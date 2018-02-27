@@ -6,7 +6,32 @@
         $MaRequete="SELECT * FROM SESSIONS Order By nom_session";
         $MonRs = $BDD -> query( $MaRequete );
         $retour = 1;
-        echo '<div class="container">
+        echo '
+        <div class="container">
+        <div class="bienvenue">Bienvenue machin</div>
+        
+        <div class="staff">
+        <div class="rondstaff1"><img src=""><div>pseudo<br>contacter</div></div>
+        <div class="rondstaff2"><img src=""><div>pseudo<br>contacter</div></div>
+        <div class="rondstaff3"><img src=""><div>pseudo<br>contacter</div></div>
+        </div>
+        
+        <div class="presentation">présentation blabla</div>
+        
+        <table style="border-collapse:collapse;">
+        <tr>
+        <td>
+        <div class="contexte">contexte</div>
+        </td>
+        <td>
+        <div class="sessions">accéder aux sessions</div>
+        <div class="nouveautes">nouveautés</div>
+        </td>
+        </tr>
+        </table>
+        
+        <br />
+        
         <table><tr>';
             while ($Tuple = $MonRs ->fetch() )
             {
