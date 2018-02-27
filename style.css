@@ -1,3 +1,5 @@
+body{background-color:#dadada;}
+
 a:link{color : silver;}
 a:visited {color: gray;}
 a:hover 
@@ -26,4 +28,13 @@ a:active {
     font-style: italic;
     text-align: right;
 
+}
+
+.footer
+{
+    text-align:center;
+    padding:40px;
+    font-family:'Trebuchet MS';
+    font-size:12px;
+    color:#444444;
 }
