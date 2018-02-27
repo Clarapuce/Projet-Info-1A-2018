@@ -4,7 +4,7 @@ a:link{color : silver;}
 a:visited {color: gray;}
 a:hover 
 {
-    color: white;
+    color: white!important;
     text-decoration: none;
     text-shadow : white 1px 1px 4px;
 }
@@ -12,6 +12,84 @@ a:active {
     color: white;
     text-decoration: none;
 }
+
+.header{
+    position:fixed;
+    top:0px;
+    background-color:#444444;
+    height:30px;
+    width:100%;
+    padding:5px;
+    text-align:center;
+}
+
+.liens1{
+    color:#fafafa!important;
+    padding-left:10px;
+}
+.liens2{
+    color:rgb(180, 180, 180)!important;
+    padding-left:10px;
+}
+.liens3{
+    color:rgb(133, 128, 128)!important;
+    padding-left:10px;
+}
+
+.h_responsive_br{ display:none;color:rgb(180, 180, 180);padding-left:15px;}
+.h_responsive{display:inline;padding-left:15px;}
+
+@media all and (max-width: 740px) {
+.h_responsive{ display:none;}
+.h_responsive_br{ display:inline;}
+.h_responsive_br > span { display:none;}
+.h_responsive_br:hover > span { display:inline;}
+}
+
+.container{width:700px;margin-left:auto;margin-right:auto;}
+
+.bienvenue{text-align:center;
+    position:relative;
+    top:20px;
+    font-size:20px;
+color:gray;}
+
+.staff{
+    height:0;
+    position:relative;
+    left:-35px;}
+.rondstaff1{
+    background-color:plum;
+    width:50px;
+    height:50px;
+    border-radius:100px;
+    margin:10px;}
+.rondstaff1 > div,.rondstaff2 > div,.rondstaff3 > div {
+    visibility:hidden;}
+.rondstaff1:hover > div,.rondstaff2:hover > div,.rondstaff3:hover > div  {
+    visibility:visible;background-color:#dadada;
+    width:100px;height:100px;padding:10px;position:relative;
+    left:50px;}
+.rondstaff2{
+    background-color:plum;width:50px;height:50px;
+    border-radius:100px;margin:10px;}
+.rondstaff3{
+    background-color:plum;width:50px;height:50px;
+    border-radius:100px;margin:10px;}
+
+.presentation{
+    width:500px;height:100px;overflow:auto;
+    border:1px solid gray;text-align:justify;padding:30px;}
+
+.contexte{
+    border:1px solid gray;width:200px;height:100px;padding:20px;}
+
+.sessions{
+    background-color:tomato;width:300px;height:30px;
+    text-align:center;padding:5px;}
+
+.nouveautes{
+    width:300px;border:1px solid gray;padding:20px;height:70px;}
 
 .description
 {
