@@ -1,5 +1,6 @@
 <!doctype html>
-<?php session_start(); ?>
+<?php session_start();
+// Commentaire ?>
 <html>
     <head>
         <meta charset="utf-8"/>
