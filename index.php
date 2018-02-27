@@ -18,13 +18,11 @@
                         <h3>'.$Tuple["nom_session"].
                         '</h3>
                     </a>
+                    <p class="auteur">Créée par '.$Tuple["auteur"].'
+                    </p>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">
-                            <p>Créée par '.$Tuple["auteur"].'
-                            </p>
-                        </h5>
-                        <p>'.$Tuple["description"].'</p>
+                        <p class="description">'.$Tuple["description"].'</p>
                     </div>
                 </div>
               <article>

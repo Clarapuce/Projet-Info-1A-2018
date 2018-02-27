@@ -1,0 +1,29 @@
+a:link{color : silver;}
+a:visited {color: gray;}
+a:hover 
+{
+    color: white;
+    text-decoration: none;
+    text-shadow : white 1px 1px 4px;
+}
+a:active {
+    color: white;
+    text-decoration: none;
+}
+
+.description
+{
+    font-size : 12px;
+    margin : -10px;
+    text-align: justify;
+}
+
+.auteur
+{
+    font-size : 16px;
+    margin-top : -5px;
+    margin-bottom: -10px;
+    font-style: italic;
+    text-align: right;
+
+}
