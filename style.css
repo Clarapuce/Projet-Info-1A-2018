@@ -1,10 +1,11 @@
 body{background-color:#dadada;}
-
+table{border-collapse:collapse;}
+h4{text-align:center}
 a:link{color : silver;}
 a:visited {color: gray;}
 a:hover 
 {
-    color: white;
+    color: white!important;
     text-decoration: none;
     text-shadow : white 1px 1px 4px;
 }
@@ -12,6 +13,88 @@ a:active {
     color: white;
     text-decoration: none;
 }
+
+.header{
+    position:fixed;
+    top:0px;
+    background-color:#444444;
+    min-height:30px;
+    width:100%;
+    padding:5px;
+    text-align:center;
+}
+
+.liens1{
+    color:#fafafa!important;
+    padding-left:10px;
+}
+.liens2{
+    color:rgb(180, 180, 180)!important;
+    padding-left:10px;
+}
+.liens3{
+    color:rgb(133, 128, 128)!important;
+    padding-left:10px;
+}
+
+.h_responsive_br{ display:none;color:rgb(180, 180, 180);padding-left:15px;}
+.h_responsive{display:inline;padding-left:15px;}
+
+.alignement{margin-left:30%;}
+
+.bienvenue{
+    left:20%;
+    position:relative;
+    top:20px;
+    font-size:20px;
+color:gray;}
+
+.staff{
+    height:0;
+    position:relative;
+    left:-35px;}
+
+.rondstaff1{
+    background-color:plum;
+    width:50px;
+    height:50px;
+    border-radius:100px;
+    margin:10px;}
+.rondstaff1 > div,.rondstaff2 > div,.rondstaff3 > div {
+    visibility:hidden;}
+.rondstaff1:hover > div,.rondstaff2:hover > div,.rondstaff3:hover > div  {
+    visibility:visible;background-color:#dadada;
+    width:100px;height:70px;padding:10px;position:relative;
+    left:50px;border: 1px solid gray;transition:0.2s all;}
+.rondstaff2{
+    background-color:plum;width:50px;height:50px;
+    border-radius:100px;margin:10px;}
+.rondstaff3{
+    background-color:plum;width:50px;height:50px;
+    border-radius:100px;margin:10px;}
+
+.presentation_container{font-size:12px;
+    width:500px;height:100px;overflow:auto;
+    border:1px solid gray;text-align:justify;
+    padding-left:30px; background-color: gray;
+}
+.presentation{
+    width:450px;height:65px;overflow:auto;background-color: #dadada;
+    }
+
+.contexte{font-size:12px;text-align:justify;
+    border:1px solid gray;width:200px;height:100px;padding:15px 20px 15px 30px;overflow:auto;}
+
+.sessions{
+    background-color:tomato;width:300px;height:30px;
+    text-align:center;padding:5px;letter-spacing:0px;transition: 0.3s all}
+.sessions:hover{
+    background-color:plum;letter-spacing:1px;}
+
+.nouveautes{font-size:12px;overflow:auto;
+    width:300px;border:1px solid gray;padding:10px 20px 10px 20px;height:70px;}
+
+.container{wiidth:700px;teext-align:justify;}
 
 .description
 {
@@ -38,3 +121,12 @@ a:active {
     font-size:12px;
     color:#444444;
 }
+
+@media all and (max-width: 840px) {
+    .h_responsive{ display:none;}
+    .h_responsive_br{ display:inline;}
+    .h_responsive_br > span { display:none;} /**l'infobulle est cachée**/
+    .h_responsive_br:hover > span { display:inline;} /**apparition de l'infobulle**/
+    .alignement{margin-left:30px;}
+}
+    
