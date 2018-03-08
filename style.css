@@ -1,8 +1,8 @@
 body{background-color:#dadada;}
 table{border-collapse:collapse;}
 h4{text-align:center}
-a:link{color : silver;}
-a:visited {color: gray;}
+a:link{color : rgb(99, 99, 99);}
+a:visited {color: rgb(238, 48, 48);}
 a:hover 
 {
     color: white!important;
@@ -38,9 +38,9 @@ a:active {
 }
 
 .h_responsive_br{ display:none;color:rgb(180, 180, 180);padding-left:15px;}
-.h_responsive{display:inline;padding-left:15px;}
+.h_responsive{display:inline;padding-left:17px;}
 
-.alignement{margin-left:30%;}
+.alignement{margin-left:20%;}
 
 .bienvenue{
     left:20%;
@@ -94,24 +94,26 @@ color:gray;}
 .nouveautes{font-size:12px;overflow:auto;
     width:300px;border:1px solid gray;padding:10px 20px 10px 20px;height:70px;}
 
-.container{wiidth:700px;teext-align:justify;}
+
 
 .description
 {
     font-size : 12px;
     margin : -10px;
     text-align: justify;
+    color: rgb(65, 65, 65);
 }
 
 .auteur
 {
     font-size : 16px;
-    margin-top : -5px;
-    margin-bottom: -10px;
     font-style: italic;
     text-align: right;
-
+    margin-top: -10px;
+    margin-bottom: -10px;
+    color: grey;
 }
+/* To do à la fin: Changer police "Session, rajouter image en fond */
 
 .footer
 {
@@ -122,11 +124,37 @@ color:gray;}
     color:#444444;
 }
 
+.persoImage {
+    border-radius: 7px;
+    border: 4px solid white;
+    box-shadow: 1px 1px 10px #555;
+    width: 100px;
+    height: 100px;
+}
+
+.persoElemt
+{
+    color:rgb(65, 65, 65);
+}
+.persoType
+{
+    text-align: right;
+    color: rgb(65, 65, 65);
+    font-style: italic ;
+    font-weight: bold;
+    margin-top:-25px;
+}
+
+.card
+{
+    margin-right: auto;
+    margin-left: auto;
+}
 @media all and (max-width: 840px) {
     .h_responsive{ display:none;}
     .h_responsive_br{ display:inline;}
     .h_responsive_br > span { display:none;} /**l'infobulle est cachée**/
     .h_responsive_br:hover > span { display:inline;} /**apparition de l'infobulle**/
-    .alignement{margin-left:30px;}
+    .alignement{margin-left:17px;}
 }
     
