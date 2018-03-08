@@ -22,9 +22,16 @@ echo '
     while ($Tuple = $MonRs ->fetch() )
     {
         echo '
-        <div class="card text-white bg-light mb-3" style="max-width: 34rem;">
+        <div class="card text-white bg-light mb-3" style="max-width: 68rem;">
             <table class="table">
                 <tr>
+                    <td>
+                    <div class="persoType">'.$Tuple["type"].'</div>
+                    <img class="persoImage" src="image/'.$Tuple["image"].'"/>
+                        
+                    </div>
+                    </td>
+                    
                     <td>
                     <div class="card-body">
                     <a href="perso.php?id='.$Tuple["prenom"].' '.$Tuple["nom"].'">
@@ -33,12 +40,9 @@ echo '
                     </a>
                     <div class="persoElemt">'.$Tuple["age"].' ans - Créé par '.$Tuple["auteur"].'</div>
                     </td>
-                    <td>
-                    <div class="persoType">'.$Tuple["type"].'</div>
-                    <img class="persoImage" src="image/'.$Tuple["image"].'"/>
-                        
-                    </div>
-                    </td>
+                    <td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td>
                 </tr>
             </table>
         </div>';
