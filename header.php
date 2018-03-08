@@ -16,43 +16,53 @@
         <body>
         
         <div class="header">
-            <a href="index.php" class="liens1">Accueil</a>
-        <span class="h_responsive_br">
-            Menu
+        <a href="index.php" class="liens1">Accueil</a>
+    <span class="h_responsive_br">
+        <p id="menu">Menu</p>
+        <div id="dropdown" class="dropdown-content">
             <span><?php creerSession() ?>
             <?php connexion() ?></span>
-        </span>
-        <span class="h_responsive">
-            <?php creerSession() ?>
-            <?php connexion() ?>
-        </span>
         </div>
-           <br /><br />
+    </span>
+        <script>
+// Get the button, and when the user clicks on it, execute myFunction
+document.getElementById("menu").onclick = function() {myFunction()};
 
-<?php
-function creerSession()
-{
-    if (isset($_SESSION['usr_id']) AND isset($_SESSION['pseudo']))
-    {
-        echo '<a href="creerSession.php" class="liens2">Créer une session</a>';
-    }
-    else
-    {
+/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+function myFunction() {
+document.getElementById("dropdown").classList.toggle("show");
+}
+</script>
+
         
-    }
-}
-function connexion()
-{
-    if (isset($_SESSION['usr_id']) AND isset($_SESSION['pseudo']))
-    {
-        echo '<a href="creerPerso.php" class="liens2">Créer un personnage</a> 
-        <a href="deconnexion.php" title="deconnexion" class="liens3">Se déconnecter</a>';
-    }
-    else
-    {
-        echo '<a href="inscription" title="inscription" class="liens3">S\'inscrire</a> <a href="connexion.php" title="connexion" class="liens3">Se connecter</a>';
-    }
-}
-?>
-
-             
+    <span class="h_responsive">
+        <?php creerSession() ?>
+        <?php connexion() ?>
+    </span>
+    </div>
+       <br /><br />
+       <?php
+       function creerSession()
+       {
+           if (isset($_SESSION['statutStaff']) AND isset($_SESSION['pseudo']) AND ($_SESSION['statutStaff']==11))
+           {
+               echo '<a href="creerSession.php" class="liens2">Créer une session</a>';
+           }
+           else
+           {
+               
+           }
+       }
+       function connexion()
+       {
+           if (isset($_SESSION['pseudo']))
+           {
+               echo '<a href="creerPerso.php" class="liens2">Créer un personnage</a> 
+               <a href="deconnexion.php" title="deconnexion" class="liens3">Se déconnecter</a>';
+           }
+           else
+           {
+               echo '<a href="inscription.php" title="inscription" class="liens3">S\'inscrire</a> <a href="connexion.php" title="connexion" class="liens3">Se connecter</a>';
+           }
+       }
+       ?>
