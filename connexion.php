@@ -2,8 +2,9 @@
 include('header.php');
 ?>
 
-<form method="post" action="login.php">
-<div class="container"><div class="alignement">
+<form method="post" action="connexion_validee.php">
+<div class="container">
+<div class="alignement">
 <h2>Connexion</h2>
 <table>
     <tr>
@@ -12,14 +13,15 @@ include('header.php');
     </tr>
         
     <tr>
-        <td><br/>Mot de passe :</td>
-        <td><br/><input type="password" name="mdp"><br/></td>
+        <td><br/>Mot de passe : </td>
+        <td><br/> <input type="password" name="mdp"><br/></td>
     </tr>
 </table>
 
 <br/>
 <input type="submit" value="Valider"> <input type="reset" value="Annuler">
-</div></div>
+</div>
+</div>
 </form>
 
 <?php 
