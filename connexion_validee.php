@@ -1,4 +1,5 @@
 <?php 
+/**ajouter sécurité */
 include('header.php');
 require("connect.php"); 
 
