@@ -1,5 +1,7 @@
 <?php 
 include('header.php');
+if (!empty($_SESSION['pseudo'])) erreur(ERR_IS_CO);
+
 ?>
 
 <form method="post" action="inscription_validee.php">
