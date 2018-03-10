@@ -1,5 +1,6 @@
 <?php 
 include('header.php');
+if (!empty($_SESSION['pseudo'])) erreur(ERR_IS_CO);
 ?>
 
 <form method="post" action="connexion_validee.php">
@@ -20,6 +21,8 @@ include('header.php');
 
 <br/>
 <input type="submit" value="Valider"> <input type="reset" value="Annuler">
+<br /><br />
+<a href="inscription.php">S'inscrire ?</a>
 </div>
 </div>
 </form>
