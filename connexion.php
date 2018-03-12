@@ -3,7 +3,7 @@ include('header.php');
 if (!empty($_SESSION['pseudo'])) erreur(ERR_IS_CO);
 ?>
 
-<form method="post" action="connexion_validee.php">
+<form method="post" action="connexion_exec.php">
 <div class="container">
 <div class="alignement">
 <h2>Connexion</h2>

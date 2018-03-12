@@ -1,6 +1,5 @@
 <?php
 include("header.php");
-
 require("connect.php");
 $id=$_GET['id'];
 $auteur=$_GET['auteur'];

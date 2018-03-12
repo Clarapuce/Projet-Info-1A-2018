@@ -4,14 +4,14 @@ if (!empty($_SESSION['pseudo'])) erreur(ERR_IS_CO);
 
 ?>
 
-<form method="post" action="inscription_validee.php">
+<form method="post" action="inscription_exec.php">
 <div class="container">
 <div class="alignement">
 <h2>Inscription</h2>
 <table>
     <tr>
         <td>Pseudo :</td>
-        <td> <input type="text" name="pseudo"></td>
+        <td> <input type="text" name="pseudo" value="<?php if (isset($_GET['pseudo'])) echo htmlentities($_GET['pseudo']); ?>"></td>
     </tr>
         
     <tr>

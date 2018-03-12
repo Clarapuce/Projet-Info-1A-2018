@@ -8,13 +8,12 @@ $retour = 1;
 echo '
 <div class="container">
 <div class="alignement">
-<div class="bienvenue">Bienvenue machin</div>
+<div class="bienvenue">Bienvenue !</div>
 
 <div class="staff">
 <div class="rondstaff"><img class="imgstaff" src="http://image.noelshack.com/fichiers-md/2018/10/6/1520716094-06-90.jpg"><div>pseudo<br>contacter</div></div>
 <div class="rondstaff"><img class="imgstaff" src="http://image.noelshack.com/fichiers-md/2018/10/6/1520716249-ga-tm1a.png"><div>pseudo<br>contacter</div></div>
 <div class="rondstaff"><img class="imgstaff" src="http://image.noelshack.com/fichiers-md/2018/10/6/1520716072-51.jpg"><div>pseudo<br>contacter</div></div>
-
 </div>
 
 <div class="presentation_container"><br />
@@ -26,7 +25,7 @@ Quod cum ita sit, paucae domus studiorum seriis cultibus antea celebratae nunc l
 </div>
 </div>
 
-<table>
+<table class="table_accueil">
 <tr>
 <td>
 <div class="contexte">
@@ -34,7 +33,7 @@ Saraceni tamen nec amici nobis umquam nec hostes optandi, ultro citroque discurs
 </div>
 </td>
 <td>
-<div class="sessions"><a href="creerPerso.php">créer un personnage</a></div>
+<div class="sessions"><a href="formulaires.php">voir les personnages</a></div>
 <div class="nouveautes">• xx.xx.xxxx : nouveauté<br />
 • xx.xx.xxxx : nouveauté<br />
 • xx.xx.xxxx : nouveauté</div>
@@ -62,7 +61,6 @@ Saraceni tamen nec amici nobis umquam nec hostes optandi, ultro citroque discurs
                 <p class="description">'.$Tuple["description"].'</p>
             </div>
         </div>
-
         
       
         </td>';
@@ -75,8 +73,6 @@ Saraceni tamen nec amici nobis umquam nec hostes optandi, ultro citroque discurs
         
     }
 echo '</table></div>';   
-
-
 
 
 include("footer.php");
