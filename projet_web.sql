@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mar. 27 fév. 2018 à 14:02
+-- Généré le :  lun. 12 mars 2018 à 12:45
 -- Version du serveur :  10.1.25-MariaDB
 -- Version de PHP :  5.6.31
 
@@ -35,8 +35,18 @@ CREATE TABLE `perso` (
   `prenom` varchar(60) NOT NULL,
   `image` varchar(100) NOT NULL,
   `age` int(5) NOT NULL,
-  `type` tinyint(1) NOT NULL DEFAULT '1'
+  `type` text NOT NULL,
+  `session_perso` char(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `perso`
+--
+
+INSERT INTO `perso` (`id_perso`, `auteur`, `nom`, `prenom`, `image`, `age`, `type`, `session_perso`) VALUES
+(3, 'user1', 'Labeille', 'Maya', 'images.duckduckgo.com.png', 10, 'Élève', 'Session 1'),
+(4, 'user2', 'Lourson', 'Winnie', 'images.duckduckgo.com.jpg', 11, 'Élève ', 'Session 1'),
+(5, 'user1', 'Rouveur', 'Samumu', 'Samumu.jpg', 9, 'Élève', 'Session 1');
 
 -- --------------------------------------------------------
 
@@ -79,7 +89,9 @@ CREATE TABLE `utilisateurs` (
 --
 
 INSERT INTO `utilisateurs` (`pseudo`, `mdp`, `statutStaff`) VALUES
-('Admin', 'admin', 1);
+('Admin', 'admin', 1),
+('user1', 'user1', 0),
+('user2', 'user2', 0);
 
 --
 -- Index pour les tables déchargées
@@ -102,7 +114,16 @@ ALTER TABLE `sessions`
 --
 ALTER TABLE `utilisateurs`
   ADD PRIMARY KEY (`pseudo`);
-COMMIT;
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `perso`
+--
+ALTER TABLE `perso`
+  MODIFY `id_perso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
