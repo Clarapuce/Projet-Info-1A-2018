@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 08 mars 2018 à 09:45
+-- Généré le :  mar. 27 fév. 2018 à 14:02
 -- Version du serveur :  10.1.25-MariaDB
 -- Version de PHP :  5.6.31
 
@@ -35,18 +35,8 @@ CREATE TABLE `perso` (
   `prenom` varchar(60) NOT NULL,
   `image` varchar(100) NOT NULL,
   `age` int(5) NOT NULL,
-  `type` varchar(20) NOT NULL,
-  `session` varchar(50) NOT NULL
+  `type` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `perso`
---
-
-INSERT INTO `perso` (`id_perso`, `auteur`, `nom`, `prenom`, `image`, `age`, `type`, `session`) VALUES
-(1, 'MayRandom', 'L\'éponge', 'Bob', '130110155311-Charlotte_Fromentin_tutoriel_bob_leponge_alife_photoshop_illustrator.png', 14, 'Élève', 'Session 1'),
-(2, 'Clarapuce', 'Fox', 'Fire', 'mozilla-firefox-vr-660x330.jpg', 54, 'Professeur', 'Session 1'),
-(3, 'Clarapuce', 'Gadget', 'Inspecteur', 'e1fe8ae466272940f42f0ca943392f7a--cartoon-art-cartoon-characters.jpg', 47, 'Professeur', 'Session 2');
 
 -- --------------------------------------------------------
 
@@ -89,9 +79,7 @@ CREATE TABLE `utilisateurs` (
 --
 
 INSERT INTO `utilisateurs` (`pseudo`, `mdp`, `statutStaff`) VALUES
-('Admin', 'admin', 1),
-('Clarapuce', 'pute', 0),
-('MayRandom', 'paschiant', 0);
+('Admin', 'admin', 1);
 
 --
 -- Index pour les tables déchargées
@@ -114,16 +102,7 @@ ALTER TABLE `sessions`
 --
 ALTER TABLE `utilisateurs`
   ADD PRIMARY KEY (`pseudo`);
-
---
--- AUTO_INCREMENT pour les tables déchargées
---
-
---
--- AUTO_INCREMENT pour la table `perso`
---
-ALTER TABLE `perso`
-  MODIFY `id_perso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;COMMIT;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
