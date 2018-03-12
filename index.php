@@ -11,9 +11,10 @@ echo '
 <div class="bienvenue">Bienvenue machin</div>
 
 <div class="staff">
-<div class="rondstaff1"><img src=""><div>pseudo<br>contacter</div></div>
-<div class="rondstaff2"><img src=""><div>pseudo<br>contacter</div></div>
-<div class="rondstaff3"><img src=""><div>pseudo<br>contacter</div></div>
+<div class="rondstaff"><img class="imgstaff" src="http://image.noelshack.com/fichiers-md/2018/10/6/1520716094-06-90.jpg"><div>pseudo<br>contacter</div></div>
+<div class="rondstaff"><img class="imgstaff" src="http://image.noelshack.com/fichiers-md/2018/10/6/1520716249-ga-tm1a.png"><div>pseudo<br>contacter</div></div>
+<div class="rondstaff"><img class="imgstaff" src="http://image.noelshack.com/fichiers-md/2018/10/6/1520716072-51.jpg"><div>pseudo<br>contacter</div></div>
+
 </div>
 
 <div class="presentation_container"><br />
