@@ -8,12 +8,13 @@ $retour = 1;
 echo '
 <div class="container">
 <div class="alignement">
-<div class="bienvenue">Bienvenue !</div>
+<div class="bienvenue">Bienvenue machin</div>
 
 <div class="staff">
 <div class="rondstaff"><img class="imgstaff" src="http://image.noelshack.com/fichiers-md/2018/10/6/1520716094-06-90.jpg"><div>pseudo<br>contacter</div></div>
 <div class="rondstaff"><img class="imgstaff" src="http://image.noelshack.com/fichiers-md/2018/10/6/1520716249-ga-tm1a.png"><div>pseudo<br>contacter</div></div>
 <div class="rondstaff"><img class="imgstaff" src="http://image.noelshack.com/fichiers-md/2018/10/6/1520716072-51.jpg"><div>pseudo<br>contacter</div></div>
+
 </div>
 
 <div class="presentation_container"><br />

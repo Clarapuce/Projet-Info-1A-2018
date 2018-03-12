@@ -46,16 +46,16 @@ a:active {
     display: inline-block;
 }
 .dropdown-content {
-    display: none;
+   display: none;
     position: relative; min-width:160px;
-    overflow: auto; background-color:#444444;
+   overflow: auto; background-color:#444444;
 }
 .dropdown-content a {
     text-decoration: none;
     display: block;
 }
 .show {display:block;}
-
+    
 .alignement{margin-left:20%;}
 
 .bienvenue{
@@ -63,19 +63,22 @@ a:active {
     position:relative;
     top:18px;
     font-size:20px;
-color:gray;z-index:1;}
+color:gray;z-index:1;};}
 
 .staff{
     height:0;
     position:relative;
     left:-35px;}
+
 .imgstaff{    
     border-radius:100px;
-    height:50px;
-}
+    height:50px;}
+
+
 .rondstaff{
     height:50px;width:50px;
     margin:10px;}
+
 .rondstaff > div{visibility:hidden;}
 .rondstaff:hover > div{
     visibility:visible;
@@ -88,6 +91,7 @@ color:gray;z-index:1;}
     width:500px;height:100px;overflow:auto;
     border:1px solid gray;text-align:justify;
     padding-left:30px; background-color: gray;
+    
 }
 .presentation{
     width:450px;height:65px;overflow:auto;background-color: #dadada;
@@ -139,8 +143,8 @@ color:gray;z-index:1;}
     border-radius: 7px;
     border: 4px solid white;
     box-shadow: 1px 1px 10px #555;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }
 
 .persoElemt
@@ -168,3 +172,4 @@ color:gray;z-index:1;}
     .alignement{margin-left:17px;}
     .header{height:50px;}
 }
+    
