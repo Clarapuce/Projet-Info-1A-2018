@@ -33,17 +33,17 @@ Saraceni tamen nec amici nobis umquam nec hostes optandi, ultro citroque discurs
 </div>
 </td>
 <td>
-<div class="sessions"><a href="formulaires.php">voir les personnages</a></div>
-<div class="nouveautes">• xx.xx.xxxx : nouveauté<br />
-• xx.xx.xxxx : nouveauté<br />
-• xx.xx.xxxx : nouveauté</div>
+<div class="voirperso"><a href="formulaires.php">voir les personnages</a></div>
+<div class="nouveautes">• xx.xx.xx : nouveauté<br />
+• xx.xx.xx : nouveauté<br />
+• xx.xx.xx : nouveauté</div>
 </td>
 </tr>
 </table></div>
 
 <br /><br />
 <h4>Sessions créées</h4>
-<table><tr>';
+<table class="liste_sessions"><tr>';
     while ($Tuple = $MonRs ->fetch() )
     {
         echo '
