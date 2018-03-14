@@ -288,97 +288,37 @@ include("header.php");?>
                             </div>
                         </div>
                     </fieldset>
-                    <fieldset class="form-group">
-                        <div class="row">
-                            <legend class="col-form-label col-sm-2 pt-0">Rapport à autrui</legend>
-                                <div class="col-sm-10">
-                                <div class="form-check form-check-inline">
-                                <label class="form-check-label" for="inlineRadio1">Introverti</label>
-                                <input class="form-check-input" type="radio" name="autrui" id="inlineRadio1" value="1">
+                    <?php 
+                    
+                    $theme=array("Rapport à autrui","Manière de penser","Ouverture","Habitudes","Nature","Stratégie","Confiance en soi", "Anxiété", "Influence du regard des autres");
+                    $valmin=array("Introverti","Pragmatique","Rigide", "Reste sur ses acquis", "Rationnel"," Organisé", "Peu confiant", "Calme", "Peu influencé");
+                    $valmax=array("Extraverti","Créatif", "Ouvert d'esprit", "Innove","Emotionnel", "Flexible", "Très confiant", "Stressé", "Influençable");
+                    for ($i =0; $i < 9; $i ++)
+                    echo'<fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-3 pt-0">'.$theme[$i].'</legend>
+                        <div class="col-sm-2"><label class="form-check-label" for="inlineRadio1">'.$valmin[$i].'</label></div>
+                            <div class="col-sm-6">
+                            <div class="form-check form-check-inline">
+                            
+                            <input class="form-check-input" type="radio" name="creativite" id="inlineRadio1" value="1">
+                    </div>';
+                        for($i = 2; $i <5;$i++)
+                            {
+                                echo'<div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="nature" id="inlineRadio2" value="'.$i.'">
+                                </div>';
+                            }
+                        
+                    echo '<div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="nature" id="inlineRadio2" value="5">
+                        
+                        <div class="col-sm-1"><label class="form-check-label" for="inlineRadio1">'.$valmin[$i].'</label></div>
                         </div>
-                            <?php for($i = 2; $i <5;$i++)
-                                {
-                                    echo'<div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="autrui" id="inlineRadio2" value="'.$i.'">
-                                    </div>';
-                                }
-                            ?>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="autrui" id="inlineRadio2" value="5">
-                            <label class="form-check-label" for="inlineRadio1">Extraverti</label>
-                            </div>
-                            </form>
-                        </div>
-                    </fieldset>
-
-                    <fieldset class="form-group">
-                        <div class="row">
-                            <legend class="col-form-label col-sm-2 pt-0">Manière de penser</legend>
-                                <div class="col-sm-10">
-                                <div class="form-check form-check-inline">
-                                <label class="form-check-label" for="inlineRadio1">Pragmatique</label>
-                                <input class="form-check-input" type="radio" name="creativite" id="inlineRadio1" value="1">
-                        </div>
-                            <?php for($i = 2; $i <5;$i++)
-                                {
-                                    echo'<div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="nature" id="inlineRadio2" value="'.$i.'">
-                                    </div>';
-                                }
-                            ?>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="nature" id="inlineRadio2" value="5">
-                            <label class="form-check-label" for="inlineRadio1">Creatif</label>
-                            </div>
-                            </form>
-                        </div>
-                    </fieldset>
-
-                    <fieldset class="form-group">
-                        <div class="row">
-                            <legend class="col-form-label col-sm-2 pt-0">Ouverture d'esprit</legend>
-                                <div class="col-sm-10">
-                                <div class="form-check form-check-inline">
-                                <label class="form-check-label" for="inlineRadio1">Rigide</label>
-                                <input class="form-check-input" type="radio" name="creativite" id="inlineRadio1" value="1">
-                        </div>
-                            <?php for($i = 2; $i <5;$i++)
-                                {
-                                    echo'<div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="nature" id="inlineRadio2" value="'.$i.'">
-                                    </div>';
-                                }
-                            ?>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="nature" id="inlineRadio2" value="5">
-                            <label class="form-check-label" for="inlineRadio1">Ouvert</label>
-                            </div>
-                            </form>
-                        </div>
-                    </fieldset>
-
-                    <fieldset class="form-group">
-                        <div class="row">
-                            <legend class="col-form-label col-sm-2 pt-0"></legend>
-                                <div class="col-sm-10">
-                                <div class="form-check form-check-inline">
-                                <label class="form-check-label" for="inlineRadio1">Sur s</label>
-                                <input class="form-check-input" type="radio" name="creativite" id="inlineRadio1" value="1">
-                        </div>
-                            <?php for($i = 2; $i <5;$i++)
-                                {
-                                    echo'<div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="nature" id="inlineRadio2" value="'.$i.'">
-                                    </div>';
-                                }
-                            ?>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="nature" id="inlineRadio2" value="5">
-                            <label class="form-check-label" for="inlineRadio1">Ouvert</label>
-                            </div>
-                            </form>
-                        </div>
-                    </fieldset>
+                        </form>
+                    </div>
+                </fieldset>'
+                ?>
         </form>
     </div>
             
