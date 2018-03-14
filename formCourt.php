@@ -4,6 +4,7 @@ include("header.php");?>
     <div class="jumbotron">
         <h1>Questionnaire de Proust</h1></br>
         <form action = "formCourt.php" method ="POST">
+<!--=================================================================================== -->
             <h2>GÉNÉRALITÉS</h2>
             <hr>
             <p>Maison : </p>
@@ -82,51 +83,49 @@ include("header.php");?>
                     </div>
                 </div>
             </fieldset>
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-3 pt-0"> Niveau de santé :</legend>
+                    <div class="col-sm-3"><label class="form-check-label" for="inlineRadio1">Fragile</label></div>
+
+                        <div class="col-sm-4">
+                            <?php 
+                            for($j = 1; $j <6;$j++)
+                                {
+                                    echo'
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="sante" id="inlineRadio2" value="'.$j.'">
+                                    </div>';
+                                }?>
+                            
+                        </div>
+
+                    <div class="col-sm-2"><label class="form-check-label" for="inlineRadio1">Robuste</label></div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-3 pt-0"> Niveau scolaire</legend>
+                    <div class="col-sm-3"><label class="form-check-label" for="inlineRadio1">Mauvais élève</label></div>
+
+                        <div class="col-sm-4">
+                            <?php 
+                            for($j = 1; $j <6;$j++)
+                                {
+                                    echo'
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="sante" id="inlineRadio2" value="'.$j.'">
+                                    </div>';
+                                }?>
+                            
+                        </div>
+
+                    <div class="col-sm-2"><label class="form-check-label" for="inlineRadio1">Excellent élève</label></div>
+                </div>
+            </fieldset>
+                        
             
-            <fieldset class="form-group">
-                <div class="row">
-                <legend class="col-form-label col-sm-2 pt-0">Niveau de santé</legend>
-                    <div class="col-sm-10">
-                    <div class="form-check form-check-inline">
-                    <label class="form-check-label" for="inlineRadio1">Fragile</label>
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
-                    </div>
-                    <?php for($i = 2; $i <5;$i++)
-                        {
-                            echo'<div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="'.$i.'">
-                            </div>';
-                        }
-                    ?>
-                    <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="5">
-                    <label class="form-check-label" for="inlineRadio1">Robuste</label>
-                    </div>
-                    </form>
-                </div>
-            </fieldset>
-            <fieldset class="form-group">
-                <div class="row">
-                <legend class="col-form-label col-sm-2 pt-0">Niveau scolaire</legend>
-                    <div class="col-sm-10">
-                    <div class="form-check form-check-inline">
-                    <label class="form-check-label" for="inlineRadio1">Très mauvais élève</label>
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
-                    </div>
-                    <?php for($i = 2; $i <5;$i++)
-                        {
-                            echo'<div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="'.$i.'">
-                            </div>';
-                        }
-                    ?>
-                    <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="5">
-                    <label class="form-check-label" for="inlineRadio1">Excellent élève</label>
-                    </div>
-                    </form>
-                </div>
-            </fieldset>
             
             <div class="form-group">
             <label for="formGroupExampleInput">Patronus:</label>
@@ -170,7 +169,7 @@ include("header.php");?>
             </div>
 
             
-
+<!--=================================================================================== -->
             <h2>PHYSIQUE</h2>
             <hr>
 
@@ -245,6 +244,7 @@ include("header.php");?>
                         </div>
                     </div>
                 </fieldset>
+<!--=================================================================================== -->
                 <h2>PERSONNALITÉ</h2>
                 <hr>
                     <fieldset class="form-group">
@@ -291,37 +291,100 @@ include("header.php");?>
                     <?php 
                     
                     $theme=array("Rapport à autrui","Manière de penser","Ouverture","Habitudes","Nature","Stratégie","Confiance en soi", "Anxiété", "Influence du regard des autres");
-                    $valmin=array("Introverti","Pragmatique","Rigide", "Reste sur ses acquis", "Rationnel"," Organisé", "Peu confiant", "Calme", "Peu influencé");
+                    $valmin=array("Introverti","Pragmatique","Rigide", "Reste sur ses acquis", "Rationnel"," Organisé", "Peu confiant", "Calme", "Peu influençable");
                     $valmax=array("Extraverti","Créatif", "Ouvert d'esprit", "Innove","Emotionnel", "Flexible", "Très confiant", "Stressé", "Influençable");
                     for ($i =0; $i < 9; $i ++)
-                    echo'<fieldset class="form-group">
-                    <div class="row">
-                        <legend class="col-form-label col-sm-3 pt-0">'.$theme[$i].'</legend>
-                        <div class="col-sm-2"><label class="form-check-label" for="inlineRadio1">'.$valmin[$i].'</label></div>
-                            <div class="col-sm-6">
-                            <div class="form-check form-check-inline">
+                    {
+                        echo'
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-3 pt-0">'.$theme[$i].' : </legend>
+                                <div class="col-sm-3"><label class="form-check-label" for="inlineRadio1">'.$valmin[$i].'</label></div>
+
+                                <div class="col-sm-4">';
+                            for($j = 1; $j <6;$j++)
+                                {
+                                    echo'
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="'.$theme[$i].'" id="inlineRadio2" value="'.$j.'">
+                                    </div>';
+                                }
                             
-                            <input class="form-check-input" type="radio" name="creativite" id="inlineRadio1" value="1">
-                    </div>';
-                        for($i = 2; $i <5;$i++)
-                            {
-                                echo'<div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="nature" id="inlineRadio2" value="'.$i.'">
-                                </div>';
-                            }
-                        
-                    echo '<div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="nature" id="inlineRadio2" value="5">
-                        
-                        <div class="col-sm-1"><label class="form-check-label" for="inlineRadio1">'.$valmin[$i].'</label></div>
-                        </div>
-                        </form>
-                    </div>
-                </fieldset>'
+                        echo '  </div>
+
+                                <div class="col-sm-2"><label class="form-check-label" for="inlineRadio1">'.$valmax[$i].'</label></div>
+                            </div>
+                        </fieldset>';
+                    }
                 ?>
+                <?php 
+                $peur = array("La solitude","Un insecte/ animal","Le feu","Le noir","Le vide","L'orage","Le regard des autres","La violence","La mort","Autre");
+                
+                echo'
+                <fieldset class="form-group">
+                        <div class="row">
+                        <legend class="col-form-label col-sm-3 pt-0">Grande peur</legend>
+                            <div class="col-sm-4">';
+                            for($i=0;$i<10;$i++)
+                             {
+                                 echo
+                                '<div class="form-check form-check-inline" name="peur">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="'.$peur[$i].'">
+                                     <label class="form-check-label" for="inlineCheckbox1">'.$peur[$i].'</label>
+                                </div>';
+
+                             }
+                               
+                            echo'
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput">Précisions</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput" name="peur_autre" >
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>';
+
+                    $hobby = array("Musique","Chant","Dessin","Ecriture","Lecture","Etudes","Sport","Théâtre","Cinéma","Sorties","Voyage","Autre");
+                    
+                    echo'
+                    <fieldset class="form-group">
+                            <div class="row">
+                            <legend class="col-form-label col-sm-3 pt-0">Hobbies</legend>
+                                <div class="col-sm-4">';
+                                for($i=0;$i<12;$i++)
+                                 {
+                                     echo
+                                    '<div class="form-check form-check-inline" name="hobby">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="'.$hobby[$i].'">
+                                         <label class="form-check-label" for="inlineCheckbox1">'.$hobby[$i].'</label>
+                                    </div>';
+    
+                                 }
+                                   
+                                echo'
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput">Précisions</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput" name="hobby_autre" >
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>';
+                    ?>
+            <div class="form-group">
+                <label for="formGroupExampleInput">Talent spécial:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" name="talent" placeholder="Un truc pour lequel je suis fort!">
+                <label for="formGroupExampleInput">Bête noire</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" name="Bête noire" placeholder="Un truc que je deteste par dessus tout!">
+            
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
         </form>
     </div>
             
-</container>
+</div>
 <?php include("footer.php");
 ?>
