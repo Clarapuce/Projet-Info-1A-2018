@@ -1,34 +1,42 @@
 <?php
-include("header.php");?>
+include("header.php");
+require("connect.php");
+//$MaRequete='SELECT id_perso FROM perso 
+//WHERE auteur=='.$_POST['auteur'].'
+//AND nom='.$_POST['nom'].'
+//AND prenom='.$_POST['prenom'].';';
+?>
 <div class="container">
     <div class="jumbotron">
+    
         <h1>Questionnaire de Proust</h1></br>
-        <form action = "formCourt.php" method ="POST">
+        <form action = "enregistrer_formCourt.php" method ="POST">
+        <input type="hidden" name="id_perso" value=1 /> 
 <!--=================================================================================== -->
             <h2>GÉNÉRALITÉS</h2>
             <hr>
             <p>Maison : </p>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="maison" id="inlineRadio1" value="Gryffondor">
+            <input class="form-check-input" type="radio" required name="maison" id="inlineRadio1" value="Gryffondor" >
             <label class="form-check-label" for="inlineRadio1">Gryffondor</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="maison" id="inlineRadio1" value="Serdaigle">
+            <input class="form-check-input" type="radio" required name="maison" id="inlineRadio1" value="Serdaigle" >
             <label class="form-check-label" for="inlineRadio1">Serdaigle</label>
             </div>
 
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="maison" id="inlineRadio1" value="Poufsouffle">
+            <input class="form-check-input" type="radio" required name="maison" id="inlineRadio1" value="Poufsouffle" >
             <label class="form-check-label" for="inlineRadio1">Poufsouffle</label>
             </div>
 
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="maison" id="inlineRadio1" value="Serpentard">
+            <input class="form-check-input" type="radio" required name="maison" id="inlineRadio1" value="Serpentard" >
             <label class="form-check-label" for="inlineRadio1">Serpentard</label>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect2">Lieu de naissance</label>
-                <select multiple class="form-control" id="exampleFormControlSelect2">
+                <select multiple class="form-control" id="exampleFormControlSelect2" name ="lieu_naissance" required>
                 <option value="Ville">Ville</option>
                 <option value ="Banlieu">Banlieu</option>
                 <option value ="Campagne">Campagne</option>
@@ -36,12 +44,12 @@ include("header.php");?>
             </div>
             <div class="form-group">
             <label for="formGroupExampleInput">Nom du lieu de naissance:</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" name="lieu_naissance">
+            <input type="text" class="form-control" id="formGroupExampleInput" required name="nom_naissance" 
             </div>
 
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Bois de la baguette</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="exampleFormControlSelect1" required name="bois_baguette" >
                 <option value="Saule">Bois de Saule</option>
                 <option value="Vigne">Bois de Vigne</option>
                 <option value="Chêne">Bois de Chêne</option>
@@ -52,7 +60,7 @@ include("header.php");?>
 
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Contenu de la baguette</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="exampleFormControlSelect1" required name="contenu_baguette" required>
                 <option value="Ventricule de dragon">Ventricule de dragon</option>
                 <option value="Plume de Phénix">Plume de Phénix</option>
                 <option value="Bois de licorne">Bois de licorne</option>
@@ -64,21 +72,21 @@ include("header.php");?>
                 <legend class="col-form-label col-sm-2 pt-0">Animal de compagnie</legend>
                 <div class="col-sm-10">
                     <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="animal" id="inlineRadio1" value="option1">
+                    <input class="form-check-input" type="radio" required name="animal" id="inlineRadio1" value="Chat">
                     <label class="form-check-label" for="inlineRadio1">Chat</label>
                     </div>
                     <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="animal" id="inlineRadio1" value="option1">
+                    <input class="form-check-input" type="radio" required name="animal" id="inlineRadio1" value="Rat">
                     <label class="form-check-label" for="inlineRadio1">Rat</label>
                     </div>
         
                     <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="animal" id="inlineRadio1" value="option1">
+                    <input class="form-check-input" type="radio" required name="animal" id="inlineRadio1" value="Hiboux">
                     <label class="form-check-label" for="inlineRadio1">Hiboux</label>
                     </div>
         
                     <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="animal" id="inlineRadio1" value="option1">
+                    <input class="form-check-input" type="radio" required name="animal" id="inlineRadio1" value="Chouette">
                     <label class="form-check-label" for="inlineRadio1">Chouette</label>
                     </div>
                 </div>
@@ -94,7 +102,7 @@ include("header.php");?>
                                 {
                                     echo'
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="sante" id="inlineRadio2" value="'.$j.'">
+                                        <input class="form-check-input" type="radio" required name="sante" id="inlineRadio2" value="'.$j.'">
                                     </div>';
                                 }?>
                             
@@ -115,7 +123,7 @@ include("header.php");?>
                                 {
                                     echo'
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="sante" id="inlineRadio2" value="'.$j.'">
+                                        <input class="form-check-input" type="radio" required name="niveau_scolaire" id="inlineRadio2" value="'.$j.'">
                                     </div>';
                                 }?>
                             
@@ -129,7 +137,7 @@ include("header.php");?>
             
             <div class="form-group">
             <label for="formGroupExampleInput">Patronus:</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" name="patronus" >
+            <input type="text" class="form-control" id="formGroupExampleInput" required name="patronus" >
             </div>
 
             <fieldset class="form-group">
@@ -137,19 +145,19 @@ include("header.php");?>
                 <legend class="col-form-label col-sm-2 pt-0">Statut</legend>
                 <div class="col-sm-10">
                     <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                    <input class="form-check-input" type="radio" required name="statut" id="gridRadios1" value="Né-Moldu" checked>
                     <label class="form-check-label" for="gridRadios1">
                         Né-moldu
                     </label>
                     </div>
                     <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    <input class="form-check-input" type="radio" required name="statut" id="gridRadios2" value="Sang-mêlé">
                     <label class="form-check-label" for="gridRadios2">
                         Sang-mêlé
                     </label>
                     </div>
                     <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    <input class="form-check-input" type="radio" required name="statut" id="gridRadios2" value="Sang-pur">
                     <label class="form-check-label" for="gridRadios2">
                         Sang-pur
                     </label>
@@ -158,7 +166,7 @@ include("header.php");?>
 
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Nombre de frères et soeurs</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="exampleFormControlSelect1" required name="freres_soeurs">
                 <?php 
                     for ($i = 1; $i<11;$i++)
                     {
@@ -176,21 +184,21 @@ include("header.php");?>
             <div class="form-row">
                 <div class="col-md-6 mb-3">
                 <label for="validationCustom03">Couleur de peau</label>
-                <input type="text" class="form-control" id="validationCustom03" name ="peau" required>
+                <input type="text" class="form-control" id="validationCustom03" required name ="peau" required>
                 </div>
                 <div class="col-md-3 mb-3">
                 <label for="validationCustom04">Taille</label>
-                <input type="text" class="form-control" id="validationCustom04" name ="taille" required>
+                <input type="text" class="form-control" id="validationCustom04" required name ="taille" required>
                 </div>
                 <div class="col-md-3 mb-3">
                 <label for="validationCustom05">Poids</label>
-                <input type="text" class="form-control" id="validationCustom05" name ="poids"required>
+                <input type="text" class="form-control" id="validationCustom05" required name ="poids"required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="col-md-3 mb-3">
                     <label for="validationCustom03">Couleur des yeux</label>
-                    <select class="form-control" name="yeux">
+                    <select class="form-control" required name="yeux">
                         <option value="Bleus">Bleus</option>
                         <option value="Verts">Verts</option>
                         <option value="Marron">Marron</option>
@@ -204,7 +212,7 @@ include("header.php");?>
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="validationCustom04">Couleur de cheveux</label>
-                    <select class="form-control" name="yeux">
+                    <select class="form-control" required name="couleur_cheveux">
                         <option value="Brun">Brun</option>
                         <option value="Blonds">Blonds</option>
                         <option value="Chatain">Chatain</option>
@@ -216,12 +224,12 @@ include("header.php");?>
             
                 <div class="col-md-6 mb-3">
                     <label for="validationCustom05">Coupe de cheveux</label>
-                    <input type="text" class="form-control" id="validationCustom05" name ="poids"required>
+                    <input type="text" class="form-control" id="validationCustom05" required name ="coupe" required>
                 </div>
             </div>            
                 <fieldset class="form-group">
                     <div class="row">
-                    <legend class="col-form-label col-sm-3 pt-0">Statut</legend>
+                    <legend class="col-form-label col-sm-3 pt-0">Particularités</legend>
                         <div class="col-sm-4">
                             <div class="form-check form-check-inline" name="particularite">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Cicatrices">
@@ -251,31 +259,31 @@ include("header.php");?>
                         <div class="row">
                         <legend class="col-form-label col-sm-3 pt-0">Objectifs de vie</legend>
                             <div class="col-sm-4">
-                                <div class="form-check form-check-inline" name="objectif">
+                                <div class="form-check form-check-inline" required name="objectif[]">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Amitié">
                                     <label class="form-check-label" for="inlineCheckbox1">Amitié</label>
                                 </div>
-                                <div class="form-check form-check-inline" name="objectif">
+                                <div class="form-check form-check-inline" required name="objectif[]">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Savoir">
                                     <label class="form-check-label" for="inlineCheckbox1">Savoir</label>
                                 </div>
-                                <div class="form-check form-check-inline" name="objectif">
+                                <div class="form-check form-check-inline" required name="objectif[]">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Pouvoir">
                                     <label class="form-check-label" for="inlineCheckbox1">Pouvoir</label>
                                 </div>
-                                <div class="form-check form-check-inline" name="objectif">
+                                <div class="form-check form-check-inline" required name="objectif[]">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Aventure">
                                     <label class="form-check-label" for="inlineCheckbox1">Aventure</label>
                                 </div>
-                                <div class="form-check form-check-inline" name="objectif">
+                                <div class="form-check form-check-inline" required name="objectif[]">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Realisation de soi">
                                     <label class="form-check-label" for="inlineCheckbox1">Realisation de soi</label>
                                 </div>
-                                <div class="form-check form-check-inline" name="objectif">
+                                <div class="form-check form-check-inline" required name="objectif[]">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Richesse">
                                     <label class="form-check-label" for="inlineCheckbox1">Richesse</label>
                                 </div>
-                                <div class="form-check form-check-inline" name="objectif">
+                                <div class="form-check form-check-inline" required name="objectif[]">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Autre">
                                     <label class="form-check-label" for="inlineCheckbox1">Autre</label>
                                 </div>
@@ -306,7 +314,7 @@ include("header.php");?>
                                 {
                                     echo'
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="'.$theme[$i].'" id="inlineRadio2" value="'.$j.'">
+                                        <input class="form-check-input" type="radio" required name="'.$theme[$i].'" id="inlineRadio2" value="'.$j.'">
                                     </div>';
                                 }
                             
@@ -328,7 +336,7 @@ include("header.php");?>
                             for($i=0;$i<10;$i++)
                              {
                                  echo
-                                '<div class="form-check form-check-inline" name="peur">
+                                '<div class="form-check form-check-inline" required name="peur">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="'.$peur[$i].'">
                                      <label class="form-check-label" for="inlineCheckbox1">'.$peur[$i].'</label>
                                 </div>';
@@ -376,9 +384,9 @@ include("header.php");?>
                     ?>
             <div class="form-group">
                 <label for="formGroupExampleInput">Talent spécial:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" name="talent" placeholder="Un truc pour lequel je suis fort!">
+                <input type="text" class="form-control" id="formGroupExampleInput" required name="talent" placeholder="Un truc pour lequel je suis fort!">
                 <label for="formGroupExampleInput">Bête noire</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" name="Bête noire" placeholder="Un truc que je deteste par dessus tout!">
+                <input type="text" class="form-control" id="formGroupExampleInput" required name="Bête noire" placeholder="Un truc que je deteste par dessus tout!">
             
             </div>
             <button type="submit" class="btn btn-primary">Envoyer</button>
