@@ -6,24 +6,24 @@ $MaRequete="SELECT * FROM SESSIONS Order By nom_session";
 $MonRs = $BDD -> query( $MaRequete );
 $retour = 1;
 ?>
-<form method="post" action="creerPerso_exec.php" id="creerPerso">
+<form method="post" action="creerPerso_exec.php" id="creerPerso" enctype="multipart/form-data">
 <div class="container">
 <div class="alignement">
 <h2>Création de personnage</h2>
 <table>
     <tr>
         <td>Prénom :</td>
-        <td> <input type="text" name="prenom" value="<?php if (isset($_GET['prenom'])) echo htmlentities($_GET['prenom']); ?>"></td>
+        <td> <input type="text" name="prenom" value="<?php if (isset($_GET['prenom'])) echo htmlentities($_GET['prenom']); ?>" required></td>
     </tr>
         
     <tr>
         <td><br/>Nom : </td>
-        <td><br/> <input type="text" name="nom" value="<?php if (isset($_GET['nom'])) echo htmlentities($_GET['nom']); ?>"><br/></td>
+        <td><br/> <input type="text" name="nom" value="<?php if (isset($_GET['nom'])) echo htmlentities($_GET['nom']); ?>" required><br/></td>
     </tr>
 
     <tr>
         <td><br/>Âge : </td>
-        <td><br/> <input type="number" name="age" min="10" value="<?php if (isset($_GET['nom'])) echo htmlentities($_GET['nom']); ?>"><br/></td>
+        <td><br/> <input type="number" name="age" min="10" value="<?php if (isset($_GET['age'])) echo $_GET['age']; ?>" required><br/></td>
     </tr>
     <tr>
         <td><br/>Type de personnage :</td>
@@ -35,10 +35,10 @@ $retour = 1;
     <tr>
         <td><br/>Choix de la session :</td>
         <td><br/> 
-        <select id="session_choisie">
+        <select name="session_choisie" id="session_choisie">
             <?php while ($Tuple = $MonRs ->fetch() )
         {
-            echo '<option value="'.$i.'">'.$Tuple["nom_session"].'</option>';
+            echo '<option value="'.$Tuple["nom_session"].'">'.$Tuple["nom_session"].'</option>';
         }
             ?>
         </select>
@@ -46,8 +46,8 @@ $retour = 1;
     </tr>
 
     <tr>
-        <td><br />Image représentant votre personnage (JPG ou PNG) :</td>
-        <td><br /><input type="file" name="image" id="image"/></td>
+        <td><br /><label for="image">Image représentant votre personnage (JPG ou PNG | max. 1 Mo) :</label></td>
+        <td><br /><input name="MAX_FILE_SIZE" size="1048576" type="hidden"><input type="file" name="image" id="image"/></td>
     </tr>
 </table>
 
