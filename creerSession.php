@@ -11,12 +11,12 @@ else if ($_SESSION['statutStaff']!=11) erreur(BAD_STATUT);
 <table>
     <tr>
         <td>Nom de la session :</td>
-        <td> <input type="text" name="nom" value="<?php if (isset($_GET['nom'])) echo htmlentities($_GET['nom']); ?>"></td>
+        <td> <input type="text" name="nom" value="<?php if (isset($_GET['nom'])) echo htmlentities($_GET['nom']); ?>" required></td>
     </tr>
         
     <tr>
         <td><br/>Description : </td>
-        <td><br/> <textarea rows="4" cols="40" name="description" form="creerSession"><?php if (isset($_GET['description'])) echo htmlentities($_GET['description']); ?></textarea><br/></td>
+        <td><br/><textarea rows="4" cols="40" name="description" form="creerSession"><?php if (isset($_GET['description'])) echo $_GET['description'];?></textarea><br/></td>
     </tr>
 
     <tr>

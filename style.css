@@ -4,7 +4,9 @@ p{margin-left:15px;margin-right:15px;}
 table{border-collapse: separate; border-spacing: 10px 8px;}
 table.table_accueil{border-collapse:collapse!important; border-spacing:0px!important;}
 table.liste_sessions{margin-left:10%}
-h4{text-align:center}
+h4{text-align:center;font-family:'Dancing Script';font-size:44px;text-shadow:1px 0px 0px white;}
+h2{text-align:center;font-family:'Dancing Script';font-size:54px;text-shadow:1px 0px 0px white;}
+
 a:link,a:visited{color : rgb(99, 99, 99);}
 a:hover 
 {
@@ -16,7 +18,7 @@ a:active {
     color: white;
     text-decoration: none;
 }
-
+.ascenseur{position:fixed;top:350px;right:5px;z-index:920}
 .header{
     position:fixed; z-index:999;
     top:0px;
@@ -99,10 +101,10 @@ color:gray;z-index:1;}
     border:1px solid gray;width:200px;height:100px;padding:15px 20px 15px 30px;overflow:auto;}
 
 .voirperso{
-    background-color:tomato;width:297px;height:30px;
+    background-image:url('http://image.noelshack.com/fichiers/2018/02/7/1515932888-pattern2.jpg');width:297px;height:30px;
     text-align:center;padding:5px;letter-spacing:0px;transition: 0.3s all}
 .voirperso:hover{
-    background-color:plum;letter-spacing:1px;}
+    background-image:url('http://image.noelshack.com/fichiers/2018/02/7/1515931669-pattern.jpg');color:white!important;letter-spacing:1px;}
 
 .nouveautes{font-size:12px;overflow:auto;
     width:297px;border:1px solid gray;padding:10px 20px 10px 20px;height:70px;}
@@ -156,7 +158,7 @@ color:gray;z-index:1;}
     font-weight: bold;
     margin-top:-25px;
 }
-
+.descr_session{color:rgb(65,65,65);text-align:justify;font-size:13px;}
 .card
 {
     margin-right: auto;

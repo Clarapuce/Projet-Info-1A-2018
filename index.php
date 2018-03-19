@@ -33,7 +33,7 @@ Saraceni tamen nec amici nobis umquam nec hostes optandi, ultro citroque discurs
 </div>
 </td>
 <td>
-<div class="voirperso"><a href="formulaires.php">voir les personnages</a></div>
+<div class="voirperso"><a href="creerPerso.php">créer un personnage</a></div>
 <div class="nouveautes">• xx.xx.xx : nouveauté<br />
 • xx.xx.xx : nouveauté<br />
 • xx.xx.xx : nouveauté</div>
@@ -58,7 +58,7 @@ Saraceni tamen nec amici nobis umquam nec hostes optandi, ultro citroque discurs
                 </p>
             </div>
             <div class="card-body">
-                <p class="description">'.$Tuple["description"].'</p>
+                <p class="description">'.nl2br($Tuple["description"]).'</p>
             </div>
         </div>
         

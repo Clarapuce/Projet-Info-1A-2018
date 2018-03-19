@@ -23,7 +23,7 @@ $retour = 1;
 
     <tr>
         <td><br/>Âge : </td>
-        <td><br/> <input type="number" name="age" min="10" value="<?php if (isset($_GET['age'])) echo $_GET['age']; ?>" required><br/></td>
+        <td><br/> <input type="number" name="age" min="10" value="" required><br/></td>
     </tr>
     <tr>
         <td><br/>Type de personnage :</td>

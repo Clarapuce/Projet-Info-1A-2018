@@ -1,3 +1,4 @@
+<!-- trouver comment conserver les sauts de lignes --!>
 <?php 
 include('header.php');
 require("connect.php"); 
@@ -5,17 +6,13 @@ require("connect.php");
 $pseudo = htmlentities($_SESSION['pseudo']);
 $nom = htmlentities($_POST['nom']);
 $description = htmlentities($_POST['description']);
+
 if(isset($_POST['formC'])) $formcourt=$_POST['formC'];
 else $formcourt=0;
 if(isset($_POST['formL'])) $formlong=$_POST['formL'];
 else $formlong=0;
 
-if (empty($_POST['nom'])) 
-{
-    echo '<body onLoad="alert(\'Vous devez renseigner le nom de la session.\')">';
-    echo '<meta http-equiv="refresh" content="0;URL=creerSession.php?description='.$description.'">';
-}
-else if (empty($_POST['description']))
+if (empty($_POST['description']))
 {
     echo '<body onLoad="alert(\'Vous devez remplir la description de la session.\')">';
     echo '<meta http-equiv="refresh" content="0;URL=creerSession.php?nom='.$nom.'">';
