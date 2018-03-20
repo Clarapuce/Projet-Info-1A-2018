@@ -4,7 +4,7 @@ include('header.php');
     //$MaRequete='INSERT INTO FORMCOURT (id_perso) VALUES('.$_POST['id_perso'].');';
     $question=array('maison','lieu_naissance','nom_naissance','bois_baguette',
     'contenu_baguette','animal','sante','niveau_scolaire','patronus','statut',
-    'freres_soeurs','peau','taille','poids','yeux','couleur_cheveux','coupe','objectif[]',
+    'freres_soeurs','peau','taille','poids','yeux','couleur_cheveux','coupe','objectif',
     'Rapport à autrui','Manière de penser','Ouverture',
     'Habitudes','Nature','Stratégie','Confiance en soi',
     'Anxiété','Influence du regard des autres','peur','hobby');
