@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mar. 20 mars 2018 à 16:17
+-- Généré le :  mar. 20 mars 2018 à 17:12
 -- Version du serveur :  10.1.25-MariaDB
 -- Version de PHP :  5.6.31
 
@@ -52,15 +52,15 @@ CREATE TABLE `formcourt` (
   `precisions` text NOT NULL,
   `objectif` varchar(30) NOT NULL,
   `objectif_autre` int(11) NOT NULL,
-  `Rapport à autrui` int(11) NOT NULL,
-  `Manière de penser` int(11) NOT NULL,
+  `Rapport_a_autrui` int(11) NOT NULL,
+  `Maniere_de_penser` int(11) NOT NULL,
   `Ouverture` int(11) NOT NULL,
   `Habitudes` int(11) NOT NULL,
   `Nature` int(11) NOT NULL,
   `Stratégie` int(11) NOT NULL,
-  `Confiance en soi` int(11) NOT NULL,
+  `Confiance_en_soi` int(11) NOT NULL,
   `Anxiété` int(11) NOT NULL,
-  `Influence du regard des autres` int(11) NOT NULL,
+  `Influence_du_regard_des_autres` int(11) NOT NULL,
   `peur` varchar(30) NOT NULL,
   `peur_autre` text NOT NULL,
   `hobby` varchar(30) NOT NULL,
@@ -71,8 +71,8 @@ CREATE TABLE `formcourt` (
 -- Déchargement des données de la table `formcourt`
 --
 
-INSERT INTO `formcourt` (`id_court`, `id_perso`, `maison`, `lieu_naissance`, `nom_naissance`, `bois_baguette`, `contenu_baguette`, `animal`, `sante`, `niveau_scolaire`, `patronus`, `statut`, `freres_soeurs`, `peau`, `taille`, `poids`, `yeux`, `couleur_cheveux`, `coupe`, `particularite`, `precisions`, `objectif`, `objectif_autre`, `Rapport à autrui`, `Manière de penser`, `Ouverture`, `Habitudes`, `Nature`, `Stratégie`, `Confiance en soi`, `Anxiété`, `Influence du regard des autres`, `peur`, `peur_autre`, `hobby`, `hobby_autre`) VALUES
-(1, '1', 'Serdaigle', 'Ville', 'Londres', 'Chêne', 'Plume de Phénix', 'Rat', 1, 3, 'Lapin', 'Né-Moldu', 10, 'Blanc', 'Petit', '1m52', 'Noisette', 'Autre', 'Cheveux blancs', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '');
+INSERT INTO `formcourt` (`id_court`, `id_perso`, `maison`, `lieu_naissance`, `nom_naissance`, `bois_baguette`, `contenu_baguette`, `animal`, `sante`, `niveau_scolaire`, `patronus`, `statut`, `freres_soeurs`, `peau`, `taille`, `poids`, `yeux`, `couleur_cheveux`, `coupe`, `particularite`, `precisions`, `objectif`, `objectif_autre`, `Rapport_a_autrui`, `Maniere_de_penser`, `Ouverture`, `Habitudes`, `Nature`, `Stratégie`, `Confiance_en_soi`, `Anxiété`, `Influence_du_regard_des_autres`, `peur`, `peur_autre`, `hobby`, `hobby_autre`) VALUES
+(1, '1', 'Serdaigle', 'Campagne', 'vds<d', 'Saule', 'Ventricule de dragon', 'Hiboux', 3, 2, 'vds<v', 'Né-Moldu', 1, 'vds<v', 'vds<v', 'vd<v', 'Bleus', 'Brun', 'vd<v', '', '', '', 0, 0, 0, 2, 3, 2, 3, 2, 3, 2, '', '', '', '');
 
 --
 -- Index pour les tables déchargées

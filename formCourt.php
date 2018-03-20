@@ -259,32 +259,32 @@ require("connect.php");
                         <div class="row">
                         <legend class="col-form-label col-sm-3 pt-0">Objectifs de vie</legend>
                             <div class="col-sm-4">
-                                <div class="form-check form-check-inline"   >
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" required name="objectif" value="Amitié" >
+                                <div class="form-check form-check-inline" required name="objectif"  >
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"  value="Amitié" >
                                     <label class="form-check-label" for="inlineCheckbox1">Amitié</label>
                                 </div>
-                                <div class="form-check form-check-inline"   >
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" required name="objectif" value="Savoir" >
+                                <div class="form-check form-check-inline"  required name="objectif" >
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"  value="Savoir" >
                                     <label class="form-check-label" for="inlineCheckbox1">Savoir</label>
                                 </div>
-                                <div class="form-check form-check-inline"   >
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" required name="objectif"  value="Pouvoir" >
+                                <div class="form-check form-check-inline"  required name="objectif" >
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"   value="Pouvoir" >
                                     <label class="form-check-label" for="inlineCheckbox1">Pouvoir</label>
                                 </div>
-                                <div class="form-check form-check-inline"   >
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"  required name="objectif" value="Aventure" >
+                                <div class="form-check form-check-inline"  required name="objectif" >
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"   value="Aventure" >
                                     <label class="form-check-label" for="inlineCheckbox1">Aventure</label>
                                 </div>
-                                <div class="form-check form-check-inline"   >
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" required name="objectif"  value="Realisation de soi" >
+                                <div class="form-check form-check-inline"  required name="objectif" >
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"   value="Realisation de soi" >
                                     <label class="form-check-label" for="inlineCheckbox1">Realisation de soi</label>
                                 </div>
-                                <div class="form-check form-check-inline"   >
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" required name="objectif"  value="Richesse">
+                                <div class="form-check form-check-inline"  required name="objectif" >
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"   value="Richesse">
                                     <label class="form-check-label" for="inlineCheckbox1">Richesse</label>
                                 </div>
-                                <div class="form-check form-check-inline"   >
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" required name="objectif"  value="Autre">
+                                <div class="form-check form-check-inline" required name="objectif"  >
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"   value="Autre">
                                     <label class="form-check-label" for="inlineCheckbox1">Autre</label>
                                 </div>
                             </div>
@@ -298,7 +298,7 @@ require("connect.php");
                     </fieldset>
                     <?php 
                     
-                    $theme=array("Rapport à autrui","Manière de penser","Ouverture","Habitudes","Nature","Stratégie","Confiance en soi", "Anxiété", "Influence du regard des autres");
+                    $theme=array("Rapport_à_autrui","Manière de penser","Ouverture","Habitudes","Nature","Stratégie","Confiance en soi", "Anxiété", "Influence du regard des autres");
                     $valmin=array("Introverti","Pragmatique","Rigide", "Reste sur ses acquis", "Rationnel"," Organisé", "Peu confiant", "Calme", "Peu influençable");
                     $valmax=array("Extraverti","Créatif", "Ouvert d'esprit", "Innove","Emotionnel", "Flexible", "Très confiant", "Stressé", "Influençable");
                     for ($i =0; $i < 9; $i ++)
