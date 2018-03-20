@@ -7,7 +7,7 @@ $MonRs = $BDD -> query( $MaRequete );
 $retour = 1;
 ?>
 <form method="post" action="creerPerso_exec.php" id="creerPerso" enctype="multipart/form-data">
-<div class="container">
+<div class="container"><div class="largeur">
 <div class="alignement">
 <h2>Création de personnage</h2>
 <table>
@@ -46,7 +46,7 @@ $retour = 1;
     </tr>
 
     <tr>
-        <td><br /><label for="image">Image représentant votre personnage (JPG ou PNG | max. 1 Mo) :</label></td>
+        <td><br /><label for="image">Image représentant votre personnage (JPG ou PNG) :</label></td>
         <td><br /><input name="MAX_FILE_SIZE" size="1048576" type="hidden"><input type="file" name="image" id="image"/></td>
     </tr>
 </table>
@@ -54,7 +54,7 @@ $retour = 1;
 <br/>
 <input type="submit" value="Valider">
 </div>
-</div>
+</div></div>
 </form>
 
 <?php

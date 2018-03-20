@@ -5,8 +5,9 @@ table{border-collapse: separate; border-spacing: 10px 8px;}
 table.table_accueil{border-collapse:collapse!important; border-spacing:0px!important;}
 table.liste_sessions{margin-left:10%}
 h4{text-align:center;font-family:'Dancing Script';font-size:44px;text-shadow:1px 0px 0px white;}
-h2{text-align:center;font-family:'Dancing Script';font-size:54px;text-shadow:1px 0px 0px white;}
+h2{margin-left:50px;font-family:'Dancing Script';font-size:54px;text-shadow:1px 0px 0px white;}
 
+.largeur{max-width:900px;}
 a:link,a:visited{color : rgb(99, 99, 99);}
 a:hover 
 {
@@ -163,9 +164,12 @@ color:gray;z-index:1;}
 {
     margin-right: auto;
     margin-left: auto;
-}
 
+}
+.alert, .alert-secondary{max-width:700px;margin-right:auto;margin-left:auto;}
 .card-header{height:80px;overflow:auto;}
+
+.profil{margin-left:20%}
 @media all and (max-width: 740px) {
     .header{height:60px;}
     .h_responsive{ display:none;}

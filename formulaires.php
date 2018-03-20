@@ -15,8 +15,8 @@ echo '
     <p><em>Créée par '.$auteur.'</em></p>
     <div class="centre">
     </br>';
-    
-    $MaRequete="SELECT * FROM PERSO WHERE session_perso= '".$id."'";
+    /**BOUTON STATS */
+    $MaRequete="SELECT * FROM PERSO WHERE session = '".$id."'";
     $MonRs = $BDD -> query( $MaRequete );
     while ($Tuple = $MonRs ->fetch() )
     {
