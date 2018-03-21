@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mar. 20 mars 2018 à 17:12
+-- Généré le :  mer. 21 mars 2018 à 19:10
 -- Version du serveur :  10.1.25-MariaDB
 -- Version de PHP :  5.6.31
 
@@ -52,27 +52,29 @@ CREATE TABLE `formcourt` (
   `precisions` text NOT NULL,
   `objectif` varchar(30) NOT NULL,
   `objectif_autre` int(11) NOT NULL,
-  `Rapport_a_autrui` int(11) NOT NULL,
-  `Maniere_de_penser` int(11) NOT NULL,
-  `Ouverture` int(11) NOT NULL,
-  `Habitudes` int(11) NOT NULL,
-  `Nature` int(11) NOT NULL,
-  `Stratégie` int(11) NOT NULL,
-  `Confiance_en_soi` int(11) NOT NULL,
-  `Anxiété` int(11) NOT NULL,
-  `Influence_du_regard_des_autres` int(11) NOT NULL,
+  `rapport_autrui` int(11) NOT NULL,
+  `maniere_de_penser` int(11) NOT NULL,
+  `ouverture` int(11) NOT NULL,
+  `habitudes` int(11) NOT NULL,
+  `nature` int(11) NOT NULL,
+  `strategie` int(11) NOT NULL,
+  `confiance` int(11) NOT NULL,
+  `anxiete` int(11) NOT NULL,
+  `influence` int(11) NOT NULL,
   `peur` varchar(30) NOT NULL,
   `peur_autre` text NOT NULL,
   `hobby` varchar(30) NOT NULL,
-  `hobby_autre` text NOT NULL
+  `hobby_autre` text NOT NULL,
+  `talent` varchar(70) NOT NULL,
+  `bete_noire` varchar(70) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `formcourt`
 --
 
-INSERT INTO `formcourt` (`id_court`, `id_perso`, `maison`, `lieu_naissance`, `nom_naissance`, `bois_baguette`, `contenu_baguette`, `animal`, `sante`, `niveau_scolaire`, `patronus`, `statut`, `freres_soeurs`, `peau`, `taille`, `poids`, `yeux`, `couleur_cheveux`, `coupe`, `particularite`, `precisions`, `objectif`, `objectif_autre`, `Rapport_a_autrui`, `Maniere_de_penser`, `Ouverture`, `Habitudes`, `Nature`, `Stratégie`, `Confiance_en_soi`, `Anxiété`, `Influence_du_regard_des_autres`, `peur`, `peur_autre`, `hobby`, `hobby_autre`) VALUES
-(1, '1', 'Serdaigle', 'Campagne', 'vds<d', 'Saule', 'Ventricule de dragon', 'Hiboux', 3, 2, 'vds<v', 'Né-Moldu', 1, 'vds<v', 'vds<v', 'vd<v', 'Bleus', 'Brun', 'vd<v', '', '', '', 0, 0, 0, 2, 3, 2, 3, 2, 3, 2, '', '', '', '');
+INSERT INTO `formcourt` (`id_court`, `id_perso`, `maison`, `lieu_naissance`, `nom_naissance`, `bois_baguette`, `contenu_baguette`, `animal`, `sante`, `niveau_scolaire`, `patronus`, `statut`, `freres_soeurs`, `peau`, `taille`, `poids`, `yeux`, `couleur_cheveux`, `coupe`, `particularite`, `precisions`, `objectif`, `objectif_autre`, `rapport_autrui`, `maniere_de_penser`, `ouverture`, `habitudes`, `nature`, `strategie`, `confiance`, `anxiete`, `influence`, `peur`, `peur_autre`, `hobby`, `hobby_autre`, `talent`, `bete_noire`) VALUES
+(3, '1', 'Serdaigle', 'Ville', 'jkyrdj', 'Saule', 'Ventricule de dragon', 'Rat', 2, 1, 'jtrdj', 'Né-Moldu', 1, 'jtrds', 'jtrd', 'jhtd', 'Bleus', 'Brun', 'jtdj', 'Cicatrices', 'puteputeputepute', 'Aventure', 0, 2, 2, 1, 2, 3, 2, 1, 2, 1, 'La violence', 'lalalalala', 'Lecture', 'leuleuleuleu', 'jtd', 'hgst');
 
 --
 -- Index pour les tables déchargées
@@ -92,7 +94,7 @@ ALTER TABLE `formcourt`
 -- AUTO_INCREMENT pour la table `formcourt`
 --
 ALTER TABLE `formcourt`
-  MODIFY `id_court` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;
+  MODIFY `id_court` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
