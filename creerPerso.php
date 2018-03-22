@@ -7,7 +7,7 @@ $MonRs = $BDD -> query( $MaRequete );
 $retour = 1;
 ?>
 <form method="post" action="creerPerso_exec.php" id="creerPerso" enctype="multipart/form-data">
-<div class="container"><div class="largeur">
+<div class="container"><div class="largeur"><div class="fond">
 <div class="alignement">
 <h2>Création de personnage</h2>
 <table>
@@ -53,7 +53,7 @@ $retour = 1;
 
 <br/>
 <input type="submit" value="Valider">
-</div>
+</div></div>
 </div></div>
 </form>
 

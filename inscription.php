@@ -5,7 +5,7 @@ if (!empty($_SESSION['pseudo'])) erreur(ERR_IS_CO);
 ?>
 
 <form method="post" action="inscription_exec.php">
-<div class="container">
+<div class="container"><div class="fond">
 <div class="alignement">
 <h2>Inscription</h2>
 <table>
@@ -28,7 +28,7 @@ if (!empty($_SESSION['pseudo'])) erreur(ERR_IS_CO);
 <br/>
 <input type="submit" value="Valider"> <input type="reset" value="Annuler">
 </div>
-</div>
+</div></div>
 </form>
 
 <?php 

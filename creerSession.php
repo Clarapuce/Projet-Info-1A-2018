@@ -5,7 +5,7 @@ if (!isset($_SESSION['statutStaff'])) erreur(NOT_CO);
 else if ($_SESSION['statutStaff']!=11) erreur(BAD_STATUT);
 ?>
 <form method="post" action="creerSession_exec.php" id="creerSession">
-<div class="container">
+<div class="container"><div class="fond"><div class="largeur">
 <div class="alignement">
 <h2>Création de session</h2>
 <table>
@@ -16,7 +16,7 @@ else if ($_SESSION['statutStaff']!=11) erreur(BAD_STATUT);
         
     <tr>
         <td><br/>Description : </td>
-        <td><br/><textarea rows="4" cols="40" name="description" form="creerSession"><?php if (isset($_GET['description'])) echo $_GET['description'];?></textarea><br/></td>
+        <td><br/><textarea rows="4" cols="20" name="description" form="creerSession"><?php if (isset($_GET['description'])) echo $_GET['description'];?></textarea><br/></td>
     </tr>
 
     <tr>
@@ -29,8 +29,8 @@ else if ($_SESSION['statutStaff']!=11) erreur(BAD_STATUT);
 
 <br/>
 <input type="submit" value="Valider"> <input type="reset" value="Annuler">
-</div>
-</div>
+</div></div>
+</div></div>
 </form>
 
 <?php

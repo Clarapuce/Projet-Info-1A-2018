@@ -6,7 +6,7 @@ $MaRequete="SELECT * FROM SESSIONS Order By nom_session";
 $MonRs = $BDD -> query( $MaRequete );
 $retour = 1;
 echo '
-<div class="container">
+<div class="container"><div class="fond">
 <div class="alignement">
 <div class="bienvenue">Bienvenue !</div>
 
@@ -72,7 +72,7 @@ Saraceni tamen nec amici nobis umquam nec hostes optandi, ultro citroque discurs
         else{$retour ++;}
         
     }
-echo '</table></div>';   
+echo '</table></div></div>';   
 
 
 include("footer.php");

@@ -6,7 +6,7 @@ $auteur=$_SESSION['pseudo'];
 
 
 echo '
-<div class="container">
+<div class="container"><div class="fond">
 Vous êtes connecté en tant que '.$auteur.'. <br /><br />
 <div class="alert alert-secondary" role="alert">
     <div class="card">
@@ -45,12 +45,11 @@ Vous êtes connecté en tant que '.$auteur.'. <br /><br />
         </div>';
         
     }
-echo '</table></div></div></div>';
+echo '</table></div></div>';
 
 if ($_SESSION['statutStaff']==11)
 {
     echo '
-    <div class="container">
     <div class="alert alert-secondary" role="alert">
         <div class="card">
             <div class="card-body">
@@ -82,7 +81,11 @@ if ($_SESSION['statutStaff']==11)
             </div>';
             
         }
-    echo '</table></div></div></div>';  
+    echo '</table></div></div></div></div>';  
+}
+else
+{
+    echo '</div></div>';
 }
 
 include("footer.php");

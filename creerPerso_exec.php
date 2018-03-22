@@ -53,7 +53,7 @@ else if ($image_sizes[0] > 500 OR $image_sizes[1] > 500)
     echo '<meta http-equiv="refresh" content="0;URL=creerPerso.php?nom='.$nom.'&prenom='.$prenom.'">';
 }**/
 
-$MaRequete="INSERT INTO perso (auteur,nom,prenom,image,age,type,session)
+$MaRequete="INSERT INTO perso (auteur,nom,prenom,image,age,type,session_perso)
 VALUES('".$_SESSION['pseudo']."','".$nom."','".$prenom."','".$file."','".$age."',
 '".$type."','".$session."');";
 $MonRs = $BDD -> query( $MaRequete );

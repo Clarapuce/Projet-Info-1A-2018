@@ -4,7 +4,7 @@ if (!empty($_SESSION['pseudo'])) erreur(ERR_IS_CO);
 ?>
 
 <form method="post" action="connexion_exec.php">
-<div class="container">
+<div class="container"><div class="fond">
 <div class="alignement">
 <h2>Connexion</h2>
 <table>
@@ -24,7 +24,7 @@ if (!empty($_SESSION['pseudo'])) erreur(ERR_IS_CO);
 <br /><br />
 <a href="inscription.php">S'inscrire ?</a>
 </div>
-</div>
+</div></div>
 </form>
 
 <?php 

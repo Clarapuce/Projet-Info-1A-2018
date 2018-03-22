@@ -4,7 +4,7 @@ require("connect.php");
 $id=$_GET['id'];
 $auteur=$_GET['auteur'];
 echo '
-<div class="container">
+<div class="container"><div class="fond">
 <div class="alert alert-secondary" role="alert">
     <div class="card">
         <div class="card-body">
@@ -12,37 +12,39 @@ echo '
         <p class ="h2">'.$id.' </p> 
         </div>
     </div>
-    <p><em>Créée par '.$auteur.'</em>   - accéder aux statistiques</p>
+    <p><em>Créée par '.$auteur.'</em>   - <a href="stat.php">accéder aux statistiques</a></p>
     <div class="centre">
     </br>';
     /**BOUTON STATS */
-    $MaRequete="SELECT * FROM PERSO WHERE session = '".$id."'";
+    $MaRequete="SELECT * FROM PERSO WHERE session_perso = '".$id."'";
     $MonRs = $BDD -> query( $MaRequete );
     while ($Tuple = $MonRs ->fetch() )
     {
         echo '
-        <div class="card text-white bg-light mb-3" style="max-width: 34rem;">
+        <div class="card text-white bg-light mb-3" style="max-width: 34rem;max-height:">
             <table class="table">
                 <tr>
+                <div class="card-body">
                     <td>
-                    <div class="card-body">
-                    <a href="perso.php?id='.$Tuple["id_perso"].'&auteur='.$Tuple["auteur"].'">
-                        <h3>'.$Tuple["prenom"].' '.$Tuple["nom"].
-                        '</h3>
-                    </a>
-                    <div class="persoElemt">'.$Tuple["age"].' ans - Créé par '.$Tuple["auteur"].'</div>
+                        <a href="perso.php?id='.$Tuple["id_perso"].'&auteur='.$Tuple["auteur"].'">
+                            <h3>'.$Tuple["prenom"].' '.$Tuple["nom"].'</h3>
+                        </a>
+                        <div class="persoElemt">
+                            '.$Tuple["age"].' ans - Créé par '.$Tuple["auteur"].'
+                        </div>
                     </td>
                     <td>
-                    <div class="persoType">'.$Tuple["type"].'</div>
-                    <img class="persoImage" src="image/'.$Tuple["image"].'"/>
-                        
-                    </div>
+                        <div class="persoType">
+                            '.$Tuple["type"].'
+                        </div>
+                        <img class="persoImage" src="image/'.$Tuple["image"].'"/>
                     </td>
+                </div>
                 </tr>
             </table>
         </div>';
         
 }
-echo '</table></div></div></div>';
+echo '</table></div></div></div></div>';
 include("footer.php");
 ?>

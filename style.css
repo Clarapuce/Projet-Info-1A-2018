@@ -1,207 +1,372 @@
-body{background-color:#dadada;}
-p{margin-left:15px;margin-right:15px;}
+body {
+background-color:rgba(255,255,255,0.4);
+background-image:url(fonds/fond.png);
+background-attachment:fixed
+}
 
-table{border-collapse: separate; border-spacing: 10px 8px;}
-table.table_accueil{border-collapse:collapse!important; border-spacing:0px!important;}
-table.liste_sessions{margin-left:10%}
-h4{text-align:center;font-family:'Dancing Script';font-size:44px;text-shadow:1px 0px 0px white;}
-h2{margin-left:50px;font-family:'Dancing Script';font-size:54px;text-shadow:1px 0px 0px white;}
+p {
+margin-left:15px;
+margin-right:15px
+}
 
-.largeur{max-width:900px;}
-a:link,a:visited{color : rgb(99, 99, 99);}
-a:hover 
-{
-    color: white!important;
-    text-decoration: none;
-    text-shadow : white 1px 1px 4px;
+table {
+border-collapse:separate;
+border-spacing:10px 8px
+}
+table.table_accueil {
+border-collapse:collapse!important;
+border-spacing:0!important
+}
+table.liste_sessions {
+margin-left:10%
+}
+
+h4 {
+text-align:center;
+font-family:'Dancing Script';
+font-size:44px;
+text-shadow:2px 0 0 #fafafac9
+}
+h2 {
+margin-left:50px;
+font-family:'Dancing Script';
+font-size:54px;
+text-shadow:2px 0 0 #fafafac9
+}
+
+.largeur {
+max-width:900px
+}
+
+.fond {
+border-radius:0 30px 30px 0;
+background-color:rgba(255,255,255,0.5);
+width:100%;
+padding:40px
+}
+
+.alignement {
+margin-left:25%
+}
+
+a:link,a:visited {
+color:#444;
+transition:.3s all;
+-webkit-transition:.3s all;
+-o-transition:.3s all;
+-moz-transition:.3s all
+}
+a:hover {
+color:#fff!important;
+text-decoration:none;
+text-shadow:#fff 1px 1px 4px
 }
 a:active {
-    color: white;
-    text-decoration: none;
-}
-.ascenseur{position:fixed;top:350px;right:5px;z-index:920}
-.header{
-    position:fixed; z-index:999;
-    top:0px;
-    background-color:#444444;
-    min-height:20px;
-    width:100%;
-    padding:5px;
-    text-align:center;
+color:#fff;
+text-decoration:none
 }
 
-.liens1{
-    color:#fafafa!important;
-    padding-left:10px;
-}
-.liens2{
-    color:rgb(180, 180, 180)!important;
-    padding-left:10px;
-}
-.liens3{
-    color:rgb(133, 128, 128)!important;
-    padding-left:10px;
+.ascenseur {
+position:fixed;
+top:350px;
+right:5px;
+z-index:920
 }
 
-.h_responsive_br{ display:none;color:rgb(180, 180, 180);padding-left:15px;}
-.h_responsive{display:inline;padding-left:17px;}
+.header {
+position:fixed;
+z-index:999;
+top:0;
+background-color:#444;
+min-height:20px;
+width:100%;
+padding:5px;
+text-align:center
+}
+
+.liens1 {
+color:#fafafa!important;
+padding-left:10px
+}
+.liens2 {
+color:#b4b4b4!important;
+padding-left:10px
+}
+.liens3 {
+color:#858080!important;
+padding-left:10px
+}
+
+.h_responsive_br {
+display:none;
+color:#b4b4b4;
+padding-left:15px
+}
+.h_responsive {
+display:inline;
+padding-left:17px
+}
 
 .dropdown {
-    position: relative;
-    display: inline-block;
+position:relative;
+display:inline-block
 }
 .dropdown-content {
-    display: none;
-    position: relative; min-width:160px;
-    overflow: auto; background-color:#444444;
+display:none;
+position:relative;
+min-width:160px;
+overflow:auto;
+background-color:#444
 }
 .dropdown-content a {
-    text-decoration: none;
-    display: block;
+text-decoration:none;
+display:block
 }
-.show {display:block;}
 
-.alignement{margin-left:25%;}
-
-.bienvenue{
-    left:20%;
-    position:relative;
-    top:18px;
-    font-size:20px;
-color:gray;z-index:1;}
-
-.staff{
-    height:0;
-    position:relative;
-    left:-35px;}
-.imgstaff{    
-    border-radius:100px;
-    -moz-border-radius:100px;
-    -webkit-border-radius:100px;
-    height:50px;
+.show {
+display:block
 }
-.rondstaff{
-    height:50px;width:50px;
-    margin:10px;}
-.rondstaff > div{visibility:hidden;}
-.rondstaff:hover > div{
-    visibility:visible;
-    background-color:#dadada;
-    width:100px;height:70px;padding:10px;
-    position:relative; top:-40px;
-    left:60px;border: 1px solid gray;transition:0.2s all;-webkit-transition:0.2s all;-o-transition:0.2s all;-moz-transition:0.2s all;}
 
-.presentation_container{font-size:12px;
-    width:500px;height:100px;overflow:auto;
-    border:1px solid gray;text-align:justify;
-    padding-left:30px; background-color: gray;
+.bienvenue {
+left:20%;
+position:relative;
+font-weight:600;
+top:18px;
+font-size:20px;
+color:#444;
+z-index:1
 }
-.presentation{
-    width:450px;height:65px;overflow:auto;
-    background-image:url('http://image.noelshack.com/fichiers-md/2018/12/4/1521707777-test.png');background-color: #dadada;
-    }
 
-.contexte{font-size:12px;text-align:justify;
-    border:1px solid gray;width:200px;
-    height:100px;padding:15px 20px 15px 30px;overflow:auto;
-    background-image:url('http://image.noelshack.com/fichiers-md/2018/12/4/1521707777-test.png');}
-
-.voirperso{border:1px solid gray;
-    background-image:url('http://image.noelshack.com/fichiers/2018/02/7/1515932888-pattern2.jpg');width:297px;height:30px;
-    text-align:center;padding:5px;letter-spacing:0px;transition: 0.3s all;-webkit-transition: 0.3s all;-o-transition: 0.3s all;-moz-transition: 0.3s all}
-.voirperso:hover{
-    background-image:url('http://image.noelshack.com/fichiers/2018/02/7/1515931669-pattern.jpg');color:white!important;letter-spacing:1px;}
-
-.nouveautes{font-size:12px;overflow:auto;
-    width:297px;border:1px solid gray;
-    border-top:none;
-    background-image:url('http://image.noelshack.com/fichiers-md/2018/12/4/1521707777-test.png');
-    padding:10px 20px 10px 20px;height:70px;}
-
-
-.description
-{
-    font-size : 12px;
-    margin : -10px;
-    text-align: justify;
-    color: rgb(65, 65, 65);
-    height:100px; overflow:auto;
+.staff {
+height:0;
+position:relative;
+left:-35px
 }
-    
-.auteur
-{
-    font-size : 16px;
-    font-style: italic;
-    text-align: right;
-    margin-top: -10px;
-    margin-bottom: -10px;
-    color: grey;
+.imgstaff {
+border-radius:100px;
+-moz-border-radius:100px;
+-webkit-border-radius:100px;
+height:50px
 }
-/* To do à la fin: Changer police "Session, rajouter image en fond */
+.rondstaff {
+height:50px;
+width:50px;
+margin:10px
+}
+.rondstaff > div {
+visibility:hidden
+}
+.rondstaff:hover > div {
+visibility:visible;
+background-color:#dadada;
+width:100px;
+height:70px;
+padding:10px;
+position:relative;
+top:-40px;
+left:40px;
+border:solid #444;
+border-width:3px 1px;
+transition:.2s all;
+-webkit-transition:.2s all;
+-o-transition:.2s all;
+-moz-transition:.2s all;
+border-radius:20px;
+font-size:14px
+}
 
-.footer
-{
-    text-align:center;
-    padding:40px;
-    font-family:'Trebuchet MS';
-    font-size:12px;
-    color:#444444;
+.presentation_container {
+font-size:12px;
+width:500px;
+height:100px;
+overflow:auto;
+border:1px solid #444;
+text-align:justify;
+padding-left:30px;
+background-color:#444
+}
+.presentation {
+width:450px;
+height:65px;
+overflow:auto;
+background-image:url(http://image.noelshack.com/fichiers-md/2018/12/4/1521707777-test.png);
+background-color:#dadada81
+}
+
+.contexte {
+font-size:12px;
+text-align:justify;
+border:1px solid #444;
+width:200px;
+height:100px;
+padding:15px 20px 15px 30px;
+overflow:auto;
+background-image:url(http://image.noelshack.com/fichiers-md/2018/12/4/1521707777-test.png);
+background-color:#dadada81
+}
+
+.voirperso {
+border:1px solid #444;
+background-image:url(http://image.noelshack.com/fichiers/2018/02/7/1515932888-pattern2.jpg);
+width:297px;
+height:30px;
+text-align:center;
+padding:5px;
+letter-spacing:0;
+transition:.3s all;
+-webkit-transition:.3s all;
+-o-transition:.3s all;
+-moz-transition:.3s all
+}
+.voirperso:hover {
+background-image:url(http://image.noelshack.com/fichiers/2018/02/7/1515931669-pattern.jpg);
+color:#fff!important;
+letter-spacing:1px
+}
+
+.nouveautes {
+font-size:12px;
+overflow:auto;
+width:297px;
+border:1px solid #444;
+border-top:none;
+background-image:url(http://image.noelshack.com/fichiers-md/2018/12/4/1521707777-test.png);
+padding:10px 20px;
+height:70px;
+background-color:#dadada81
+}
+
+.description {
+font-size:12px;
+margin:-10px;
+text-align:justify;
+color:#414141;
+height:100px;
+overflow:auto
+}
+
+.auteur {
+font-size:16px;
+font-style:italic;
+text-align:right;
+margin-top:-10px;
+margin-bottom:-10px;
+color:grey
+}
+
+.footer {
+text-align:center;
+padding:40px;
+font-family:'Trebuchet MS';
+font-size:12px;
+color:#444
 }
 
 .persoImage {
-    border-radius: 7px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    border: 4px solid white;
-    box-shadow: 1px 1px 10px #555;
-    width: 100px;
-    height: 100px;
+border-radius:7px;
+-webkit-border-radius:7px;
+-moz-border-radius:7px;
+border:4px solid #fff;
+box-shadow:1px 1px 10px #555;
+width:100px;
+height:100px
+}
+.persoElemt {
+color:#414141
+}
+.persoType {
+color:#414141;
+font-style:italic;
+font-weight:700;
+margin-top:-25px
 }
 
-.persoElemt
-{
-    color:rgb(65, 65, 65);
+.descr_session {
+color:#414141;
+text-align:justify;
+font-size:13px
 }
-.persoType
-{
-    color: rgb(65, 65, 65);
-    font-style: italic ;
-    font-weight: bold;
-    margin-top:-25px;
+
+.card {
+margin-right:auto;
+margin-left:auto
 }
-.descr_session{color:rgb(65,65,65);text-align:justify;font-size:13px;}
-.card
-{
-    margin-right: auto;
-    margin-left: auto;
 
+.alert,.alert-secondary {
+max-width:700px;
+margin-right:auto;
+margin-left:auto
 }
-.alert, .alert-secondary{max-width:700px;margin-right:auto;margin-left:auto;}
-.card-header{height:80px;overflow:auto;}
 
-.profil{margin-left:20%}
+.card-header {
+height:80px;
+overflow:auto
+}
 
-.stats_bouton{width:140px;height:80px;background-color:seagreen;
-    padding: 26px;
-    border: 1px solid #bbb;
-    background: #F7F7F7;
-    color: #777;
-    box-shadow: 0 0 0 16px #fff inset,
-                0 0 0 17px #DAD4D4 inset;}
-.stats_position{height:0;position:relative;left:300px;}
+.profil {
+margin-left:20%
+}
+
 @media all and (max-width: 740px) {
-    .header{height:60px;}
-    .h_responsive{ display:none;}
-    .h_responsive_br{ display:inline;}
-    .h_responsive_br > span { display:none;} /**l'infobulle est cachée**/
-    .h_responsive_br:hover > span { display:inline;} /**apparition de l'infobulle**/
-    .alignement{margin-left:10%;}
-    .presentation_container{width:100%;min-width:248px;}
-    .presentation{width:97%}
-    table.table_accueil{width:100%}
-    .nouveautes,.voirperso{width:100%}
-    .voirperso{font-size:11px;min-width:120px;}
-    .voirperso:hover{letter-spacing:0px;}
-    .contexte{width:100%}
-    table.liste_sessions{margin-left:15px;}
+    .header {
+    height:60px
+    }
+
+    .h_responsive {
+    display:none
+    }
+
+    .h_responsive_br {
+    display:inline
+    }
+
+    .h_responsive_br > span {
+    display:none
+    }
+
+    .h_responsive_br:hover > span {
+    display:inline
+    }
+
+    .alignement {
+    margin-left:10%
+    }
+
+    .presentation_container {
+    width:100%;
+    min-width:248px
+    }
+
+    .presentation {
+    width:97%
+    }
+
+    table.table_accueil {
+    width:100%
+    }
+
+    .nouveautes,.voirperso {
+    width:100%
+    }
+
+    .voirperso {
+    font-size:11px;
+    min-width:120px
+    }
+
+    .voirperso:hover {
+    letter-spacing:0
+    }
+
+    .contexte {
+    width:100%
+    }
+
+    table.liste_sessions {
+    margin-left:15px
+    }
+
+    .fond {
+    min-width:400px
+    }
 }
