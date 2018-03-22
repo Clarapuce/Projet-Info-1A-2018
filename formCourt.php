@@ -1,17 +1,21 @@
 <?php
 include("header.php");
 require("connect.php");
-//$MaRequete='SELECT id_perso FROM perso 
-//WHERE auteur=='.$_POST['auteur'].'
-//AND nom='.$_POST['nom'].'
-//AND prenom='.$_POST['prenom'].';';
+$id_perso=$_GET['id_perso'];
+/*$MaRequete='SELECT id_perso FROM perso 
+            WHERE auteur='.$_POST['auteur'].'
+            AND nom='.$_POST['nom'].'
+            AND prenom='.$_POST['prenom'].';';
+$id_perso = $BDD -> query( $MaRequette );
+<?php
+            echo'<input type="hidden" name="id_perso" value='.$id_perso.' /> ';
+        ?>*/
 ?>
 <div class="container">
     <div class="jumbotron">
     
         <h1>Questionnaire de Proust</h1></br>
-        <form action = "enregistrer_formCourt.php" method ="POST">
-        <input type="hidden" name="id_perso" value=1 /> 
+        <form action = "enregistrer_form.php?id_perso=<?php echo $_GET['id_perso']?>&amp;type=court" method ="POST">
 <!--=================================================================================== -->
             <h2>GÉNÉRALITÉS</h2>
             <hr>

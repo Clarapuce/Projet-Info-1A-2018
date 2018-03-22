@@ -3,23 +3,23 @@ include("header.php");?>
 <div class="container">
     <div class="jumbotron">
         <h1>Descriptions longues</h1></br>
-        <form action = "formCourt.php" method ="POST">
+        <form action = "enregistrer_form.php?id_perso=<?php echo $_GET['id_perso']?>&amp;type=long" method ="POST">
             <h2>DESCRIPTION PHYSIQUE</h2>
             <hr>
             <div class="form-group">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="physique"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required name="physique"></textarea>
             </div>
 
             <h2>DESCRIPTION MENTALE</h2>
             <hr>
             <div class="form-group">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mental"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required name="mental"></textarea>
             </div>
 
             <h2>HISTOIRE</h2>
             <hr>
             <div class="form-group">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="histoire"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required name="histoire"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Envoyer</button>
         </form>

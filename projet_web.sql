@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 12 mars 2018 à 12:45
+-- Généré le :  jeu. 22 mars 2018 à 18:36
 -- Version du serveur :  10.1.25-MariaDB
 -- Version de PHP :  5.6.31
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `projet web`
+-- Base de données :  `projet_web`
 --
 
 -- --------------------------------------------------------
@@ -46,7 +46,34 @@ CREATE TABLE `perso` (
 INSERT INTO `perso` (`id_perso`, `auteur`, `nom`, `prenom`, `image`, `age`, `type`, `session_perso`) VALUES
 (3, 'user1', 'Labeille', 'Maya', 'images.duckduckgo.com.png', 10, 'Élève', 'Session 1'),
 (4, 'user2', 'Lourson', 'Winnie', 'images.duckduckgo.com.jpg', 11, 'Élève ', 'Session 1'),
-(5, 'user1', 'Rouveur', 'Samumu', 'Samumu.jpg', 9, 'Élève', 'Session 1');
+(5, 'user1', 'Rouveur', 'Samumu', 'Samumu.jpg', 9, 'Élève', 'Session 1'),
+(6, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(7, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(8, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(9, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(10, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(11, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(12, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(13, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(14, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(15, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(16, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(17, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(18, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(19, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(20, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(21, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(22, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(23, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(24, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(25, 'Clarapuce', 'Durand', 'Eva', 'Koala.jpg', 15, 'Élève', 'Session 2'),
+(26, 'Clarapuce', 'Mathieu', 'Mireille', 'Desert.jpg', 97, 'Professeur', 'Session 3'),
+(27, 'Clarapuce', 'Mathieu', 'Mireille', 'Desert.jpg', 97, 'Professeur', 'Session 3'),
+(28, 'Clarapuce', 'Mathieu', 'Mireille', 'Desert.jpg', 97, 'Professeur', 'Session 3'),
+(29, 'Clarapuce', 'Mathieu', 'Mireille', 'Desert.jpg', 97, 'Professeur', 'Session 3'),
+(30, 'Clarapuce', 'Ohnonjtedirien', 'Noemie', 'Koala.jpg', 26, 'Élève', 'Session 4'),
+(31, 'Clarapuce', 'numero1', 'pute', 'Jellyfish.jpg', 12, 'Élève', 'Session 4'),
+(32, 'Clarapuce', 'Sorita', 'Clara', '11237891.png', 21, 'Élève', 'Session 4');
 
 -- --------------------------------------------------------
 
@@ -90,6 +117,7 @@ CREATE TABLE `utilisateurs` (
 
 INSERT INTO `utilisateurs` (`pseudo`, `mdp`, `statutStaff`) VALUES
 ('Admin', 'admin', 1),
+('Clarapuce', 'opencat30', 0),
 ('user1', 'user1', 0),
 ('user2', 'user2', 0);
 
@@ -123,7 +151,7 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `perso`
 --
 ALTER TABLE `perso`
-  MODIFY `id_perso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;COMMIT;
+  MODIFY `id_perso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
