@@ -76,6 +76,8 @@ color:gray;z-index:1;}
     left:-35px;}
 .imgstaff{    
     border-radius:100px;
+    -moz-border-radius:100px;
+    -webkit-border-radius:100px;
     height:50px;
 }
 .rondstaff{
@@ -87,7 +89,7 @@ color:gray;z-index:1;}
     background-color:#dadada;
     width:100px;height:70px;padding:10px;
     position:relative; top:-40px;
-    left:60px;border: 1px solid gray;transition:0.2s all;}
+    left:60px;border: 1px solid gray;transition:0.2s all;-webkit-transition:0.2s all;-o-transition:0.2s all;-moz-transition:0.2s all;}
 
 .presentation_container{font-size:12px;
     width:500px;height:100px;overflow:auto;
@@ -95,20 +97,26 @@ color:gray;z-index:1;}
     padding-left:30px; background-color: gray;
 }
 .presentation{
-    width:450px;height:65px;overflow:auto;background-color: #dadada;
+    width:450px;height:65px;overflow:auto;
+    background-image:url('http://image.noelshack.com/fichiers-md/2018/12/4/1521707777-test.png');background-color: #dadada;
     }
 
 .contexte{font-size:12px;text-align:justify;
-    border:1px solid gray;width:200px;height:100px;padding:15px 20px 15px 30px;overflow:auto;}
+    border:1px solid gray;width:200px;
+    height:100px;padding:15px 20px 15px 30px;overflow:auto;
+    background-image:url('http://image.noelshack.com/fichiers-md/2018/12/4/1521707777-test.png');}
 
-.voirperso{
+.voirperso{border:1px solid gray;
     background-image:url('http://image.noelshack.com/fichiers/2018/02/7/1515932888-pattern2.jpg');width:297px;height:30px;
-    text-align:center;padding:5px;letter-spacing:0px;transition: 0.3s all}
+    text-align:center;padding:5px;letter-spacing:0px;transition: 0.3s all;-webkit-transition: 0.3s all;-o-transition: 0.3s all;-moz-transition: 0.3s all}
 .voirperso:hover{
     background-image:url('http://image.noelshack.com/fichiers/2018/02/7/1515931669-pattern.jpg');color:white!important;letter-spacing:1px;}
 
 .nouveautes{font-size:12px;overflow:auto;
-    width:297px;border:1px solid gray;padding:10px 20px 10px 20px;height:70px;}
+    width:297px;border:1px solid gray;
+    border-top:none;
+    background-image:url('http://image.noelshack.com/fichiers-md/2018/12/4/1521707777-test.png');
+    padding:10px 20px 10px 20px;height:70px;}
 
 
 .description
@@ -142,6 +150,8 @@ color:gray;z-index:1;}
 
 .persoImage {
     border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
     border: 4px solid white;
     box-shadow: 1px 1px 10px #555;
     width: 100px;
@@ -170,6 +180,15 @@ color:gray;z-index:1;}
 .card-header{height:80px;overflow:auto;}
 
 .profil{margin-left:20%}
+
+.stats_bouton{width:140px;height:80px;background-color:seagreen;
+    padding: 26px;
+    border: 1px solid #bbb;
+    background: #F7F7F7;
+    color: #777;
+    box-shadow: 0 0 0 16px #fff inset,
+                0 0 0 17px #DAD4D4 inset;}
+.stats_position{height:0;position:relative;left:300px;}
 @media all and (max-width: 740px) {
     .header{height:60px;}
     .h_responsive{ display:none;}

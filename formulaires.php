@@ -9,10 +9,10 @@ echo '
     <div class="card">
         <div class="card-body">
         
-        <p class ="h2">'.$id.'</p>
+        <p class ="h2">'.$id.' </p> 
         </div>
     </div>
-    <p><em>Créée par '.$auteur.'</em></p>
+    <p><em>Créée par '.$auteur.'</em>   - accéder aux statistiques</p>
     <div class="centre">
     </br>';
     /**BOUTON STATS */
@@ -26,7 +26,7 @@ echo '
                 <tr>
                     <td>
                     <div class="card-body">
-                    <a href="perso.php?id='.$Tuple["prenom"].' '.$Tuple["nom"].'">
+                    <a href="perso.php?id='.$Tuple["id_perso"].'&auteur='.$Tuple["auteur"].'">
                         <h3>'.$Tuple["prenom"].' '.$Tuple["nom"].
                         '</h3>
                     </a>

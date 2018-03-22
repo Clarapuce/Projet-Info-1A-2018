@@ -32,7 +32,7 @@ Vous êtes connecté en tant que '.$auteur.'. <br /><br />
                         <h3>'.$Tuple["prenom"].' '.$Tuple["nom"].
                         '</h3>
                     </a>
-                    <div class="persoElemt">'.$Tuple["age"].' ans - Appartient à '.$Tuple["session_perso"].'</div>
+                    <div class="persoElemt">'.$Tuple["age"].' ans - Appartient à '.$Tuple["session"].'</div>
                     </td>
                     <td>
                     <div class="persoType">'.$Tuple["type"].'</div>
