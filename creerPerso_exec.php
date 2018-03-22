@@ -60,7 +60,19 @@ $MonRs = $BDD -> query( $MaRequete );
 $target_dir="image/";
 $target_file=$target_dir . basename($_FILES['image']['name']);
 move_uploaded_file($_FILES['image']['tmp_name'],$target_file);
+$recupID=   "SELECT id_perso FROM perso 
+            WHERE auteur='".$_SESSION['pseudo']."'
+            AND nom='".$nom."'
+            AND prenom='".$prenom."'
+            AND type='".$type."'
+            AND session_perso='".$session."';";
+$requete = $BDD -> query( $recupID );
+$tab=$requete -> fetch();
+$id_perso = $tab[0];
+
 echo '<body onLoad="alert(\'Personnage créé !\')">';
-echo '<meta http-equiv="refresh" content="0;URL=formCourt.php">';
-exit();
+echo '<meta http-equiv="refresh" content="0;URL=formCourt.php?id_perso='.$id_perso.'">';
+//a enlever, passer direct à la page suivante
+
+//exit();
 }
