@@ -283,14 +283,37 @@ box-shadow:1px 1px 10px #555;
 width:100px;
 height:100px
 }
+.persoImagePage {
+    
+min-width:200px;max-width:90%;
+border-radius:7px;
+-webkit-border-radius:7px;
+-moz-border-radius:7px;
+border:4px solid #fff;
+box-shadow:1px 1px 10px #555;
+}
+.persoAnimal {max-width:80%;}
+.persoImagePageContainer {max-width:100%;}
 .persoElemt {
 color:#414141
 }
+.persoElemtPage {
+    color:#414141;
+    margin-left:200px;
+    font-size:18px;
+    position:relative;
+    top:-20px;
+    }
 .persoType {
 color:#414141;
 font-style:italic;
 font-weight:700;
 margin-top:-25px
+}
+.persoDesc{
+    padding:30px;
+    max-height:500px;
+    overflow:auto;
 }
 
 .descr_session {
