@@ -17,7 +17,7 @@ $id_perso = $BDD -> query( $MaRequette );
         <h1>Questionnaire de Proust</h1></br>
         <form action = "enregistrer_form.php?id_perso=<?php echo $_GET['id_perso']?>&amp;type=court" method ="POST">
 <!--=================================================================================== -->
-            <h2>GÉNÉRALITÉS</h2>
+            <h2 class="formcourt_titre">GÉNÉRALITÉS</h2>
             <hr>
             <p>Maison : </p>
             <div class="form-check form-check-inline">
@@ -179,10 +179,10 @@ $id_perso = $BDD -> query( $MaRequette );
                 ?>
                 </select>
             </div>
-
+            <br />
             
 <!--=================================================================================== -->
-            <h2>PHYSIQUE</h2>
+            <h2 class="formcourt_titre">PHYSIQUE</h2>
             <hr>
 
             <div class="form-row">
@@ -256,8 +256,9 @@ $id_perso = $BDD -> query( $MaRequette );
                         </div>
                     </div>
                 </fieldset>
+                <br />
 <!--=================================================================================== -->
-                <h2>PERSONNALITÉ</h2>
+                <h2 class="formcourt_titre">PERSONNALITÉ</h2>
                 <hr>
                     <fieldset class="form-group">
                         <div class="row">

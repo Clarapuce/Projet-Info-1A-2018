@@ -28,12 +28,24 @@ font-size:44px;
 text-shadow:2px 0 0 #fafafac9
 }
 h2 {
-margin-left:50px;
-font-family:'Dancing Script';
-font-size:54px;
-text-shadow:2px 0 0 #fafafac9
+    margin-left:50px;
+    font-family:'Dancing Script';
+    font-size:50px;
+    text-shadow:2px 0 0 #fafafac9
 }
-
+h2.formcourt_titre {
+    margin-left:70px;
+    font-family:'Trebuchet MS';
+    font-size:35px;
+    text-transform: lowercase;
+    letter-spacing: +1px;
+    text-shadow:2px 0 0 #fafafac9}
+h1 {
+    margin-left:50px;
+    font-family:'Dancing Script';
+    font-size:58px;
+    text-shadow:2px 0 0 #fafafac9
+}
 .largeur {
 max-width:900px
 }

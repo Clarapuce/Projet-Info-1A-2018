@@ -50,7 +50,8 @@ while($donnees = $MonRs -> fetch())
 }
 
 
-/**foreach($Tuple as $key=>$value){
+/**echo $key=$value
+ foreach($Tuple as $key=>$value){
     if($key!='id_perso')
     {
         if($value!=NULL){
