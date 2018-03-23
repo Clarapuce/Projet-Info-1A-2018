@@ -8,11 +8,10 @@ echo '
 <div class="alert alert-secondary" role="alert">
     <div class="card">
         <div class="card-body">
-        
-        <p class ="h2">'.$id.' </p> 
+            <p class ="h2">'.$id.' </p> 
         </div>
     </div>
-    <p><em>Créée par '.$auteur.'</em>   - <a href="stat.php">accéder aux statistiques</a></p>
+    <p><em>Créée par '.$auteur.'</em>   - <a href="stat.php?id='.$id.'">accéder aux statistiques</a></p>
     <div class="centre">
     </br>';
     /**BOUTON STATS */
@@ -26,7 +25,7 @@ echo '
                 <tr>
                 <div class="card-body">
                     <td>
-                        <a href="perso.php?id='.$Tuple["id_perso"].'&auteur='.$Tuple["auteur"].'">
+                        <a href="perso.php?id='.$Tuple["id"].'&auteur='.$Tuple["auteur"].'">
                             <h3>'.$Tuple["prenom"].' '.$Tuple["nom"].'</h3>
                         </a>
                         <div class="persoElemt">

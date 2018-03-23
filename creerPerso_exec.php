@@ -60,7 +60,7 @@ $MonRs = $BDD -> query( $MaRequete );
 $target_dir="image/";
 $target_file=$target_dir . basename($_FILES['image']['name']);
 move_uploaded_file($_FILES['image']['tmp_name'],$target_file);
-$recupID=   "SELECT id_perso FROM perso 
+$recupID=   "SELECT id FROM perso 
             WHERE auteur='".$_SESSION['pseudo']."'
             AND nom='".$nom."'
             AND prenom='".$prenom."'
