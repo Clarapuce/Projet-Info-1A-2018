@@ -40,7 +40,7 @@ include('header.php');
         <div class="container">
             <div class="jumbotron">
                 <p>Votre personnage a bien été créé !</br>
-                <a href=\'perso.php\'>Fiche personnage</a></br>
+                <a href=\'perso.php?id='.$_GET['id_perso'].'"&auteur='.$_SESSION['pseudo'].'\'>Fiche personnage</a></br>
                 <a href=\'index.php\'>Retour à la page d\'accueil</a></p>  
             </div>
         </div>';
