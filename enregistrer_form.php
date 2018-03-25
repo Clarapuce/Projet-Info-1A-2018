@@ -15,14 +15,13 @@ include('header.php');
     'nature','strategie','confiance','anxiete','influence' ,'peur','peur_autre','hobby',
     'hobby_autre');*/
 
-    
-    $MonRs = $BDD -> query( $MaRequete );
+    $MonRs = $BDD -> query($MaRequete);
     foreach($_POST as $key=>$value){
         if($value!=NULL){
-
+            $value=addslashes(htmlentities($value));
             $colonne = "UPDATE ".$table." 
                         SET " . $key . "='" . $value ."'
-                        WHERE id_perso='" . $_GET['id_perso']."';";
+                        WHERE id_perso ='" . $_GET['id_perso']."';";
             
             $MonRs = $BDD -> query( $colonne );
         }
@@ -40,7 +39,7 @@ include('header.php');
         <div class="container">
             <div class="jumbotron">
                 <p>Votre personnage a bien été créé !</br>
-                <a href=\'perso.php?id='.$_GET['id_perso'].'"&auteur='.$_SESSION['pseudo'].'\'>Fiche personnage</a></br>
+                <a href=\'perso.php?id='.$_GET['id_perso'].'&auteur='.$_SESSION['pseudo'].'\'>Fiche personnage</a></br>
                 <a href=\'index.php\'>Retour à la page d\'accueil</a></p>  
             </div>
         </div>';

@@ -3,9 +3,13 @@ include("header.php");
 require("connect.php");
 $id=$_GET['id'];
 $auteur=$_GET['auteur'];
-$animal='Chouette';
 
-$MaRequete="SELECT * FROM PERSO WHERE id_perso = '".$id."'";
+$MaRequete="SELECT * FROM FORMCOURT WHERE id_perso = '".$id."'";
+$MonRs = $BDD -> query( $MaRequete );
+$Tuple = $MonRs -> fetch();
+$animal=$Tuple['animal'];
+
+$MaRequete="SELECT * FROM PERSO WHERE id = '".$id."'";
 $MonRs = $BDD -> query( $MaRequete );
 $Tuple = $MonRs ->fetch();
 
@@ -18,13 +22,19 @@ echo '
         </div>
     </div>
     <p><em>Créé par '.$auteur.'</em></p>
-    <table>
+    <table class="persoTable">
         <tr>
             <td>
                 <div class="persoImagePageContainer">
                 <img class="persoImagePage" src="image/'.$Tuple["image"].'"/>
-                <img class="persoAnimal" ' ;
-if ($animal=='Chouette') echo 'src="image/chouette.png" alt="Animal de compagnie"/>
+                <br /><img class="persoAnimal" ' ;
+                
+if ($animal=='Chouette') echo 'src="image/chouette.png" alt="Animal de compagnie"/> <div class="persoAnimalTexte">Animal : chouette</div>';
+else if ($animal=='Hibou') echo 'src="image/hibou.png" alt="Animal de compagnie"/> <div class="persoAnimalTexte">Animal : hibou</div>';
+else if ($animal=='Rat') echo 'src="image/rat.png" alt="Animal de compagnie"/> <div class="persoAnimalTexte">Animal : rat</div>';
+else if ($animal=='Chat') echo 'src="image/chat.png" alt="Animal de compagnie"/> <div class="persoAnimalTexte">Animal : chat</div>';
+
+echo '
             </div>
             </td>
             
@@ -34,31 +44,20 @@ if ($animal=='Chouette') echo 'src="image/chouette.png" alt="Animal de compagnie
                 '.$Tuple['age'].' ans<br />';
 
                 $MaRequete="SELECT * FROM formcourt WHERE id_perso = '".$id."'";
-                
                 $MonRs = $BDD -> query( $MaRequete );
                 $Tuple = $MonRs -> fetch();
                 
-                $MaRequete2="SELECT column_name FROM information_schema.columns WHERE table_name = 'formcourt' AND table_schema='projet_web'";
-                $MonRs2 = $BDD -> query( $MaRequete2 );
-                $Tuple2 = $MonRs2 -> fetch();
-                
+                $MaRequete3 = "SELECT * FROM formlibelles";
+                $MonRs3 = $BDD -> query($MaRequete3);
+                $Tuple3 = $MonRs3 -> fetch();
+
                 $a=0;
-                $numColonne=0;
-                foreach($Tuple as $value)
-                { 
-                    if($a==0) $a=$a+1;
-                    else if ($a==2)
-                    {
-                        $b=$Tuple2[$numColonne];
-                        $MaRequete3 = "SELECT $Tuple2[$numColonne] FROM formlibelles";
-                        $MonRs3 = $BDD -> query($MaRequete2);
-                        $MonRs3 -> fetch();
-                        
-                        echo $MonRs3[$b].$value."<br />";
-                        $a=3;
-                        $numColonne=$numColonne+1;
-                    }
-                    else $a=2;
+                foreach(array_combine($Tuple3,$Tuple) as $libelle => $value)
+                {
+                    if (($libelle=='Animal de compagnie') OR ($a==0)) $a+=1;
+                    else if($a==1) $a+=1;
+                    else if($value==NULL);
+                    else echo $libelle.' : '.$value.'<br />____<br />';
                 }
                 echo'
                 </div>
@@ -68,27 +67,6 @@ if ($animal=='Chouette') echo 'src="image/chouette.png" alt="Animal de compagnie
     </table>
     </br>';
 
-
-
-
-/**echo $key=$value
- foreach($Tuple as $key=>$value){
-    if($key!='id_perso')
-    {
-        if($value!=NULL){
-            echo $key . ' = ' . $value . '<br>';
-
-            $colonne = "UPDATE FORMCOURT 
-                        SET " . $key . "='" . $value ."'
-                        WHERE id_perso=" . $_POST['id_perso'].";";
-            
-            $MonRs = $BDD -> query( $colonne );
-        }
-    }
-}  
-   **/
-
-   
 $MaRequete="SELECT * FROM formlong WHERE id_perso = '".$id."'";
 $MonRs = $BDD -> query( $MaRequete );
 $Tuple = $MonRs ->fetch();

@@ -2,6 +2,8 @@
 include("header.php");
 require("connect.php");
 
+if (empty($_SESSION['pseudo'])) erreur(ERR_IS_CO);
+else{
 $auteur=$_SESSION['pseudo'];
 
 
@@ -89,4 +91,5 @@ else
 }
 
 include("footer.php");
+}
 ?>
