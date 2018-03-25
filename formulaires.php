@@ -5,13 +5,15 @@ $id=$_GET['id'];
 $auteur=$_GET['auteur'];
 echo '
 <div class="container"><div class="fond">
+
 <div class="alert alert-secondary" role="alert">
+	<a href ="index.php"> Retour </a>
     <div class="card">
         <div class="card-body">
             <p class ="h2">'.$id.' </p> 
         </div>
     </div>
-    <p><em>Créée par '.$auteur.'</em>   - <a href="stat.php?id='.$id.'">accéder aux statistiques</a></p>
+    <p><em>Créée par '.$auteur.'</em>   - <a href="stat.php?id='.$id.'&auteur='.$_GET['auteur'].'">accéder aux statistiques</a></p>
     <div class="centre">
     </br>';
     /**BOUTON STATS */
