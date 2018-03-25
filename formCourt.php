@@ -73,24 +73,24 @@ $id_perso = $BDD -> query( $MaRequette );
             
             <fieldset class="form-group">
                 <div class="row">
-                <legend class="col-form-label col-sm-2 pt-0">Animal de compagnie :</legend>
+                <legend class="col-form-label col-sm-2 pt-0">Animal de compagnie</legend>
                 <div class="col-sm-10">
                     <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" required name="animal" id="inlineRadio1" value="Chat">
+                    <input class="form-check-input" type="radio" required name="animal" id="inlineRadio1" value="chat">
                     <label class="form-check-label" for="inlineRadio1">Chat</label>
                     </div>
                     <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" required name="animal" id="inlineRadio1" value="Rat">
+                    <input class="form-check-input" type="radio" required name="animal" id="inlineRadio1" value="rat">
                     <label class="form-check-label" for="inlineRadio1">Rat</label>
                     </div>
         
                     <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" required name="animal" id="inlineRadio1" value="Hibou">
+                    <input class="form-check-input" type="radio" required name="animal" id="inlineRadio1" value="hibou">
                     <label class="form-check-label" for="inlineRadio1">Hibou</label>
                     </div>
         
                     <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" required name="animal" id="inlineRadio1" value="Chouette">
+                    <input class="form-check-input" type="radio" required name="animal" id="inlineRadio1" value="chouette">
                     <label class="form-check-label" for="inlineRadio1">Chouette</label>
                     </div>
                 </div>
