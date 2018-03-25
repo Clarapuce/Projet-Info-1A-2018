@@ -17,9 +17,9 @@ $id_perso = $BDD -> query( $MaRequette );
         <h1>Questionnaire de Proust</h1></br>
         <form action = "enregistrer_form.php?id_perso=<?php echo $_GET['id_perso']?>&amp;type=court" method ="POST">
 <!--=================================================================================== -->
-            <h2 class="formcourt_titre">GÉNÉRALITÉS</h2>
+            <h2 class="form_titre">GÉNÉRALITÉS</h2>
             <hr>
-            <p>Maison : </p>
+            <p>Maison :</p>
             <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" required name="maison" id="inlineRadio1" value="Gryffondor" >
             <label class="form-check-label" for="inlineRadio1">Gryffondor</label>
@@ -47,12 +47,12 @@ $id_perso = $BDD -> query( $MaRequette );
                 </select>
             </div>
             <div class="form-group">
-            <label for="formGroupExampleInput">Nom du lieu de naissance:</label>
+            <label for="formGroupExampleInput">Nom du lieu de naissance :</label>
             <input type="text" class="form-control" id="formGroupExampleInput" required name="nom_naissance" 
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Bois de la baguette</label>
+                <label for="exampleFormControlSelect1">Bois de la baguette :</label>
                 <select class="form-control" id="exampleFormControlSelect1" required name="bois_baguette" >
                 <option value="Saule">Bois de Saule</option>
                 <option value="Vigne">Bois de Vigne</option>
@@ -63,7 +63,7 @@ $id_perso = $BDD -> query( $MaRequette );
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Contenu de la baguette</label>
+                <label for="exampleFormControlSelect1">Contenu de la baguette :</label>
                 <select class="form-control" id="exampleFormControlSelect1" required name="contenu_baguette" required>
                 <option value="Ventricule de dragon">Ventricule de dragon</option>
                 <option value="Plume de Phénix">Plume de Phénix</option>
@@ -73,7 +73,7 @@ $id_perso = $BDD -> query( $MaRequette );
             
             <fieldset class="form-group">
                 <div class="row">
-                <legend class="col-form-label col-sm-2 pt-0">Animal de compagnie</legend>
+                <legend class="col-form-label col-sm-2 pt-0">Animal de compagnie :</legend>
                 <div class="col-sm-10">
                     <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" required name="animal" id="inlineRadio1" value="Chat">
@@ -118,7 +118,7 @@ $id_perso = $BDD -> query( $MaRequette );
 
             <fieldset class="form-group">
                 <div class="row">
-                    <legend class="col-form-label col-sm-3 pt-0"> Niveau scolaire</legend>
+                    <legend class="col-form-label col-sm-3 pt-0"> Niveau scolaire :</legend>
                     <div class="col-sm-3"><label class="form-check-label" for="inlineRadio1">Mauvais élève</label></div>
 
                         <div class="col-sm-4">
@@ -140,13 +140,13 @@ $id_perso = $BDD -> query( $MaRequette );
             
             
             <div class="form-group">
-            <label for="formGroupExampleInput">Patronus:</label>
+            <label for="formGroupExampleInput">Patronus :</label>
             <input type="text" class="form-control" id="formGroupExampleInput" required name="patronus" >
             </div>
 
             <fieldset class="form-group">
                 <div class="row">
-                <legend class="col-form-label col-sm-2 pt-0">Statut</legend>
+                <legend class="col-form-label col-sm-2 pt-0">Statut :</legend>
                 <div class="col-sm-10">
                     <div class="form-check">
                     <input class="form-check-input" type="radio" required name="statut" id="gridRadios1" value="Né-Moldu" checked>
@@ -169,10 +169,10 @@ $id_perso = $BDD -> query( $MaRequette );
             </fieldset>
 
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Nombre de frères et soeurs</label>
+                <label for="exampleFormControlSelect1">Nombre de frères et soeurs :</label>
                 <select class="form-control" id="exampleFormControlSelect1" required name="freres_soeurs">
                 <?php 
-                    for ($i = 1; $i<11;$i++)
+                    for ($i = 0; $i<11;$i++)
                     {
                         echo '<option value ="'.$i.'">'.$i.'</option>';
                     }
@@ -182,26 +182,26 @@ $id_perso = $BDD -> query( $MaRequette );
             <br />
             
 <!--=================================================================================== -->
-            <h2 class="formcourt_titre">PHYSIQUE</h2>
+            <h2 class="form_titre">PHYSIQUE</h2>
             <hr>
 
             <div class="form-row">
                 <div class="col-md-6 mb-3">
-                <label for="validationCustom03">Couleur de peau</label>
+                <label for="validationCustom03">Couleur de peau :</label>
                 <input type="text" class="form-control" id="validationCustom03" required name ="peau" required>
                 </div>
                 <div class="col-md-3 mb-3">
-                <label for="validationCustom04">Taille</label>
+                <label for="validationCustom04">Taille (en cm) :</label>
                 <input type="text" class="form-control" id="validationCustom04" required name ="taille" required>
                 </div>
                 <div class="col-md-3 mb-3">
-                <label for="validationCustom05">Poids</label>
+                <label for="validationCustom05">Poids (en kg) :</label>
                 <input type="text" class="form-control" id="validationCustom05" required name ="poids"required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="col-md-3 mb-3">
-                    <label for="validationCustom03">Couleur des yeux</label>
+                    <label for="validationCustom03">Couleur des yeux :</label>
                     <select class="form-control" required name="yeux">
                         <option value="Bleus">Bleus</option>
                         <option value="Verts">Verts</option>
@@ -215,7 +215,7 @@ $id_perso = $BDD -> query( $MaRequette );
                     
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label for="validationCustom04">Couleur de cheveux</label>
+                    <label for="validationCustom04">Couleur de cheveux :</label>
                     <select class="form-control" required name="couleur_cheveux">
                         <option value="Brun">Brun</option>
                         <option value="Blonds">Blonds</option>
@@ -227,13 +227,13 @@ $id_perso = $BDD -> query( $MaRequette );
                 </div>
             
                 <div class="col-md-6 mb-3">
-                    <label for="validationCustom05">Coupe de cheveux</label>
+                    <label for="validationCustom05">Coupe de cheveux :</label>
                     <input type="text" class="form-control" id="validationCustom05" required name ="coupe" required>
                 </div>
             </div>            
                 <fieldset class="form-group">
                     <div class="row">
-                    <legend class="col-form-label col-sm-3 pt-0">Particularités</legend>
+                    <legend class="col-form-label col-sm-3 pt-0">Particularités :</legend>
                         <div class="col-sm-4">
                             <div class="form-check form-check-inline" >
                                 <input class="form-check-input" name="particularite"type="radio" id="inlineradio1" value="Cicatrices">
@@ -250,7 +250,7 @@ $id_perso = $BDD -> query( $MaRequette );
                         </div>
                         <div class="col-sm-5">
                             <div class="form-group">
-                                <label for="formGroupExampleInput">Précisions</label>
+                                <label for="formGroupExampleInput">Précisions :</label>
                                 <input type="text" class="form-control" id="formGroupExampleInput" name="precisions" >
                             </div>
                         </div>
@@ -258,11 +258,11 @@ $id_perso = $BDD -> query( $MaRequette );
                 </fieldset>
                 <br />
 <!--=================================================================================== -->
-                <h2 class="formcourt_titre">PERSONNALITÉ</h2>
+                <h2 class="form_titre">PERSONNALITÉ</h2>
                 <hr>
                     <fieldset class="form-group">
                         <div class="row">
-                        <legend class="col-form-label col-sm-3 pt-0">Objectifs de vie</legend>
+                        <legend class="col-form-label col-sm-3 pt-0">Objectif de vie :</legend>
                             <div class="col-sm-4">
                                 <div class="form-check form-check-inline"  >
                                     <input class="form-check-input" required name="objectif" type="radio" id="inlineradio1"  value="Amitié" >
@@ -337,7 +337,7 @@ $id_perso = $BDD -> query( $MaRequette );
                 echo'
                 <fieldset class="form-group">
                         <div class="row">
-                        <legend class="col-form-label col-sm-3 pt-0">Grande peur</legend>
+                        <legend class="col-form-label col-sm-3 pt-0">Grande peur :</legend>
                             <div class="col-sm-4">';
                             for($i=0;$i<10;$i++)
                              {
@@ -353,7 +353,7 @@ $id_perso = $BDD -> query( $MaRequette );
                             </div>
                             <div class="col-sm-5">
                                 <div class="form-group">
-                                    <label for="formGroupExampleInput">Précisions</label>
+                                    <label for="formGroupExampleInput">Précisions :</label>
                                     <input type="text" class="form-control" id="formGroupExampleInput" name="peur_autre" >
                                 </div>
                             </div>
@@ -365,7 +365,7 @@ $id_perso = $BDD -> query( $MaRequette );
                     echo'
                     <fieldset class="form-group">
                             <div class="row">
-                            <legend class="col-form-label col-sm-3 pt-0">Hobbies</legend>
+                            <legend class="col-form-label col-sm-3 pt-0">Hobby :</legend>
                                 <div class="col-sm-4">';
                                 for($i=0;$i<12;$i++)
                                  {
@@ -381,7 +381,7 @@ $id_perso = $BDD -> query( $MaRequette );
                                 </div>
                                 <div class="col-sm-5">
                                     <div class="form-group">
-                                        <label for="formGroupExampleInput">Précisions</label>
+                                        <label for="formGroupExampleInput">Précisions :</label>
                                         <input type="text" class="form-control" id="formGroupExampleInput" name="hobby_autre" >
                                     </div>
                                 </div>
@@ -389,9 +389,9 @@ $id_perso = $BDD -> query( $MaRequette );
                         </fieldset>';
                     ?>
             <div class="form-group">
-                <label for="formGroupExampleInput">Talent spécial:</label>
+                <label for="formGroupExampleInput">Talent spécial :</label>
                 <input type="text" class="form-control" id="formGroupExampleInput" required name="talent" placeholder="Un truc pour lequel je suis fort!">
-                <label for="formGroupExampleInput">Bête noire</label>
+                <label for="formGroupExampleInput">Bête noire :</label>
                 <input type="text" class="form-control" id="formGroupExampleInput" required name="bete_noire" placeholder="Un truc que je deteste par dessus tout!">
             
             </div>
