@@ -8,6 +8,7 @@ $MaRequete="SELECT * FROM FORMCOURT WHERE id_perso = '".$id."'";
 $MonRs = $BDD -> query( $MaRequete );
 $Tuple = $MonRs -> fetch();
 $animal=$Tuple['animal'];
+$maison=$Tuple['maison'];
 
 $MaRequete="SELECT * FROM PERSO WHERE id = '".$id."'";
 $MonRs = $BDD -> query( $MaRequete );
@@ -29,10 +30,17 @@ echo '
                 <img class="persoImagePage" src="image/'.$Tuple["image"].'"/>
                 <br /><img class="persoAnimal" ' ;
                 
-if ($animal=='Chouette') echo 'src="image/chouette.png" alt="Animal de compagnie"/> <div class="persoAnimalTexte">Animal : chouette</div>';
-else if ($animal=='Hibou') echo 'src="image/hibou.png" alt="Animal de compagnie"/> <div class="persoAnimalTexte">Animal : hibou</div>';
-else if ($animal=='Rat') echo 'src="image/rat.png" alt="Animal de compagnie"/> <div class="persoAnimalTexte">Animal : rat</div>';
-else if ($animal=='Chat') echo 'src="image/chat.png" alt="Animal de compagnie"/> <div class="persoAnimalTexte">Animal : chat</div>';
+if ($animal=='Chouette') echo 'src="base_images/chouette.png" alt="Animal de compagnie"/>';
+else if ($animal=='Hibou') echo 'src="base_images/hibou.png" alt="Animal de compagnie"/>';
+else if ($animal=='Rat') echo 'src="base_images/rat.png" alt="Animal de compagnie"/>';
+else if ($animal=='Chat') echo 'src="base_images/chat.png" alt="Animal de compagnie"/>';
+
+echo '
+<img class="persoMaison" ';
+if ($maison == 'Gryffondor') echo 'src="base_images/Gryffondor.png"/>';
+else if ($maison == 'Serdaigle') echo 'src="base_images/Serdaigle.png"/>';
+else if ($maison == 'Poufsouffle') echo 'src="base_images/Poufsouffle.png"/>';
+else if ($maison == 'Serpentard') echo 'src="base_images/Serpentard.png"/>';
 
 echo '
             </div>
@@ -54,8 +62,7 @@ echo '
                 $a=0;
                 foreach(array_combine($Tuple3,$Tuple) as $libelle => $value)
                 {
-                    if (($libelle=='Animal de compagnie') OR ($a==0)) $a+=1;
-                    else if($a==1) $a+=1;
+                    if (($libelle=='Maison') OR ($libelle=='Animal de compagnie') OR ($libelle=='ID du formulaire') OR $libelle=='ID du personnage');
                     else if($value==NULL);
                     else echo $libelle.' : '.$value.'<br />____<br />';
                 }
