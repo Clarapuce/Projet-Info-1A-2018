@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  Dim 25 mars 2018 à 19:09
+-- Généré le :  jeu. 29 mars 2018 à 22:11
 -- Version du serveur :  10.1.30-MariaDB
 -- Version de PHP :  7.2.2
 
@@ -74,12 +74,10 @@ CREATE TABLE `formcourt` (
 --
 
 INSERT INTO `formcourt` (`id_court`, `id_perso`, `maison`, `lieu_naissance`, `nom_naissance`, `bois_baguette`, `contenu_baguette`, `animal`, `sante`, `niveau_scolaire`, `patronus`, `statut`, `freres_soeurs`, `peau`, `taille`, `poids`, `yeux`, `couleur_cheveux`, `coupe`, `particularite`, `precisions`, `objectif`, `objectif_autre`, `rapport_autrui`, `maniere_de_penser`, `ouverture`, `habitudes`, `nature`, `strategie`, `confiance`, `anxiete`, `influence`, `peur`, `peur_autre`, `hobby`, `hobby_autre`, `talent`, `bete_noire`) VALUES
-(4, '33', 'Gryffondor', 'Campagne', 'Pays trop mignon', 'Aubépine', 'Bois de licorne', 'chat', 5, 5, 'Grenouille', 'Sang-mêlé', 3, 'Verte', '1m20', '10kg', 'Verts', 'Autre', 'pas de cheveux', '', '', 'Amitié', 0, 5, 5, 1, 5, 5, 5, 5, 5, 5, 'La solitude', '', '', 'Jouer', 'Se transformer en bad Kaeloo', 'Monsieur chaaaaaaat'),
-(5, '34', 'Serdaigle', 'Campagne', 'Pays trop mignon', 'If', 'Plume de Phénix', 'chouette', 5, 5, 'Canard', 'Né-Moldu', 1, 'Jaune', '1m30', '12kg', 'Noisette', 'Autre', 'pas de cheveux', 'Cicatrices', '', 'Savoir', 0, 1, 1, 5, 5, 1, 5, 2, 1, 1, 'Le noir', '', '', 'Manger des yaourt', 'Tout', 'Coin?'),
-(6, '35', 'Serpentard', 'Campagne', 'Pays trop mignon', 'Saule', 'Ventricule de dragon', 'chat', 2, 2, 'Chat', 'Né-Moldu', 1, 'orange rayures marrons', '1m20', '34kg', 'Rouge', 'Autre', 'Pas de cheveux', '', 'Mitaines', 'Pouvoir', 0, 5, 2, 1, 5, 3, 1, 5, 2, 1, 'Le vide', '', 'Autre', 'La violence', 'Bazooka', 'Bad kaeloo'),
-(7, '36', 'Serpentard', 'Ville', 'Monster City', 'Chêne', 'Ventricule de dragon', 'rat', 2, 1, 'Une crotte', 'Sang-pur', 1, 'Vert', '1m00', '120kg', 'Marron', 'Autre', 'chauve', '', 'Moche', 'Autre', 0, 1, 2, 3, 4, 5, 3, 2, 1, 2, 'Le regard des autres', '', 'Autre', 'Violence', 'Etre moche', 'Les gens'),
-(8, '37', 'Poufsouffle', 'Banlieu', 'Saussetlespins', 'Aubépine', 'Bois de licorne', 'chat', 1, 5, 'Blonde', 'Né-Moldu', 1, 'rfe', 'fre', 'fre', 'Bleus', 'Brun', 'fre', '', '', 'Amitié', 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 'La solitude', '', 'Voyage', '', 'Gentillesse', 'Mechanceté'),
-(9, '39', 'Poufsouffle', 'Campagne', 'gregre', 'Saule', 'Ventricule de dragon', 'chouette', 2, 3, 'gre', 'Né-Moldu', 1, 'gre', 'gre', 'gre', 'Bleus', 'Brun', 'gre', '', '', 'Aventure', 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 'Le noir', '', 'Lecture', '', 'greg', 'greg');
+(10, '40', 'Gryffondor', 'Ville', 'Londres', 'Saule', 'Plume de Ph&eacute;nix', 'chouette', 4, 3, 'Biche', 'Sang-pur', 0, 'Blanche', '154', '54', 'Verts', 'Brun', 'En bataille', 'Cicatrices', 'En forme d\'&eacute;clair', 'Amiti&eacute;', 0, 1, 2, 3, 5, 4, 4, 1, 4, 5, 'Autre', 'La peur', 'Sport', 'Quidditch', 'Attraper le vif d\'or', 'Voldemort et l\'histoire de la magie'),
+(11, '41', 'Gryffondor', 'Ville', 'Londres', 'Vigne', 'Bois de licorne', 'chat', 4, 5, 'Loutre', 'N&eacute;-Moldu', 0, 'Blanche', '152', '47', 'Noisette', 'Brun', 'Longs fris&eacute;s', '', '', 'Savoir', 0, 3, 1, 1, 2, 2, 1, 2, 5, 5, 'Le regard des autres', '', 'Autre', 'Travailler', 'Tout ce qui concerne la magie', 'La divination'),
+(12, '42', 'Serpentard', 'Campagne', 'Cambridge', 'If', 'Ventricule de dragon', 'hibou', 2, 4, 'Ch&egrave;vre', 'Sang-pur', 0, 'P&acirc;le', '156', '53', 'Bleus', 'Blonds', 'Coiff&eacute; comme un bourgeo', '', '', 'Autre', 0, 5, 1, 1, 1, 5, 1, 1, 5, 3, 'Autre', 'Voldemort', 'Autre', 'Ennuyer le monde', 'Ennuyer le monde, avoir l\'air hautain', '&Ecirc;tre gentil'),
+(13, '43', 'Poufsouffle', 'Ville', 'Dublin', 'Vigne', 'Bois de licorne', 'chat', 2, 2, 'Cheval', 'Sang-m&ecirc;l&eacute;', 2, 'Blanche', '150', '56', 'Marron', 'Chatain', 'Long lisse', 'Autre', 'T&acirc;ches de rousseurs', 'Aventure', 0, 1, 5, 4, 4, 2, 3, 2, 4, 3, 'Le feu', '', 'Musique', '', '&Ecirc;tre invisible', 'Rogue');
 
 -- --------------------------------------------------------
 
@@ -153,31 +151,10 @@ CREATE TABLE `formlong` (
 --
 
 INSERT INTO `formlong` (`id_perso`, `histoire`, `mental`, `physique`) VALUES
-(31, 'lalala', 'lalala', 'lalala'),
-(31, 'lalala', 'lalala', 'lalala'),
-(31, 'lalala', 'lalala', 'lalala'),
-(31, 'lalala', 'lalala', 'lalala'),
-(31, 'lalala', 'lalala', 'lalala'),
-(31, 'lalala', 'lalala', 'lalala'),
-(31, 'lalala', 'lalala', 'lalala'),
-(31, 'lalala', 'lalala', 'lalala'),
-(31, 'lalala', 'lalala', 'lalala'),
-(31, 'lalala', 'lalala', 'lalala'),
-(31, 'lalala', 'lalala', 'lalala'),
-(31, 'lalala', 'lalala', 'lalala'),
-(31, 'lalala', 'lalala', 'lalala'),
-(31, 'lalala', 'lalala', 'lalala'),
-(31, 'lalala', 'lalala', 'lalala'),
-(31, 'lalala', 'lalala', 'lalala'),
-(31, 'lalala', 'lalala', 'lalala'),
-(32, 'Quand je suis petite, je mangeais la queue de mon chat. Gnignigniiiii', 'TEUBÉ - GENTILLE -CHIANTE - NE SAIT PAS PRENDRE DE DECISIONS', 'ROUSSE'),
-(33, 'Pays trop mignon', 'toute joyeuse mais bipolaire', 'Grenouille souriante'),
-(33, 'Pays trop mignon', 'toute joyeuse mais bipolaire', 'Grenouille souriante'),
-(34, 'Pays trop mignon', 'Coin', 'Canard'),
-(35, 'Pays trop mignon', 'Violent', 'Chat'),
-(36, 'Moi, moche et mechant', 'Mechant', 'Moche'),
-(37, 'Vis près de Marseille', 'gentille', 'Blonde'),
-(39, 'gregggr', 'greggr', 'gregr');
+(40, 'Cf Harry Potter &agrave; l\'&eacute;cole des sorciers.', 'Renferm&eacute;, peu confiant', 'Fin, cheveux en bataille, lunettes rondes, yeux verts'),
+(41, 'Cf Harry Potter &agrave; l\'&eacute;cole des sorciers', 'Rigide, madame je sais tout, brillante', 'Petite, grandes dents, Cheveux en bataille fris&eacute;s.'),
+(42, 'Cf. Harry Potter &agrave; l\'&eacute;cole des sorciers.', 'Snob, casse-pied', 'Hautain, robe de premi&egrave;re main, air noble'),
+(43, 'Inconnue au bataillon', 'Gentille mais timide', 'Grassouillette, tresses, dents du bonheur');
 
 -- --------------------------------------------------------
 
@@ -201,17 +178,10 @@ CREATE TABLE `perso` (
 --
 
 INSERT INTO `perso` (`id`, `auteur`, `nom`, `prenom`, `image`, `age`, `type`, `session_perso`) VALUES
-(28, 'Clarapuce', 'Mathieu', 'Mireille', 'Desert.jpg', 97, 'Professeur', 'Session 3'),
-(29, 'Clarapuce', 'Mathieu', 'Mireille', 'Desert.jpg', 97, 'Professeur', 'Session 3'),
-(30, 'Clarapuce', 'Ohnonjtedirien', 'Noemie', 'Koala.jpg', 26, 'Élève', 'Session 4'),
-(31, 'Clarapuce', 'numero1', 'pute', 'Jellyfish.jpg', 12, 'Élève', 'Session 4'),
-(32, 'Clarapuce', 'Sorita', 'Clara', '11237891.png', 21, 'Élève', 'Session 4'),
-(33, 'Clarapuce', 'Dupaystromignon', 'Kaeloo', '94xew5u9ouhpgl2khc3k.jpg', 10, 'Élève', 'Session 1'),
-(34, 'Clarapuce', 'Coin', 'Coin', 'Kaeloo02.jpg', 10, 'Élève', 'Session 1'),
-(35, 'Clarapuce', 'Chat', 'Monsieur', 'Cool_dear.jpg', 10, 'Élève', 'Session 1'),
-(36, 'Clarapuce', 'M&eacute;chant', 'Monsieur', 'mike_wazowski_by_disse86-dab828i-768x858.jpg', 10, 'Élève', 'Session 1'),
-(37, 'Clarapuce', 'Leleu', 'Ma&iuml;a', '705a3fbd040be6a0c5bdf63dbd62d29b.jpg', 21, 'Professeur', 'Session 1'),
-(39, 'Clarapuce', 'Crush', 'Candy', 'SD011.jpg', 12, 'Élève', 'Session 1');
+(40, 'Admin', 'Potter', 'Harry', 'occhiali-harry-potter.jpg', 11, 'Élève', 'Promo 1990'),
+(41, 'Admin', 'Granger', 'Hermione', 'hermione-granger-hermione-granger-20053436-936-1197.jpg', 11, 'Élève', 'Promo 1990'),
+(42, 'Admin', 'Malefoy', 'Drago', 'tom-felton-alias-drago-malefoy-a-ses-debuts-dans-harry-potter_146874_w620.jpg', 11, 'Élève', 'Promo 1990'),
+(43, 'Admin', 'Abott', 'Hannah', 'tumblr_inline_nak4l3nd7f1reg6lt.jpg', 11, 'Élève', 'Promo 1990');
 
 -- --------------------------------------------------------
 
@@ -232,7 +202,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`nom_session`, `auteur`, `formcourt`, `formlong`, `description`) VALUES
-('Session 1', 'Admin', 1, 1, 'Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae.'),
+('Promo 1990', 'Admin', 1, 1, 'Promotion de l\'année 1990. Année où se déroule le début de l\'histoire du fameux Harry Potter.'),
 ('Session 2', 'Admin', 1, 1, 'Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae.'),
 ('Session 3', 'admin', 1, 1, 'Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae.'),
 ('Session 4', 'admin', 1, 1, 'Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae.');
@@ -295,13 +265,13 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `formcourt`
 --
 ALTER TABLE `formcourt`
-  MODIFY `id_court` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_court` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT pour la table `perso`
 --
 ALTER TABLE `perso`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

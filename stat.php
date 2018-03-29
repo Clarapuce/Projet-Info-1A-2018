@@ -55,25 +55,31 @@ if ($total != 0)
 		$effectif[$i] = $taux_maison;
 
 		echo '<img src="base_images/'.$maison[$i].'.png" class="icone"/>'.$taux_maison." ~ ";
+		
 	}
-
-	$RqMoyenneEleve="SELECT SUM(age)
+	if ($total_eleve !=0)
+	{
+		$RqMoyenneEleve="SELECT SUM(age)
 				FROM PERSO
 				WHERE session_perso = '".$_GET['id']."'
 				AND type='Élève';";
-	$requete = $BDD -> query( $RqMoyenneEleve);
-	$tab=$requete -> fetch();
-
-	$moyenne_age_eleve = $tab[0]/$total_eleve;
+		$requete = $BDD -> query( $RqMoyenneEleve);
+		$tab=$requete -> fetch();
+		$moyenne_age_eleve = $tab[0]/$total_eleve;
+	}
+	else {$moyenne_age_eleve=0;}
 	
-	$RqMoyenneProf = "SELECT SUM(age)
+	if ($total_prof !=0)
+	{
+		$RqMoyenneProf="SELECT SUM(age)
 				FROM PERSO
 				WHERE session_perso = '".$_GET['id']."'
 				AND type='Professeur';";
-	$requete = $BDD -> query( $RqMoyenneProf);
-	$tab = $requete -> fetch();
-
-	$moyenne_age_prof = $tab[0]/$total_prof;
+		$requete = $BDD -> query( $RqMoyenneProf);
+		$tab=$requete -> fetch();
+		$moyenne_age_prof = $tab[0]/$total_prof;
+	}
+	else {$moyenne_age_prof=0;}
 
 	echo'<br /> 
 			Nombre d\'élèves : '.$total_eleve.'<br />
@@ -104,20 +110,23 @@ if ($total != 0)
 	';
 
 	$couleur=array('darkred','darkblue','yellow','green');
-
-	for ($i = 0; $i<4;$i++)
+	if($total_eleve!=0)
 	{
-		$ratio = $effectif[$i]/$total_eleve*600;
-		$ratio = round ( $ratio , 0 );
-
-		if ($ratio != 0)
+		for ($i = 0; $i<4;$i++)
 		{
-			echo'
-					<td> 
-						<img src="base_images/barre_'.$couleur[$i].'.png" height="20px" width="'.$ratio.'px"/>
-					</td>';
+			$ratio = $effectif[$i]/$total_eleve*600;
+			$ratio = round ( $ratio , 0 );
+
+			if ($ratio != 0)
+			{
+				echo'
+						<td> 
+							<img src="base_images/barre_'.$couleur[$i].'.png" height="20px" width="'.$ratio.'px"/>
+						</td>';
+			}
 		}
 	}
+	
 	
 	echo'
 				</tr>
