@@ -94,6 +94,7 @@ right:5px;
 z-index:920
 }
 
+/**HEADER**/
 .header {
 position:fixed;
 z-index:999;
@@ -153,6 +154,7 @@ display:block
 display:block
 }
 
+/**PAGE D'ACCUEIL**/
 .bienvenue {
 left:20%;
 position:relative;
@@ -220,7 +222,7 @@ background-color:#444
 width:450px;
 height:65px;
 overflow:auto;
-background-image:url(http://image.noelshack.com/fichiers-md/2018/12/4/1521707777-test.png);
+background-image:url(../base_images/fond_page_accueil.png);
 background-color:#dadada81
 }
 
@@ -232,13 +234,13 @@ width:200px;
 height:100px;
 padding:15px 20px 15px 30px;
 overflow:auto;
-background-image:url(http://image.noelshack.com/fichiers-md/2018/12/4/1521707777-test.png);
+background-image:url(../base_images/fond_page_accueil.png);
 background-color:#dadada81
 }
 
 .creerPerso {
 border:1px solid #444;
-background-image:url(http://image.noelshack.com/fichiers/2018/02/7/1515932888-pattern2.jpg);
+background-image:url(../base_images/fond_jaune.jpg);
 width:297px;
 height:30px;
 text-align:center;
@@ -251,7 +253,7 @@ transition:.3s all;
 }
 
 .creerPerso:hover {
-background-image:url(http://image.noelshack.com/fichiers/2018/02/7/1515931669-pattern.jpg);
+background-image:url(../base_images/fond_carreaux.jpg);
 color:#fff!important;
 letter-spacing:1px
 }
@@ -262,7 +264,7 @@ overflow:auto;
 width:297px;
 border:1px solid #444;
 border-top:none;
-background-image:url(http://image.noelshack.com/fichiers-md/2018/12/4/1521707777-test.png);
+background-image:url(../base_images/fond_page_accueil.png);
 padding:10px 20px;
 height:70px;
 background-color:#dadada81
@@ -286,6 +288,7 @@ margin-bottom:-10px;
 color:grey
 }
 
+/**FOOTER**/
 .footer {
 text-align:center;
 padding:40px;
@@ -294,6 +297,7 @@ font-size:12px;
 color:#444
 }
 
+/**AFFICHAGE DES PERSONNAGES**/
 .persoImage {
 border-radius:7px;
 -webkit-border-radius:7px;
@@ -304,30 +308,8 @@ width:100px;
 height:100px
 }
 
-table.persoTable {
-width:80%
-}
-
-.persoImagePage {
-min-width:200px;
-border-radius:7px;
-max-width:100%;
--webkit-border-radius:7px;
--moz-border-radius:7px;
-border:4px solid #fff;
-box-shadow:1px 1px 10px #555
-}
-
 .persoElemt {
 color:#414141
-}
-
-.persoElemtPage {
-color:#414141;
-margin-left:200px;
-font-size:18px;
-position:relative;
-top:-20px
 }
 
 .persoType {
@@ -337,26 +319,30 @@ font-weight:700;
 margin-top:-25px
 }
 
-.persoDesc {
-padding:30px;
-min-width:200px;
-width:100%;
-max-height:500px;
-min-width:100px;
-overflow:auto
-}
-
 .persoAnimal,.persoMaison {
 height:100px;
 position:relative;
 top:-10px;
 left:-10px
 }
+  
+.persoImagePage {
+min-width:150px;
+border-radius:7px;
+max-width:100%;
+-webkit-border-radius:7px;
+-moz-border-radius:7px;
+border:4px solid #fff;
+box-shadow:1px 1px 10px #555
+}
 
-.persoAnimalTexte {
-position:relative;
-top:-70px;
-left:90px
+.persoDesc {
+padding:30px;
+min-width:250px;
+width:100%;
+max-height:500px;
+min-width:100px;
+overflow:auto
 }
 
 .descr_session {
@@ -385,6 +371,43 @@ overflow:auto
 margin-left:20%
 }
 
+/**RESPONSIVITE**/
+@media all and (max-width: 1000px) {
+    .presentation_container {
+    width:100%;
+    min-width:248px
+    }
+
+    .presentation {
+    width:97%
+    }
+
+    table.table_accueil {
+    width:100%
+    }
+
+    .nouveautes,.creerPerso {
+    width:100%
+    }
+
+    .creerPerso {
+    font-size:11px;
+    min-width:120px
+    }
+
+    .creerPerso:hover {
+    letter-spacing:0
+    }
+
+    .contexte {
+    width:100%
+    }
+
+    table.liste_sessions {
+    margin-left:15px
+    }
+}
+
 @media all and (max-width: 740px) {
     .header {
     height:60px
@@ -410,36 +433,6 @@ margin-left:20%
     margin-left:10%
     }
 
-    .presentation_container {
-    width:100%;
-    min-width:248px
-    }
-
-    .presentation {
-    width:97%
-    }
-
-    table.table_accueil {
-    width:100%
-    }
-
-    .nouveautes,.voirperso {
-    width:100%
-    }
-
-    .voirperso {
-    font-size:11px;
-    min-width:120px
-    }
-
-    .voirperso:hover {
-    letter-spacing:0
-    }
-
-    .contexte {
-    width:100%
-    }
-
     table.liste_sessions {
     margin-left:15px
     }
@@ -449,6 +442,7 @@ margin-left:20%
     }
 }
 
+/**STATS**/
 .icone {
 width:40px
 }
