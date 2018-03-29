@@ -76,6 +76,87 @@ foreach(array_combine($Tuple3,$Tuple) as $libelle => $value)
         if ($value == 5) echo $libelle.' : Richesse<br />____<br />';
         if ($value == 6);
     }**/
+    //else if ($libelle=='Rapport à autrui' OR $libelle == 'Manière de penser' OR $libelle == 'Ouverture' OR $libelle == 'Habitudes' OR $libelle == 'Nature' OR $libelle == 'Stratégie' OR $libelle == 'Confiance en soi' OR $libelle == 'Anxiété' OR $libelle == 'Influence du regard des autres');
+    else if ($libelle == 'Rapport à autrui')
+    {
+        if ($value == 1) echo $libelle.' : introverti<br />____<br />';
+        if ($value == 2) echo $libelle.' : plutôt introverti<br />____<br />';
+        if ($value == 3) echo $libelle.' : mitigé<br />____<br />';
+        if ($value == 4) echo $libelle.' : plutôt extraverti<br />____<br />';
+        if ($value == 5) echo $libelle.' : extraverti<br />____<br />';
+    }
+    else if ($libelle == 'Manière de penser')
+    {
+        if ($value == 1) echo $libelle.' : pragmatique<br />____<br />';
+        if ($value == 2) echo $libelle.' : plutôt pragmatique<br />____<br />';
+        if ($value == 3) echo $libelle.' : mitigé<br />____<br />';
+        if ($value == 4) echo $libelle.' : plutôt créatif<br />____<br />';
+        if ($value == 5) echo $libelle.' : créatif<br />____<br />';
+    }
+    else if ($libelle == 'Ouverture')
+    {
+        if ($value == 1) echo 'Ouverture d\'esprit : Rigide<br />____<br />';
+        if ($value == 2) echo 'Ouverture d\'esprit : plutôt rigide<br />____<br />';
+        if ($value == 3) echo 'Ouverture d\'esprit : mitigé<br />____<br />';
+        if ($value == 4) echo 'Ouverture d\'esprit : plutôt ouvert d\'esprit<br />____<br />';
+        if ($value == 5) echo 'Ouverture d\'esprit : ouvert d\'esprit<br />____<br />';
+    }
+    else if ($libelle == 'Manière de penser')
+    {
+        if ($value == 1) echo $libelle.' : introverti<br />____<br />';
+        if ($value == 2) echo $libelle.' : plutôt introverti<br />____<br />';
+        if ($value == 3) echo $libelle.' : mitigé<br />____<br />';
+        if ($value == 4) echo $libelle.' : plutôt extraverti<br />____<br />';
+        if ($value == 5) echo $libelle.' : extraverti<br />____<br />';
+    }
+    else if ($libelle == 'Habitudes')
+    {
+        if ($value == 1) echo $libelle.' : reste sur ses acquis<br />____<br />';
+        if ($value == 2) echo $libelle.' : a tendance à rester sur ses acquis<br />____<br />';
+        if ($value == 3) echo $libelle.' : mitigé<br />____<br />';
+        if ($value == 4) echo $libelle.' : a tendance à innover<br />____<br />';
+        if ($value == 5) echo $libelle.' : innove<br />____<br />';
+    }
+    else if ($libelle == 'Nature')
+    {
+        if ($value == 1) echo $libelle.' : rationnel<br />____<br />';
+        if ($value == 2) echo $libelle.' : plutôt rationnel<br />____<br />';
+        if ($value == 3) echo $libelle.' : mitigé<br />____<br />';
+        if ($value == 4) echo $libelle.' : plutôt emotionnel<br />____<br />';
+        if ($value == 5) echo $libelle.' : emotionnel<br />____<br />';
+    }
+    else if ($libelle == 'Stratégie')
+    {
+        if ($value == 1) echo $libelle.' : organisé<br />____<br />';
+        if ($value == 2) echo $libelle.' : plutôt organisé<br />____<br />';
+        if ($value == 3) echo $libelle.' : mitigé<br />____<br />';
+        if ($value == 4) echo $libelle.' : plutôt flexible<br />____<br />';
+        if ($value == 5) echo $libelle.' : flexible<br />____<br />';
+    }
+    else if ($libelle == 'Confiance en soi')
+    {
+        if ($value == 1) echo $libelle.' : peu confiant<br />____<br />';
+        if ($value == 2) echo $libelle.' : plutôt peu confiant<br />____<br />';
+        if ($value == 3) echo $libelle.' : mitigé<br />____<br />';
+        if ($value == 4) echo $libelle.' : plutôt confiant<br />____<br />';
+        if ($value == 5) echo $libelle.' : très confiant<br />____<br />';
+    }
+    else if ($libelle == 'Anxiété')
+    {
+        if ($value == 1) echo $libelle.' : calme<br />____<br />';
+        if ($value == 2) echo $libelle.' : plutôt calme<br />____<br />';
+        if ($value == 3) echo $libelle.' : mitigé<br />____<br />';
+        if ($value == 4) echo $libelle.' : plutôt stressé<br />____<br />';
+        if ($value == 5) echo $libelle.' : stressé<br />____<br />';
+    }
+    else if ($libelle == 'Influence du regard des autres')
+    {
+        if ($value == 1) echo $libelle.' : peu influençable<br />____<br />';
+        if ($value == 2) echo $libelle.' : plutôt peu influençable<br />____<br />';
+        if ($value == 3) echo $libelle.' : mitigé<br />____<br />';
+        if ($value == 4) echo $libelle.' : plutôt influençable<br />____<br />';
+        if ($value == 5) echo $libelle.' : influençable<br />____<br />';
+    }
     else 
     {
         echo $libelle.' : '.$value.'<br />____<br />';
