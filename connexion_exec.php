@@ -1,12 +1,12 @@
 <?php 
-/**ajouter sécurité */
-include('header.php');
-require("connect.php"); 
+
+include('includes/header.php');
+require('connect.php'); 
 
 $pseudo = htmlentities($_POST['pseudo']);
 $mdp = htmlentities($_POST['mdp']);
 
-$resultat = $BDD -> query("SELECT statutStaff FROM utilisateurs WHERE pseudo = '".$pseudo."' AND mdp = '".$mdp."'");
+$resultat = $BDD -> query("SELECT statutStaff FROM utilisateurs WHERE pseudo = '".$pseudo."' AND mdp = '".$mdp."'"); //vérifie que les données sont correctes et que le membre existe
 $ligne = $resultat -> fetch();
 
 if ($ligne==null)
@@ -16,7 +16,7 @@ if ($ligne==null)
 }
 else
 {
-    $_SESSION['statutStaff']= implode("",$ligne);
+    $_SESSION['statutStaff']= implode("",$ligne); //conversion de l'array statutStaff
     $_SESSION['pseudo'] = $pseudo;
     header('location: index.php');
     exit();

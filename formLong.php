@@ -1,8 +1,9 @@
 <?php
-include("header.php");?>
+include("includes/header.php");
+?>
 <div class="container">
     <div class="jumbotron">
-        <h1>Descriptions longues</h1></br>
+        <h1>Descriptions longues</h1><br />
         <form action = "enregistrer_form.php?id_perso=<?php echo $_GET['id_perso']?>&amp;type=long" method ="POST">
             <h2 class="form_titre">DESCRIPTION PHYSIQUE</h2>
             <hr>
@@ -24,5 +25,6 @@ include("header.php");?>
             <button type="submit" class="btn btn-primary">Envoyer</button>
         </form>
     </div>
-<?php include("footer.php");
+<?php 
+include("includes/footer.php");
 ?>

@@ -1,0 +1,460 @@
+body {
+background-color:rgba(255,255,255,0.4);
+background-image:url(../base_images/fond.png);
+background-attachment:fixed
+}
+
+p {
+margin-left:15px;
+margin-right:15px
+}
+
+table {
+border-collapse:separate;
+border-spacing:10px 8px
+}
+
+table.table_accueil {
+border-collapse:collapse!important;
+border-spacing:0!important
+}
+
+table.liste_sessions {
+margin-left:10%
+}
+
+h4 {
+text-align:center;
+font-family:'Dancing Script';
+font-size:44px;
+text-shadow:2px 0 0 #fafafac9
+}
+
+h2 {
+margin-left:50px;
+font-family:'Dancing Script';
+font-size:50px;
+text-shadow:2px 0 0 #fafafac9
+}
+
+h2.form_titre {
+margin-left:70px;
+font-family:'Trebuchet MS';
+font-size:35px;
+text-transform:lowercase;
+letter-spacing:1px;
+text-shadow:2px 0 0 #fafafac9
+}
+
+h1 {
+margin-left:50px;
+font-family:'Dancing Script';
+font-size:58px;
+text-shadow:2px 0 0 #fafafac9
+}
+
+.largeur {
+max-width:900px
+}
+
+.fond {
+border-radius:0 30px 30px 0;
+background-color:rgba(255,255,255,0.5);
+width:100%;
+padding:40px
+}
+
+.alignement {
+margin-left:25%
+}
+
+a:link,a:visited {
+color:#444;
+transition:.3s all;
+-webkit-transition:.3s all;
+-o-transition:.3s all;
+-moz-transition:.3s all
+}
+
+a:hover {
+color:#fff!important;
+text-decoration:none;
+text-shadow:#fff 1px 1px 4px
+}
+
+a:active {
+color:#fff;
+text-decoration:none
+}
+
+.ascenseur {
+position:fixed;
+top:350px;
+right:5px;
+z-index:920
+}
+
+.header {
+position:fixed;
+z-index:999;
+top:0;
+background-color:#444;
+min-height:20px;
+width:100%;
+padding:5px;
+text-align:center
+}
+
+.liens1 {
+color:#fafafa!important;
+padding-left:10px
+}
+
+.liens2 {
+color:#b4b4b4!important;
+padding-left:10px
+}
+
+.liens3 {
+color:#858080!important;
+padding-left:10px
+}
+
+.h_responsive_br {
+display:none;
+color:#b4b4b4;
+padding-left:15px
+}
+
+.h_responsive {
+display:inline;
+padding-left:17px
+}
+
+.dropdown {
+position:relative;
+display:inline-block
+}
+
+.dropdown-content {
+display:none;
+position:relative;
+min-width:160px;
+overflow:auto;
+background-color:#444
+}
+
+.dropdown-content a {
+text-decoration:none;
+display:block
+}
+
+.show {
+display:block
+}
+
+.bienvenue {
+left:20%;
+position:relative;
+font-weight:600;
+top:18px;
+font-size:20px;
+color:#444;
+z-index:1
+}
+
+.staff {
+height:0;
+position:relative;
+left:-35px
+}
+
+.imgstaff {
+border-radius:100px;
+-moz-border-radius:100px;
+-webkit-border-radius:100px;
+height:50px
+}
+
+.rondstaff {
+height:50px;
+width:50px;
+margin:10px
+}
+
+.rondstaff > div {
+visibility:hidden
+}
+
+.rondstaff:hover > div {
+visibility:visible;
+background-color:#dadada;
+width:100px;
+height:70px;
+padding:10px;
+position:relative;
+top:-40px;
+left:40px;
+border:solid #444;
+border-width:3px 1px;
+transition:.2s all;
+-webkit-transition:.2s all;
+-o-transition:.2s all;
+-moz-transition:.2s all;
+border-radius:20px;
+font-size:14px
+}
+
+.presentation_container {
+font-size:12px;
+width:500px;
+height:100px;
+overflow:auto;
+border:1px solid #444;
+text-align:justify;
+padding-left:30px;
+background-color:#444
+}
+
+.presentation {
+width:450px;
+height:65px;
+overflow:auto;
+background-image:url(http://image.noelshack.com/fichiers-md/2018/12/4/1521707777-test.png);
+background-color:#dadada81
+}
+
+.contexte {
+font-size:12px;
+text-align:justify;
+border:1px solid #444;
+width:200px;
+height:100px;
+padding:15px 20px 15px 30px;
+overflow:auto;
+background-image:url(http://image.noelshack.com/fichiers-md/2018/12/4/1521707777-test.png);
+background-color:#dadada81
+}
+
+.creerPerso {
+border:1px solid #444;
+background-image:url(http://image.noelshack.com/fichiers/2018/02/7/1515932888-pattern2.jpg);
+width:297px;
+height:30px;
+text-align:center;
+padding:5px;
+letter-spacing:0;
+transition:.3s all;
+-webkit-transition:.3s all;
+-o-transition:.3s all;
+-moz-transition:.3s all
+}
+
+.creerPerso:hover {
+background-image:url(http://image.noelshack.com/fichiers/2018/02/7/1515931669-pattern.jpg);
+color:#fff!important;
+letter-spacing:1px
+}
+
+.nouveautes {
+font-size:12px;
+overflow:auto;
+width:297px;
+border:1px solid #444;
+border-top:none;
+background-image:url(http://image.noelshack.com/fichiers-md/2018/12/4/1521707777-test.png);
+padding:10px 20px;
+height:70px;
+background-color:#dadada81
+}
+
+.description {
+font-size:12px;
+margin:-10px;
+text-align:justify;
+color:#414141;
+height:100px;
+overflow:auto
+}
+
+.auteur {
+font-size:16px;
+font-style:italic;
+text-align:right;
+margin-top:-10px;
+margin-bottom:-10px;
+color:grey
+}
+
+.footer {
+text-align:center;
+padding:40px;
+font-family:'Trebuchet MS';
+font-size:12px;
+color:#444
+}
+
+.persoImage {
+border-radius:7px;
+-webkit-border-radius:7px;
+-moz-border-radius:7px;
+border:4px solid #fff;
+box-shadow:1px 1px 10px #555;
+width:100px;
+height:100px
+}
+
+table.persoTable {
+width:80%
+}
+
+.persoImagePage {
+min-width:200px;
+border-radius:7px;
+max-width:100%;
+-webkit-border-radius:7px;
+-moz-border-radius:7px;
+border:4px solid #fff;
+box-shadow:1px 1px 10px #555
+}
+
+.persoElemt {
+color:#414141
+}
+
+.persoElemtPage {
+color:#414141;
+margin-left:200px;
+font-size:18px;
+position:relative;
+top:-20px
+}
+
+.persoType {
+color:#414141;
+font-style:italic;
+font-weight:700;
+margin-top:-25px
+}
+
+.persoDesc {
+padding:30px;
+min-width:200px;
+width:100%;
+max-height:500px;
+min-width:100px;
+overflow:auto
+}
+
+.persoAnimal,.persoMaison {
+height:100px;
+position:relative;
+top:-10px;
+left:-10px
+}
+
+.persoAnimalTexte {
+position:relative;
+top:-70px;
+left:90px
+}
+
+.descr_session {
+color:#414141;
+text-align:justify;
+font-size:13px
+}
+
+.card {
+margin-right:auto;
+margin-left:auto
+}
+
+.alert,.alert-secondary {
+max-width:700px;
+margin-right:auto;
+margin-left:auto
+}
+
+.card-header {
+height:80px;
+overflow:auto
+}
+
+.profil {
+margin-left:20%
+}
+
+@media all and (max-width: 740px) {
+    .header {
+    height:60px
+    }
+
+    .h_responsive {
+    display:none
+    }
+
+    .h_responsive_br {
+    display:inline
+    }
+
+    .h_responsive_br > span {
+    display:none
+    }
+
+    .h_responsive_br:hover > span {
+    display:inline
+    }
+
+    .alignement {
+    margin-left:10%
+    }
+
+    .presentation_container {
+    width:100%;
+    min-width:248px
+    }
+
+    .presentation {
+    width:97%
+    }
+
+    table.table_accueil {
+    width:100%
+    }
+
+    .nouveautes,.voirperso {
+    width:100%
+    }
+
+    .voirperso {
+    font-size:11px;
+    min-width:120px
+    }
+
+    .voirperso:hover {
+    letter-spacing:0
+    }
+
+    .contexte {
+    width:100%
+    }
+
+    table.liste_sessions {
+    margin-left:15px
+    }
+
+    .fond {
+    min-width:400px
+    }
+}
+
+.icone {
+width:40px
+}
+
+table.stat {
+padding:0!important;
+border-spacing:0!important;
+border-collapse:collapse!important
+}

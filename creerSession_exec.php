@@ -1,6 +1,5 @@
-<!-- trouver comment conserver les sauts de lignes --!>
 <?php 
-include('header.php');
+include('includes/header.php');
 require("connect.php"); 
 
 $pseudo = htmlentities($_SESSION['pseudo']);
@@ -25,7 +24,7 @@ else if ((!isset($_POST['formC']) and (!isset($_POST['formL']))))
 else
 {
     $description=addslashes($description);
-    $requete = $BDD -> exec("INSERT INTO sessions (nom_session,auteur,formcourt,formlong,description) VALUES ('$nom','$pseudo','$formcourt','$formlong','$description')");
+    $requete = $BDD -> exec("INSERT INTO sessions (nom_session,auteur,formcourt,formlong,description) VALUES ('$nom','$pseudo','$formcourt','$formlong','$description')"); //insère la session dans la table "sessions"
     echo '<body onLoad="alert(\'Session créée !\')">';
     echo '<meta http-equiv="refresh" content="0;URL=index.php">';
     exit();
