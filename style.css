@@ -1,6 +1,6 @@
 body {
 background-color:rgba(255,255,255,0.4);
-background-image:url(image/fond.png);
+background-image:url(../base_images/fond.png);
 background-attachment:fixed
 }
 
@@ -13,10 +13,12 @@ table {
 border-collapse:separate;
 border-spacing:10px 8px
 }
+
 table.table_accueil {
 border-collapse:collapse!important;
 border-spacing:0!important
 }
+
 table.liste_sessions {
 margin-left:10%
 }
@@ -27,25 +29,30 @@ font-family:'Dancing Script';
 font-size:44px;
 text-shadow:2px 0 0 #fafafac9
 }
+
 h2 {
-    margin-left:50px;
-    font-family:'Dancing Script';
-    font-size:50px;
-    text-shadow:2px 0 0 #fafafac9
+margin-left:50px;
+font-family:'Dancing Script';
+font-size:50px;
+text-shadow:2px 0 0 #fafafac9
 }
+
 h2.form_titre {
-    margin-left:70px;
-    font-family:'Trebuchet MS';
-    font-size:35px;
-    text-transform: lowercase;
-    letter-spacing: +1px;
-    text-shadow:2px 0 0 #fafafac9}
-h1 {
-    margin-left:50px;
-    font-family:'Dancing Script';
-    font-size:58px;
-    text-shadow:2px 0 0 #fafafac9
+margin-left:70px;
+font-family:'Trebuchet MS';
+font-size:35px;
+text-transform:lowercase;
+letter-spacing:1px;
+text-shadow:2px 0 0 #fafafac9
 }
+
+h1 {
+margin-left:50px;
+font-family:'Dancing Script';
+font-size:58px;
+text-shadow:2px 0 0 #fafafac9
+}
+
 .largeur {
 max-width:900px
 }
@@ -68,11 +75,13 @@ transition:.3s all;
 -o-transition:.3s all;
 -moz-transition:.3s all
 }
+
 a:hover {
 color:#fff!important;
 text-decoration:none;
 text-shadow:#fff 1px 1px 4px
 }
+
 a:active {
 color:#fff;
 text-decoration:none
@@ -85,6 +94,7 @@ right:5px;
 z-index:920
 }
 
+/**HEADER**/
 .header {
 position:fixed;
 z-index:999;
@@ -100,10 +110,12 @@ text-align:center
 color:#fafafa!important;
 padding-left:10px
 }
+
 .liens2 {
 color:#b4b4b4!important;
 padding-left:10px
 }
+
 .liens3 {
 color:#858080!important;
 padding-left:10px
@@ -114,6 +126,7 @@ display:none;
 color:#b4b4b4;
 padding-left:15px
 }
+
 .h_responsive {
 display:inline;
 padding-left:17px
@@ -123,6 +136,7 @@ padding-left:17px
 position:relative;
 display:inline-block
 }
+
 .dropdown-content {
 display:none;
 position:relative;
@@ -130,6 +144,7 @@ min-width:160px;
 overflow:auto;
 background-color:#444
 }
+
 .dropdown-content a {
 text-decoration:none;
 display:block
@@ -139,6 +154,7 @@ display:block
 display:block
 }
 
+/**PAGE D'ACCUEIL**/
 .bienvenue {
 left:20%;
 position:relative;
@@ -154,20 +170,24 @@ height:0;
 position:relative;
 left:-35px
 }
+
 .imgstaff {
 border-radius:100px;
 -moz-border-radius:100px;
 -webkit-border-radius:100px;
 height:50px
 }
+
 .rondstaff {
 height:50px;
 width:50px;
 margin:10px
 }
+
 .rondstaff > div {
 visibility:hidden
 }
+
 .rondstaff:hover > div {
 visibility:visible;
 background-color:#dadada;
@@ -197,11 +217,12 @@ text-align:justify;
 padding-left:30px;
 background-color:#444
 }
+
 .presentation {
 width:450px;
 height:65px;
 overflow:auto;
-background-image:url(http://image.noelshack.com/fichiers-md/2018/12/4/1521707777-test.png);
+background-image:url(../base_images/fond_page_accueil.png);
 background-color:#dadada81
 }
 
@@ -213,13 +234,13 @@ width:200px;
 height:100px;
 padding:15px 20px 15px 30px;
 overflow:auto;
-background-image:url(http://image.noelshack.com/fichiers-md/2018/12/4/1521707777-test.png);
+background-image:url(../base_images/fond_page_accueil.png);
 background-color:#dadada81
 }
 
-.voirperso {
+.creerPerso {
 border:1px solid #444;
-background-image:url(http://image.noelshack.com/fichiers/2018/02/7/1515932888-pattern2.jpg);
+background-image:url(../base_images/fond_jaune.jpg);
 width:297px;
 height:30px;
 text-align:center;
@@ -230,8 +251,9 @@ transition:.3s all;
 -o-transition:.3s all;
 -moz-transition:.3s all
 }
-.voirperso:hover {
-background-image:url(http://image.noelshack.com/fichiers/2018/02/7/1515931669-pattern.jpg);
+
+.creerPerso:hover {
+background-image:url(../base_images/fond_carreaux.jpg);
 color:#fff!important;
 letter-spacing:1px
 }
@@ -242,7 +264,7 @@ overflow:auto;
 width:297px;
 border:1px solid #444;
 border-top:none;
-background-image:url(http://image.noelshack.com/fichiers-md/2018/12/4/1521707777-test.png);
+background-image:url(../base_images/fond_page_accueil.png);
 padding:10px 20px;
 height:70px;
 background-color:#dadada81
@@ -266,6 +288,7 @@ margin-bottom:-10px;
 color:grey
 }
 
+/**FOOTER**/
 .footer {
 text-align:center;
 padding:40px;
@@ -274,6 +297,7 @@ font-size:12px;
 color:#444
 }
 
+/**AFFICHAGE DES PERSONNAGES**/
 .persoImage {
 border-radius:7px;
 -webkit-border-radius:7px;
@@ -284,41 +308,55 @@ width:100px;
 height:100px
 }
 
-table.persoTable{width:80%}
-
-.persoImagePage {
-min-width:200px;
-border-radius:7px;max-width:100%;
--webkit-border-radius:7px;
--moz-border-radius:7px;
-border:4px solid #fff;
-box-shadow:1px 1px 10px #555;
-}
 .persoElemt {
 color:#414141
 }
+
 .persoElemtPage {
-    color:#414141;
-    margin-left:200px;
-    font-size:18px;
-    position:relative;
-    top:-20px;
-    }
+color:#414141;
+margin-left:200px;
+font-size:18px;
+position:relative;
+top:-20px
+}
+
 .persoType {
 color:#414141;
 font-style:italic;
 font-weight:700;
 margin-top:-25px
 }
-.persoDesc{
-    padding:30px;min-width:200px;width:100%;
-    max-height:500px;
-    min-width:100px;
-    overflow:auto;
+
+.persoAnimal,.persoMaison {
+height:100px;
+position:relative;
+top:-10px;
+left:-10px
 }
-.persoAnimal,.persoMaison{height:100px;position:relative;
-top:-10px;left:-10px;}
-.persoAnimalTexte{position:relative;top:-70px;left:90px;}
+
+table.persoTable {
+width:80%
+}
+    
+.persoImagePage {
+min-width:200px;
+border-radius:7px;
+max-width:100%;
+-webkit-border-radius:7px;
+-moz-border-radius:7px;
+border:4px solid #fff;
+box-shadow:1px 1px 10px #555
+}
+
+.persoDesc {
+padding:30px;
+min-width:200px;
+width:100%;
+max-height:500px;
+min-width:100px;
+overflow:auto
+}
+
 .descr_session {
 color:#414141;
 text-align:justify;
@@ -343,6 +381,43 @@ overflow:auto
 
 .profil {
 margin-left:20%
+}
+
+/**RESPONSIVITE**/
+@media all and (max-width: 1000px) {
+    .presentation_container {
+    width:100%;
+    min-width:248px
+    }
+
+    .presentation {
+    width:97%
+    }
+
+    table.table_accueil {
+    width:100%
+    }
+
+    .nouveautes,.creerPerso {
+    width:100%
+    }
+
+    .creerPerso {
+    font-size:11px;
+    min-width:120px
+    }
+
+    .creerPerso:hover {
+    letter-spacing:0
+    }
+
+    .contexte {
+    width:100%
+    }
+
+    table.liste_sessions {
+    margin-left:15px
+    }
 }
 
 @media all and (max-width: 740px) {
@@ -370,36 +445,6 @@ margin-left:20%
     margin-left:10%
     }
 
-    .presentation_container {
-    width:100%;
-    min-width:248px
-    }
-
-    .presentation {
-    width:97%
-    }
-
-    table.table_accueil {
-    width:100%
-    }
-
-    .nouveautes,.voirperso {
-    width:100%
-    }
-
-    .voirperso {
-    font-size:11px;
-    min-width:120px
-    }
-
-    .voirperso:hover {
-    letter-spacing:0
-    }
-
-    .contexte {
-    width:100%
-    }
-
     table.liste_sessions {
     margin-left:15px
     }
@@ -408,12 +453,14 @@ margin-left:20%
     min-width:400px
     }
 }
-.icone{
-width:40px;
+
+/**STATS**/
+.icone {
+width:40px
 }
-table.stat
-{
-	padding : 0px!important;
-	border-spacing:0px!important;
-	border-collapse: collapse!important;
+
+table.stat {
+padding:0!important;
+border-spacing:0!important;
+border-collapse:collapse!important
 }

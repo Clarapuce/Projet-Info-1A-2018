@@ -66,7 +66,10 @@ foreach(array_combine($Tuple3,$Tuple) as $libelle => $value)
 {
     if (($libelle == 'Maison') OR ($libelle == 'Animal de compagnie') OR ($libelle == 'ID du formulaire') OR ($libelle == 'ID du personnage'));
     else if($value == NULL);
-    else echo $libelle.' : '.$value.'<br />____<br />';
+    else 
+    {
+        echo $libelle.' : '.$value.'<br />____<br />';
+    }
 }
 echo'
                         </div>

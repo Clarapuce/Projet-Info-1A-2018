@@ -29,7 +29,7 @@ echo '
 
             <div class="presentation_container"><br />
                 <div class="presentation">
-                    présentation ici
+                    Ce site vous permettra de créer votre propre personnage dans l\'univers d\'Harry Potter en répondant à des questionnaires. Il vous suffit de vous inscrire et de cliquer sur "créer un personnage". Une session correspond à une promotion d\'élèves.
                 </div>
             </div>
 
@@ -37,7 +37,7 @@ echo '
                 <tr>
                     <td>
                         <div class="contexte">
-                            Contexte ici
+                        La série de romans "Harry Potter" raconte les aventures d\'un jeune sorcier nommé Harry Potter et de ses amis Ron Weasley et Hermione Granger à l\'école de sorcellerie Poudlard, dirigée par Albus Dumbledore. L\'intrigue principale de la série met en scène le combat de Harry contre Lord Voldemort, un mage noir à la recherche de l\'immortalité ayant autrefois assassiné les parents du garçon. À la tête de ses fidèles adeptes, les Mangemorts, Voldemort cherche depuis des décennies à acquérir le pouvoir absolu sur le monde des sorciers et des Moldus, les humains sans pouvoirs magiques.
                         </div>
                     </td>
                     <td>

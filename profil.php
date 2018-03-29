@@ -29,7 +29,7 @@ else
                             <tr>
                                 <div class="card-body">
                                     <td>
-                                        <a href="perso.php?id='.$Tuple["prenom"].' '.$Tuple["nom"].'">
+                                        <a href="perso.php?id='.$Tuple["id"].'&auteur='.$Tuple["auteur"].'">
                                         <h3>'.$Tuple["prenom"].' '.$Tuple["nom"].'</h3>
                                         </a>
                                         <div class="persoElemt">
