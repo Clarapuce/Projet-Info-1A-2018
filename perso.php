@@ -65,7 +65,17 @@ $Tuple3 = $MonRs3 -> fetch();
 foreach(array_combine($Tuple3,$Tuple) as $libelle => $value)
 {
     if (($libelle == 'Maison') OR ($libelle == 'Animal de compagnie') OR ($libelle == 'ID du formulaire') OR ($libelle == 'ID du personnage'));
-    else if($value == NULL);
+    else if ($value == NULL);
+    /**else if ($libelle == 'Objectif de vie')
+    {
+        if ($value == 0) echo $libelle.' : Amitié<br />____<br />';
+        if ($value == 1) echo $libelle.' : Savoir<br />____<br />';
+        if ($value == 2) echo $libelle.' : Pouvoir<br />____<br />';
+        if ($value == 3) echo $libelle.' : Aventure<br />____<br />';
+        if ($value == 4) echo $libelle.' : Réalisation de soi<br />____<br />';
+        if ($value == 5) echo $libelle.' : Richesse<br />____<br />';
+        if ($value == 6);
+    }**/
     else 
     {
         echo $libelle.' : '.$value.'<br />____<br />';
