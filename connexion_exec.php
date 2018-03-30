@@ -3,8 +3,8 @@
 include('includes/header.php');
 require('connect.php'); 
 
-$pseudo = htmlentities($_POST['pseudo']);
-$mdp = htmlentities($_POST['mdp']);
+$pseudo = addslashes(htmlentities($_POST['pseudo']));
+$mdp = addslashes(htmlentities($_POST['mdp']));
 
 $resultat = $BDD -> query("SELECT statutStaff FROM utilisateurs WHERE pseudo = '".$pseudo."' AND mdp = '".$mdp."'"); //vérifie que les données sont correctes et que le membre existe
 $ligne = $resultat -> fetch();
@@ -20,4 +20,5 @@ else
     $_SESSION['pseudo'] = $pseudo;
     header('location: index.php');
     exit();
-}?>
+}
+?>

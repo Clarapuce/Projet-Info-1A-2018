@@ -2,6 +2,9 @@
 include("includes/header.php");
 require("connect.php");
 
+if (!isset($_SESSION['statutStaff'])) erreur(NOT_CO); //si la personne n'est pas connectée, renvoie une erreur
+if(!isset($_GET['id_perso'])) erreur(NO_CHARACTER); //si on n'a pas accédé à la création de personnage auparavant, renvoie une erreur
+
 $id_perso=$_GET['id_perso'];
 ?>
 
@@ -33,8 +36,8 @@ $id_perso=$_GET['id_perso'];
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" required name="maison" id="inlineRadio1" value="Serpentard" >
                 <label class="form-check-label" for="inlineRadio1">Serpentard</label>
-            </div>
-
+            </div><br /><br />
+            
             <div class="form-group">
                 <label for="exampleFormControlSelect2">Lieu de naissance</label>
                 <select multiple class="form-control" id="exampleFormControlSelect2" name ="lieu_naissance" required>

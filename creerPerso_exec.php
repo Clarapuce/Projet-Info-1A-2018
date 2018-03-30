@@ -32,6 +32,6 @@ else
     $requete = $BDD -> query( $recupID );
     $tab = $requete -> fetch();
 
-    $id_perso = $tab[0];
+    $id_perso = $tab[0];    
     echo '<meta http-equiv="refresh" content="0;URL=formCourt.php?id_perso='.$id_perso.'">';
 }

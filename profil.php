@@ -9,7 +9,7 @@ else
 
     echo '<div class="container">
         <div class="fond">
-            Vous êtes connecté en tant que '.$auteur.'. <br /><br />
+            Vous êtes connecté en tant que '.nl2br($auteur).'. <br /><br />
             <div class="alert alert-secondary" role="alert">
                 <div class="card">
                     <div class="card-body">

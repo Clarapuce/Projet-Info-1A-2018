@@ -1,5 +1,10 @@
 <?php
 include("includes/header.php");
+
+if (!isset($_SESSION['statutStaff'])) erreur(NOT_CO); //si la personne n'est pas connectée, renvoie une erreur
+if(!isset($_GET['id_perso'])) erreur(NO_CHARACTER); //si on n'a pas accédé à la création de personnage auparavant, renvoie une erreur
+
+$id_perso=$_GET['id_perso'];
 ?>
 <div class="container">
     <div class="jumbotron">

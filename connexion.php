@@ -11,12 +11,12 @@ if (!empty($_SESSION['pseudo'])) erreur(ERR_IS_CO); //si on accède à la page e
                 <table>
                     <tr>
                         <td>Pseudo :</td>
-                        <td> <input type="text" name="pseudo"></td>
+                        <td> <input type="text" name="pseudo" required></td>
                     </tr>
                         
                     <tr>
                         <td><br />Mot de passe : </td>
-                        <td><br/> <input type="password" name="mdp"><br/></td>
+                        <td><br/> <input type="password" name="mdp" required><br/></td>
                     </tr>
                 </table><br />
 
