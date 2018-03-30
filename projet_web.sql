@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 29 mars 2018 à 22:11
--- Version du serveur :  10.1.30-MariaDB
--- Version de PHP :  7.2.2
+-- Généré le :  ven. 30 mars 2018 à 17:31
+-- Version du serveur :  10.1.25-MariaDB
+-- Version de PHP :  5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -51,7 +51,7 @@ CREATE TABLE `formcourt` (
   `particularite` varchar(50) NOT NULL,
   `precisions` text NOT NULL,
   `objectif` varchar(30) NOT NULL,
-  `objectif_autre` int(11) NOT NULL,
+  `objectif_autre` text NOT NULL,
   `rapport_autrui` int(11) NOT NULL,
   `maniere_de_penser` int(11) NOT NULL,
   `ouverture` int(11) NOT NULL,
@@ -74,10 +74,10 @@ CREATE TABLE `formcourt` (
 --
 
 INSERT INTO `formcourt` (`id_court`, `id_perso`, `maison`, `lieu_naissance`, `nom_naissance`, `bois_baguette`, `contenu_baguette`, `animal`, `sante`, `niveau_scolaire`, `patronus`, `statut`, `freres_soeurs`, `peau`, `taille`, `poids`, `yeux`, `couleur_cheveux`, `coupe`, `particularite`, `precisions`, `objectif`, `objectif_autre`, `rapport_autrui`, `maniere_de_penser`, `ouverture`, `habitudes`, `nature`, `strategie`, `confiance`, `anxiete`, `influence`, `peur`, `peur_autre`, `hobby`, `hobby_autre`, `talent`, `bete_noire`) VALUES
-(10, '40', 'Gryffondor', 'Ville', 'Londres', 'Saule', 'Plume de Ph&eacute;nix', 'chouette', 4, 3, 'Biche', 'Sang-pur', 0, 'Blanche', '154', '54', 'Verts', 'Brun', 'En bataille', 'Cicatrices', 'En forme d\'&eacute;clair', 'Amiti&eacute;', 0, 1, 2, 3, 5, 4, 4, 1, 4, 5, 'Autre', 'La peur', 'Sport', 'Quidditch', 'Attraper le vif d\'or', 'Voldemort et l\'histoire de la magie'),
-(11, '41', 'Gryffondor', 'Ville', 'Londres', 'Vigne', 'Bois de licorne', 'chat', 4, 5, 'Loutre', 'N&eacute;-Moldu', 0, 'Blanche', '152', '47', 'Noisette', 'Brun', 'Longs fris&eacute;s', '', '', 'Savoir', 0, 3, 1, 1, 2, 2, 1, 2, 5, 5, 'Le regard des autres', '', 'Autre', 'Travailler', 'Tout ce qui concerne la magie', 'La divination'),
-(12, '42', 'Serpentard', 'Campagne', 'Cambridge', 'If', 'Ventricule de dragon', 'hibou', 2, 4, 'Ch&egrave;vre', 'Sang-pur', 0, 'P&acirc;le', '156', '53', 'Bleus', 'Blonds', 'Coiff&eacute; comme un bourgeo', '', '', 'Autre', 0, 5, 1, 1, 1, 5, 1, 1, 5, 3, 'Autre', 'Voldemort', 'Autre', 'Ennuyer le monde', 'Ennuyer le monde, avoir l\'air hautain', '&Ecirc;tre gentil'),
-(13, '43', 'Poufsouffle', 'Ville', 'Dublin', 'Vigne', 'Bois de licorne', 'chat', 2, 2, 'Cheval', 'Sang-m&ecirc;l&eacute;', 2, 'Blanche', '150', '56', 'Marron', 'Chatain', 'Long lisse', 'Autre', 'T&acirc;ches de rousseurs', 'Aventure', 0, 1, 5, 4, 4, 2, 3, 2, 4, 3, 'Le feu', '', 'Musique', '', '&Ecirc;tre invisible', 'Rogue');
+(10, '40', 'Gryffondor', 'Ville', 'Londres', 'Saule', 'Plume de Ph&eacute;nix', 'chouette', 4, 3, 'Biche', 'Sang-pur', 0, 'Blanche', '154', '54', 'Verts', 'Brun', 'En bataille', 'Cicatrices', 'En forme d\'&eacute;clair', 'Amiti&eacute;', '', 1, 2, 3, 5, 4, 4, 1, 4, 5, 'Autre', 'La peur', 'Sport', 'Quidditch', 'Attraper le vif d\'or', 'Voldemort et l\'histoire de la magie'),
+(11, '41', 'Gryffondor', 'Ville', 'Londres', 'Vigne', 'Bois de licorne', 'chat', 4, 5, 'Loutre', 'N&eacute;-Moldu', 0, 'Blanche', '152', '47', 'Noisette', 'Brun', 'Longs fris&eacute;s', '', '', 'Savoir', '', 3, 1, 1, 2, 2, 1, 2, 5, 5, 'Le regard des autres', '', 'Autre', 'Travailler', 'Tout ce qui concerne la magie', 'La divination'),
+(12, '42', 'Serpentard', 'Campagne', 'Cambridge', 'If', 'Ventricule de dragon', 'hibou', 2, 4, 'Ch&egrave;vre', 'Sang-pur', 0, 'P&acirc;le', '156', '53', 'Bleus', 'Blonds', 'Coiff&eacute; comme un bourgeo', '', '', 'Autre', '', 5, 1, 1, 1, 5, 1, 1, 5, 3, 'Autre', 'Voldemort', 'Autre', 'Ennuyer le monde', 'Ennuyer le monde, avoir l\'air hautain', '&Ecirc;tre gentil'),
+(13, '43', 'Poufsouffle', 'Ville', 'Dublin', 'Vigne', 'Bois de licorne', 'chat', 2, 2, 'Cheval', 'Sang-m&ecirc;l&eacute;', 2, 'Blanche', '150', '56', 'Marron', 'Chatain', 'Long lisse', 'Autre', 'T&acirc;ches de rousseurs', 'Aventure', '', 1, 5, 4, 4, 2, 3, 2, 4, 3, 'Le feu', '', 'Musique', '', '&Ecirc;tre invisible', 'Rogue');
 
 -- --------------------------------------------------------
 
@@ -100,10 +100,10 @@ CREATE TABLE `formlibelles` (
   `statut` varchar(30) NOT NULL,
   `freres_soeurs` varchar(50) NOT NULL,
   `peau` varchar(30) NOT NULL,
-  `taille` varchar(6) NOT NULL,
-  `poids` varchar(10) NOT NULL,
-  `yeux` varchar(15) NOT NULL,
-  `couleur_cheveux` varchar(10) NOT NULL,
+  `taille` varchar(50) NOT NULL,
+  `poids` varchar(50) NOT NULL,
+  `yeux` varchar(50) NOT NULL,
+  `couleur_cheveux` varchar(50) NOT NULL,
   `coupe` varchar(30) NOT NULL,
   `particularite` varchar(50) NOT NULL,
   `precisions` varchar(50) NOT NULL,
@@ -131,7 +131,7 @@ CREATE TABLE `formlibelles` (
 --
 
 INSERT INTO `formlibelles` (`id_court`, `id_perso`, `maison`, `lieu_naissance`, `nom_naissance`, `bois_baguette`, `contenu_baguette`, `animal`, `sante`, `niveau_scolaire`, `patronus`, `statut`, `freres_soeurs`, `peau`, `taille`, `poids`, `yeux`, `couleur_cheveux`, `coupe`, `particularite`, `precisions`, `objectif`, `objectif_autre`, `rapport_autrui`, `maniere_de_penser`, `ouverture`, `habitudes`, `nature`, `strategie`, `confiance`, `anxiete`, `influence`, `peur`, `peur_autre`, `hobby`, `hobby_autre`, `talent`, `bete_noire`) VALUES
-('ID du formulaire', 'ID du personnage', 'Maison', 'Lieu de naissance', 'Nom du lieu de naissance', 'Bois de la baguette', 'Contenu de la baguette', 'Animal de compagnie', 'Niveau de santé', 'Niveau scolaire', 'Patronus', 'Statut', 'Nombre de frères et soeurs', 'Couleur de peau', 'Taille', 'Poids', 'Couleur des yeu', 'Couleur de', 'Coupe de cheveux', 'Particularités', 'Précisions', 'Objectif de vie', 'Objectif de vie', 'Rapport à autrui', 'Manière de penser', 'Ouverture', 'Habitudes', 'Nature', 'Stratégie', 'Confiance en soi', 'Anxiété', 'Influence du regard des autres', 'Grande peur', 'Grande peur', 'Hobbies', 'Hobbies', 'Talent spécial', 'Bête noire');
+('ID du formulaire', 'ID du personnage', 'Maison', 'Lieu de naissance', 'Nom du lieu de naissance', 'Bois de la baguette', 'Contenu de la baguette', 'Animal de compagnie', 'Niveau de santé', 'Niveau scolaire', 'Patronus', 'Statut', 'Nombre de frères et soeurs', 'Couleur de peau', 'Taille', 'Poids', 'Couleur des yeux', 'Couleur des cheveux', 'Coupe de cheveux', 'Particularités', 'Précisions', 'Objectif de vie', 'Objectif', 'Rapport à autrui', 'Manière de penser', 'Ouverture', 'Habitudes', 'Nature', 'Stratégie', 'Confiance en soi', 'Anxiété', 'Influence du regard des autres', 'Grande peur', 'Grande peur', 'Hobbies', 'Hobbies', 'Talent spécial', 'Bête noire');
 
 -- --------------------------------------------------------
 
@@ -181,7 +181,9 @@ INSERT INTO `perso` (`id`, `auteur`, `nom`, `prenom`, `image`, `age`, `type`, `s
 (40, 'Admin', 'Potter', 'Harry', 'occhiali-harry-potter.jpg', 11, 'Élève', 'Promo 1990'),
 (41, 'Admin', 'Granger', 'Hermione', 'hermione-granger-hermione-granger-20053436-936-1197.jpg', 11, 'Élève', 'Promo 1990'),
 (42, 'Admin', 'Malefoy', 'Drago', 'tom-felton-alias-drago-malefoy-a-ses-debuts-dans-harry-potter_146874_w620.jpg', 11, 'Élève', 'Promo 1990'),
-(43, 'Admin', 'Abott', 'Hannah', 'tumblr_inline_nak4l3nd7f1reg6lt.jpg', 11, 'Élève', 'Promo 1990');
+(43, 'Admin', 'Abott', 'Hannah', 'tumblr_inline_nak4l3nd7f1reg6lt.jpg', 11, 'Élève', 'Promo 1990'),
+(46, 'Admin', 'qzr', 'qze', 'Chrysanthemum.jpg', 12, 'Professeur', 'Promo 1990'),
+(47, 'Admin', 'erq', 'a\'z&quot;', 'Tulips.jpg', 223, 'Professeur', 'Promo 1990');
 
 -- --------------------------------------------------------
 
@@ -266,13 +268,11 @@ ALTER TABLE `utilisateurs`
 --
 ALTER TABLE `formcourt`
   MODIFY `id_court` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
 --
 -- AUTO_INCREMENT pour la table `perso`
 --
 ALTER TABLE `perso`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
-COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
