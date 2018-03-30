@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  ven. 30 mars 2018 à 19:52
+-- Généré le :  ven. 30 mars 2018 à 19:54
 -- Version du serveur :  10.1.25-MariaDB
 -- Version de PHP :  5.6.31
 
@@ -77,7 +77,8 @@ INSERT INTO `formcourt` (`id_court`, `id_perso`, `maison`, `lieu_naissance`, `no
 (10, '40', 'Gryffondor', 'Ville', 'Londres', 'Saule', 'Plume de Ph&eacute;nix', 'chouette', 4, 3, 'Biche', 'Sang-pur', 0, 'Blanche', '154', '54', 'Verts', 'Brun', 'En bataille', 'Cicatrices', 'En forme d\'&eacute;clair', 'Amiti&eacute;', '', 1, 2, 3, 5, 4, 4, 1, 4, 5, 'Autre', 'La peur', 'Sport', 'Quidditch', 'Attraper le vif d\'or', 'Voldemort et l\'histoire de la magie'),
 (11, '41', 'Gryffondor', 'Ville', 'Londres', 'Vigne', 'Bois de licorne', 'chat', 4, 5, 'Loutre', 'N&eacute;-Moldu', 0, 'Blanche', '152', '47', 'Noisette', 'Brun', 'Longs fris&eacute;s', '', '', 'Savoir', '', 3, 1, 1, 2, 2, 1, 2, 5, 5, 'Le regard des autres', '', 'Autre', 'Travailler', 'Tout ce qui concerne la magie', 'La divination'),
 (12, '42', 'Serpentard', 'Campagne', 'Cambridge', 'If', 'Ventricule de dragon', 'hibou', 2, 4, 'Ch&egrave;vre', 'Sang-pur', 0, 'P&acirc;le', '156', '53', 'Bleus', 'Blonds', 'Coiff&eacute; comme un bourgeo', '', '', 'Autre', '', 5, 1, 1, 1, 5, 1, 1, 5, 3, 'Autre', 'Voldemort', 'Autre', 'Ennuyer le monde', 'Ennuyer le monde, avoir l\'air hautain', '&Ecirc;tre gentil'),
-(13, '43', 'Poufsouffle', 'Ville', 'Dublin', 'Vigne', 'Bois de licorne', 'chat', 2, 2, 'Cheval', 'Sang-m&ecirc;l&eacute;', 2, 'Blanche', '150', '56', 'Marron', 'Chatain', 'Long lisse', 'Autre', 'T&acirc;ches de rousseurs', 'Aventure', '', 1, 5, 4, 4, 2, 3, 2, 4, 3, 'Le feu', '', 'Musique', '', '&Ecirc;tre invisible', 'Rogue');
+(13, '43', 'Poufsouffle', 'Ville', 'Dublin', 'Vigne', 'Bois de licorne', 'chat', 2, 2, 'Cheval', 'Sang-m&ecirc;l&eacute;', 2, 'Blanche', '150', '56', 'Marron', 'Chatain', 'Long lisse', 'Autre', 'T&acirc;ches de rousseurs', 'Aventure', '', 1, 5, 4, 4, 2, 3, 2, 4, 3, 'Le feu', '', 'Musique', '', '&Ecirc;tre invisible', 'Rogue'),
+(16, '48', 'Gryffondor', 'Campagne', 'Village People', 'Saule', 'Ventricule de dragon', 'rat', 5, 5, 'Chat', 'Sang-pur', 1, 'Blanche', '167', '64', 'Verts', 'Autre', 'Chignon tir&eacute;', '', 'Cheveux poivre-sel', 'Autre', 'Que Gryffondor gagne la coupe', 3, 1, 1, 1, 1, 1, 5, 1, 1, 'L\'orage', '', 'Ecriture', '', '&Ecirc;tre rigide', 'La flexibilit&eacute;');
 
 -- --------------------------------------------------------
 
@@ -154,7 +155,8 @@ INSERT INTO `formlong` (`id_perso`, `histoire`, `mental`, `physique`) VALUES
 (40, 'Cf Harry Potter &agrave; l\'&eacute;cole des sorciers.', 'Renferm&eacute;, peu confiant', 'Fin, cheveux en bataille, lunettes rondes, yeux verts'),
 (41, 'Cf Harry Potter &agrave; l\'&eacute;cole des sorciers', 'Rigide, madame je sais tout, brillante', 'Petite, grandes dents, Cheveux en bataille fris&eacute;s.'),
 (42, 'Cf. Harry Potter &agrave; l\'&eacute;cole des sorciers.', 'Snob, casse-pied', 'Hautain, robe de premi&egrave;re main, air noble'),
-(43, 'Inconnue au bataillon', 'Gentille mais timide', 'Grassouillette, tresses, dents du bonheur');
+(43, 'Inconnue au bataillon', 'Gentille mais timide', 'Grassouillette, tresses, dents du bonheur'),
+(48, 'Cf &quot;Histoire de Poudlard, Professeurs et mati&egrave;res tome 4&quot;', 'Rigide', 'Traits durs, chignon tir&eacute;, grandes robes vertes');
 
 -- --------------------------------------------------------
 
@@ -181,7 +183,8 @@ INSERT INTO `perso` (`id`, `auteur`, `nom`, `prenom`, `image`, `age`, `type`, `s
 (40, 'Admin', 'Potter', 'Harry', 'occhiali-harry-potter.jpg', 11, 'Élève', 'Promo 1990'),
 (41, 'Admin', 'Granger', 'Hermione', 'hermione-granger-hermione-granger-20053436-936-1197.jpg', 11, 'Élève', 'Promo 1990'),
 (42, 'Admin', 'Malefoy', 'Drago', 'tom-felton-alias-drago-malefoy-a-ses-debuts-dans-harry-potter_146874_w620.jpg', 11, 'Élève', 'Promo 1990'),
-(43, 'Admin', 'Abott', 'Hannah', 'tumblr_inline_nak4l3nd7f1reg6lt.jpg', 11, 'Élève', 'Promo 1990');
+(43, 'Admin', 'Abott', 'Hannah', 'tumblr_inline_nak4l3nd7f1reg6lt.jpg', 11, 'Élève', 'Promo 1990'),
+(48, 'Clarapuce', 'Mcgonagall', 'Minerva', 'Primerafoto.jpg', 68, 'Professeur', 'Promo 1990');
 
 -- --------------------------------------------------------
 
@@ -204,8 +207,8 @@ CREATE TABLE `sessions` (
 INSERT INTO `sessions` (`nom_session`, `auteur`, `formcourt`, `formlong`, `description`) VALUES
 ('Promo 1990', 'Admin', 1, 1, 'Promotion de l\'année 1990. Année où se déroule le début de l\'histoire du fameux Harry Potter.'),
 ('Session 2', 'Admin', 1, 1, 'Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae.'),
-('Session 3', 'Admin', 0, 1, 'Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae.'),
-('Session 4', 'Admin', 1, 1, 'Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae.');
+('Session 3', 'admin', 1, 1, 'Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae.'),
+('Session 4', 'admin', 1, 1, 'Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae.');
 
 -- --------------------------------------------------------
 
@@ -264,12 +267,12 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `formcourt`
 --
 ALTER TABLE `formcourt`
-  MODIFY `id_court` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_court` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT pour la table `perso`
 --
 ALTER TABLE `perso`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
